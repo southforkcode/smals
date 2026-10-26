@@ -8,12 +8,14 @@ if(NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR
   message(FATAL_ERROR "The build requires clang major version 21")
 endif()
 
-add_library(smil_core STATIC src/support/version.cpp)
+add_library(smil_core STATIC src/support/version.cpp src/support/diagnostic.cpp)
 target_include_directories(smil_core PUBLIC src)
 target_compile_features(smil_core PUBLIC cxx_std_23)
 set_target_properties(smil_core PROPERTIES CXX_EXTENSIONS OFF)
 
-add_executable(smil_tests test/main.cpp)
+add_executable(smil_tests test/main.cpp test/cases/diagnostics.cpp)
+add_executable(smil src/main.cpp)
+target_link_libraries(smil PRIVATE smil_core)
 target_link_libraries(smil_tests PRIVATE smil_core)
 
 include(CTest)

@@ -1,0 +1,9 @@
+# Diagnostics and command boundary
+
+Sources: [SMIL-004/005](../specs/0000_smil.md), [B005](../plans/01_foundation_and_contracts.md#b005), and errors-as-values code standards. Use `Result<T> = std::expected<T, Diagnostic>`. Diagnostic owns phase/code/source-span/reason; spans use a source identifier and half-open byte offsets, plus one-based line/column. Keeping ownership avoids dangling text from temporary inputs. Phase names distinguish command-line, parsing, verification, binding, linking and execution; no boundary implies another succeeded.
+
+`parse_command(span<string_view>, ostream&)` accepts exactly `--version`. Other arguments return CLI001 at the command boundary, with source `<command-line>`, byte range for the first operand (empty for no arguments), line/column 1, and reason `expected exactly --version`. The originating function writes that error once; callers propagate the value and status without logging it again. Function entry is debug logging. The CLI exposes tool identity only, with no output publication or supported compiler stages yet. Future stage implementation must preserve diagnostics and artifact prevention. No artifact is opened before argument validation.
+
+Unit cases assert all diagnostic fields, phase-name mapping, positive Result payload and one originating error. A CLI process test asserts exact version stdout, invalid status, one CLI001 error and absent requested output. Logging uses an injected stream until the shared native logging increment. This advances the named requirements without closing their later parsing/binding/linking/runtime obligations.
+
+An explicit reserved `Phase::unknown` sentinel renders as unknown; this avoids constructing an out-of-enumerator value solely to test defensive rendering. It never implies successful passage through a compiler stage.
