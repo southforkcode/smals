@@ -1,0 +1,48 @@
+{
+  "schema": "smals.increment.v1",
+  "increment": "B014",
+  "targets": [
+    "quality",
+    "smil_tests",
+    "smil"
+  ],
+  "build_dir": "build/smil",
+  "inputs": [
+    "CMakeLists.txt",
+    "src/**/*.cpp",
+    "src/**/*.hpp",
+    "test/**/*.cpp",
+    "test/**/*.hpp",
+    "scripts/**/*.py",
+    "tools/**/*.py",
+    "tools/cmake/*.cmake",
+    ".python-version",
+    ".clang-format",
+    ".clang-tidy",
+    "specs/GLOSSARY.md",
+    "pyproject.toml",
+    "uv.lock",
+    "plans/11_requirement_matrix.md",
+    "plans/verification/requirements/*.json",
+    "plans/verification/native_cases.cmake",
+    "examples/answer.smil",
+    "examples/commands.json"
+  ],
+  "cases": [
+    {
+      "id": "example.boundaries",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "tools.tests.test_example",
+        "tools.tests.test_cli"
+      ],
+      "timeout_seconds": 30,
+      "expected_exit": 0,
+      "stderr_contains": [
+        "OK"
+      ]
+    }
+  ]
+}
