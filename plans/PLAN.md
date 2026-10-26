@@ -27,7 +27,7 @@ Full checkpoints are due at primary steps 10, 20, 30, ...; children do not move 
 
 ### Timing baseline and target
 
-Recorded primary steps 12–21, including resumed attempts and children, total 9,168 elapsed seconds: **916.8 seconds (15.28 minutes) per primary step**. Active/waiting time is unknown where unmeasured. This baseline exceeds the new <300-second target; no improvement is claimed yet. Keep child/resume costs with their parent so splitting cannot improve the denominator artificially. Ad-hoc user-requested process work is recorded separately.
+Recorded primary steps 12–21, including resumed attempts and children, total 9,168 elapsed seconds: **916.8 seconds (15.28 minutes) per primary step**. Active/waiting time is unknown where unmeasured. This known-record baseline excludes later ad-hoc process/checkpoint maintenance whose separate duration is not measured; future cadence checkpoints are timed inside the primary increment. It exceeds the new <300-second target; no improvement is claimed yet. Keep child/resume costs with their parent so splitting cannot improve the denominator artificially. Ad-hoc user-requested process work is recorded separately.
 
 ## Work timing log
 
