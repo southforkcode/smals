@@ -1,5 +1,5 @@
 # Process-only increment mappings; domain cases remain in test support.
-foreach(entry "version|B002;B006;B013" "diagnostics|B005;B006" "command.reject|B005;B006" "trace.records|B007" "runtime.guards|B011")
+foreach(entry "version|B002;B006;B013" "diagnostics|B005;B006" "command.reject|B005;B006" "trace.records|B007" "runtime.guards|B011" "logging.records|B015;B015.1;B015.2")
   string(REPLACE "|" ";" fields "${entry}")
   list(POP_FRONT fields domain)
   string(REPLACE "." "_" name "${domain}")

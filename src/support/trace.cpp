@@ -1,5 +1,7 @@
 #include "support/trace.hpp"
+#include "support/logging.hpp"
 
+#include <sstream>
 #include <tuple>
 #include <utility>
 
@@ -7,14 +9,16 @@ namespace smil {
 namespace {
 Result<void> trace_error(std::string code, std::string reason,
                          std::size_t index, std::ostream &log) {
-  log << "error[" << code << "]: " << reason << " at event " << index << '\n';
+  std::ostringstream message;
+  message << "error[" << code << "]: " << reason << " at event " << index;
+  log_error("trace", message.str(), log);
   return std::unexpected(Diagnostic{Phase::execution,
                                     std::move(code),
                                     {"<trace>", index, index + 1, 1, index + 1},
                                     std::move(reason)});
 }
 Result<void> validate(std::span<const Event> trace, std::ostream &log) {
-  log << "debug: entering trace validation\n";
+  log_entry("trace.validate", log);
   for (std::size_t index = 0; index < trace.size(); ++index) {
     if (static_cast<unsigned>(trace[index].kind) >= 6) {
       return trace_error("TRACE_KIND", "unknown observable event kind", index,
@@ -31,7 +35,7 @@ Result<void> validate(std::span<const Event> trace, std::ostream &log) {
 
 Result<void> compare_traces(std::span<const Event> expected,
                             std::span<const Event> actual, std::ostream &log) {
-  log << "debug: entering compare_traces\n";
+  log_entry("compare_traces", log);
   auto expected_valid = validate(expected, log);
   if (!expected_valid) {
     return expected_valid;

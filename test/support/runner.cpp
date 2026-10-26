@@ -13,6 +13,7 @@
 bool diagnostic_cases();
 bool trace_cases();
 bool guarded_cases();
+bool logging_cases();
 
 namespace {
 struct Options {
@@ -86,8 +87,12 @@ Observation traces_case(std::uint64_t) {
 Observation guards_case(std::uint64_t) {
   return {guarded_cases(), "guarded-buffer-and-budget"};
 }
-constexpr std::array<Case, 5> registry{
-    {{"runtime.guards", true, guards_case},
+Observation logs_case(std::uint64_t) {
+  return {logging_cases(), "structured-log-records"};
+}
+constexpr std::array<Case, 6> registry{
+    {{"logging.records", true, logs_case},
+     {"runtime.guards", true, guards_case},
      {"trace.records", true, traces_case},
      {"version", true, version_case},
      {"diagnostics", true, fields_case},
