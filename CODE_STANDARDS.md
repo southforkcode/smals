@@ -20,12 +20,12 @@
 - Designs document options, but the focus is on the design not the decision process: summarize the reason for the design, not the process of litigation.
 - Designs are concise. They don't repeat themselves, the statements in a design document are necessary for guiding an implementation. Designs can cause documentation but they are not user or external documentation themselves.
 - Designs are persistent and not temporary. A design document also exists at a moment of time. If a design must be modified, the original design document is retired and replaced with a full new design document. Avoid fracturing of design ideas. Keep them consistent and whole and together.
-- If a design uses a well known pattern, data structure or algorithm, it states the conventional name. It doesn't pretend to invent things they it did not.
+- If a design uses a well known pattern, data structure or algorithm, it states the conventional name. It doesn't pretend to invent things that it did not.
 - Design documents how a behavior or non-functional requirement will be met. They aren't requirements, they are not causal statements other than causing how an impolementation will happen; not why it must happen.
 
 ## Other Code Standards
 
- - If a standard code formatter exists for the language, the standard code formatter is used as part of the *build* process. Meaning, if a binary (executable or library) is built, before the binary is deemed acceptable, the code formatter must have run, and *all* corrections were made and includede in the binary built.
+ - If a standard code formatter exists for the language, the standard code formatter is used as part of the *build* process. Meaning, if a binary (executable or library) is built, before the binary is deemed acceptable, the code formatter must have run, and *all* corrections were made and included in the binary built.
  - If a standard linter exists, the standard code linter (or "tidier") is used as part of the *build* process.
  - Code structure is clear and obvious, and **easy to read**. For example, don't use multiple levels of loops within a single function/method or implementation unit.
 - Function names describe the behavior implemented 
