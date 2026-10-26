@@ -8,3 +8,4 @@
 - [Diagnostics and command boundary](diagnostics.md)
 - [Bounded behavioral case runner](test_runner.md)
 - [Observable trace records](observable_traces.md)
+- [Proof receipts](proof_runner.md)
