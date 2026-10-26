@@ -8,13 +8,13 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 
 | State | Count |
 | --- | --- |
-| Completed with verified evidence | 22 |
-| In progress | 1 |
+| Completed with verified evidence | 23 |
+| In progress | 0 |
 | Blocked or split | 0 |
 | Pending | 1,923 |
 | Total indexed increments | 1,946 |
 
-**Next step: [20 — B012](#step-20).** Step 20.1 is complete with [integration and cleanup evidence](evidence/B012.1.md). This file records implementation progress, not the completion of writing the plan.
+**Next step: [21 — B013](#step-21).** Step 20 is complete with [integration and cleanup evidence](evidence/B012.md). This file records implementation progress, not the completion of writing the plan.
 
 ## Work timing log
 
@@ -22,7 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 20 | B012 | 2 | 2026-10-26T12:26:48Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/B012.md) |
+| 20 | B012 | 2 | 2026-10-26T12:26:48Z | 2026-10-26T12:30:17Z | 209 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B012.md) |
 | 20.1 | B012.1 | 1 | 2026-10-26T12:20:44Z | 2026-10-26T12:26:48Z | 364 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B012.1.md) |
 | 21 | B013 | 1 | 2026-10-26T12:20:11Z | 2026-10-26T12:20:44Z | 33 | 10 active minutes | unknown / unknown | Stopped: prerequisite timing closeout | [Evidence](evidence/B013.md) |
 | 20 | B012 | 1 | 2026-10-26T12:01:22Z | 2026-10-26T12:20:10Z | 1128 | 10 active minutes | unknown / unknown | Over budget; verified implementation retained, closeout reopened | [Evidence](evidence/B012.md) |
@@ -140,7 +140,7 @@ The sections below follow useful advancement: build and evidence, source verific
 - [x] <a id="step-17.1"></a>**Step 17.1 — [B009.1](01_foundation_and_contracts.md#b009.1)**: Finish auditor acceptance, host verification and integration. Evidence: [B009.1 completion](evidence/B009.1.md); merged, verified and local branch deleted.
 - [x] <a id="step-18"></a>**Step 18 — [B010](01_foundation_and_contracts.md#b010)**: Seed plans/verification/requirements/<KEY>.json with all 435 exact requirement texts/digests, clause obligations and initially missing evidence links. Evidence: [B010 completion](evidence/B010.md); merged, verified and local branch deleted.
 - [x] <a id="step-19"></a>**Step 19 — [B011](01_foundation_and_contracts.md#b011)**: Add bounded runtime fault injection, red-zone/canary memory and deterministic resource limits to test support. Evidence: [B011 completion](evidence/B011.md); merged, verified and local branch deleted.
-- [ ] <a id="step-20"></a>**Step 20 — [B012](01_foundation_and_contracts.md#b012)**: Add final acceptance policy that separates source, host model, artifact, native-family and exact-profile evidence. Evidence: [B012 completion](evidence/B012.md); merged, verified and local branch deleted.
+- [x] <a id="step-20"></a>**Step 20 — [B012](01_foundation_and_contracts.md#b012)**: Add final acceptance policy that separates source, host model, artifact, native-family and exact-profile evidence. Evidence: [B012 completion](evidence/B012.md); merged, verified and local branch deleted.
 - [x] <a id="step-20.1"></a>**Step 20.1 — [B012.1](01_foundation_and_contracts.md#b012.1)**: Bounded receipt and integration closeout after the evidence-scope timebox overrun. Evidence: [B012.1 completion](evidence/B012.1.md); merged, verified and local branch deleted.
 - [ ] <a id="step-21"></a>**Step 21 — [B013](01_foundation_and_contracts.md#b013)**: Expose CTest labels per increment and scripts/prove.py --case-set/--shard for bounded reruns Evidence: pending.
 - [ ] <a id="step-22"></a>**Step 22 — [B014](01_foundation_and_contracts.md#b014)**: Create one runnable placeholder-free example module and a command expectation file Evidence: pending.
