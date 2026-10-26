@@ -76,3 +76,7 @@ Use `/Library/Developer/CommandLineTools/usr/bin/clang-format` (Apple 21.0.0 (cl
 ## macOS clang-tidy pin
 
 Use `/opt/homebrew/Cellar/llvm@21/21.1.8_1/bin/clang-tidy` (21.1.8 (Homebrew llvm@21 21.1.8_1)). Source: existing Homebrew core llvm@21 bottle; no installation. Requalify on replacement. [Receipt](../plans/evidence/BT05.md). This is a host-local tool selection.
+
+## macOS uv pin
+
+Use `/opt/homebrew/Cellar/uv/0.13.5/bin/uv` (0.13.5). Source: existing Homebrew core uv bottle; no installation. Requalify on replacement. [Receipt](../plans/evidence/BT06.md). This is a host-local tool selection.
