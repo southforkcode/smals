@@ -9,6 +9,7 @@ import subprocess
 import tempfile
 
 from tools.evidence_policy import assess_case
+from tools.selection import select_cases
 from tools.proof import (
     capture,
     capture_errors,
@@ -251,7 +252,15 @@ def receipt_registration(root, increment, receipt):
         or receipt["targets"] != manifest["targets"]
     ):
         return None, ["receipt manifest/target identity mismatch"]
-    return manifest, []
+    selected, errors = select_cases(
+        manifest,
+        receipt["selection"]["case_set"],
+        receipt["selection"]["shard"],
+        receipt["budget_seconds"],
+    )
+    if errors:
+        return None, errors
+    return {**manifest, "cases": selected}, []
 
 
 def audit_receipt(root, increment, out):
@@ -267,6 +276,8 @@ def audit_receipt(root, increment, out):
         manifest, errors = receipt_registration(root, increment, receipt)
         if not errors:
             errors.extend(timing_errors(receipt["work_timing"]))
+            if not 0 <= receipt["proof_elapsed_seconds"] <= receipt["budget_seconds"]:
+                errors.append("proof runtime exceeds the selected bound")
             errors.extend(dependency_errors(root, manifest, receipt))
             errors.extend(observation_errors(root, out, manifest, receipt))
         return errors
@@ -364,10 +375,16 @@ def audit_link(root, link):
     cases = (
         []
         if failure
-        else [case for case in manifest["cases"] if case["id"] == link["case_id"]]
+        else [
+            case
+            for case in manifest["cases"]
+            if case["id"] == link["case_id"]
+            and case["id"] in {item["id"] for item in receipt["cases"]}
+        ]
     )
     if (
         not cases
+        or link["case_id"] not in {item["id"] for item in receipt["cases"]}
         or link["kind"] != cases[0].get("kind", "positive")
         or not assess_case(cases[0])["available"]
         or link["scope"] != assess_case(cases[0])["scope"]

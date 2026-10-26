@@ -54,3 +54,7 @@ add_custom_target(python-format
   COMMAND "${SMIL_UV}" run --locked python tools/check_python.py --fix
   WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}" VERBATIM)
 add_dependencies(quality python-check)
+
+if(BUILD_TESTING)
+  include(plans/verification/native_cases.cmake)
+endif()
