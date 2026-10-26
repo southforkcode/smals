@@ -2,6 +2,8 @@
 
 Use [PLAN.md](PLAN.md) to execute this work by number: “do step 1”, “do step 2”, and so on. It orders every increment by dependencies and provides the central completion checklist and evidence links. Update it alongside the detailed increment after each completed step.
 
+Record the agent's development-work start/end timestamps and elapsed seconds per attempt in the [work timing log](PLAN.md#work-timing-log) and linked plan evidence, including stopped or failed attempts. These support later plan analysis; they do not measure software runtime or imply active compute time.
+
 Follow the repository [agent development process](../AGENTS.md) for requirements analysis, design, test-first implementation, simplicity review, retesting, documentation, evidence, and completion updates. Every step uses a feature/bug branch and is complete only after merging into `main`, verifying the merged result, and safely deleting the merged local branch; routine human review is not required. Build-host guidance covers macOS first, Linux x64 and ARM64 container execution, and Windows x64 with its unavailable local validation explicitly recorded. Record non-material discoveries as deferred plan work; keep material acceptance obligations in the current step or its prerequisite children.
 
 Implement the [15 effective specifications](../specs/README.md) through small, observable increments. The plan covers all **435 requirement keys**, the checked runtime/toolchain, and all **38 reference CPU/mode profiles**. It contains **1,943 indexed increments**, including individual requirement audits and exact-profile qualification shards. Current completion and evidence are recorded in PLAN.md; step 1 is complete.

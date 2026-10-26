@@ -19,6 +19,16 @@ Every step uses its own feature or bug branch and ends by merging its completed 
 
 Target 10 minutes of active work, with the plan's hard stop at 15 minutes. Include analysis, editing, builds, tests, review, and evidence capture in that budget. If the work does not fit, leave it incomplete and add bounded child increments using the stable numbering rules in `PLAN.md`. Never renumber existing integer steps or hide unfinished work behind a checked box.
 
+## Record development work timing
+
+Measure the agent's work on the plan step, not the runtime or performance of the software being built. Capture a real UTC clock reading before requirements analysis or other work begins, and persist it in the step's plan evidence and the timing log in `plans/PLAN.md` as soon as the work branch is available. Capture the end when the attempt finishes or stops; a successful attempt includes analysis, design, test development, implementation, review, retesting, documentation, merge, post-merge verification, and branch cleanup. Write the final timing record with completion bookkeeping.
+
+Use one record per attempt with step number, increment ID, attempt number, `started_at_utc`, `ended_at_utc`, `elapsed_seconds`, outcome, and evidence link. Use ISO 8601 UTC timestamps ending in `Z` and calculate elapsed seconds from those timestamps. An in-progress attempt has no end or elapsed value yet. Keep the step's original time estimate available for later plan analysis.
+
+Record stopped, blocked, split, and unsuccessful attempts too. On resume, append another attempt instead of replacing the first start or counting a long inactive gap as continuous work. If pauses/waits or active-work duration are measured, record `waiting_seconds` and `active_seconds` separately with their measurement basis. Otherwise use `unknown`; never infer active compute time from elapsed wall time, tool durations, or commit timestamps. Explain material scope additions or interruptions briefly so later comparisons are interpretable.
+
+Keep these timestamps and timing notes in plan documents, with raw clock observations under `temp/` if useful. Do not add software instrumentation, product metrics, timers in source/test code, or timing assertions to fulfill this process rule. For historical steps, backfill only supported observations and label their source and precision honestly; unknown times stay unknown.
+
 ## Branch and merge discipline
 
 - Before each step, inspect the working tree and current branch. Preserve unrelated changes. Start from the current `main` and check out `feature/step-<N>-<short-description>`, or `bug/step-<N>-<short-description>` for a bug fix being handled separately from feature implementation. Use a unique suffix if a branch name already exists. If the step's purpose is to establish a different named feature branch, that branch satisfies this rule.
@@ -87,6 +97,7 @@ A deferred improvement does not prevent completion when it is demonstrably outsi
 Use a short report, scaled to the change:
 
 - **Step/result:** numbered step and increment ID; delivered behavior or explicit incomplete status.
+- **Work timing:** UTC start/end, elapsed duration, and separately measured active/waiting time or `unknown`; identify a stopped/resumed attempt when applicable.
 - **Verification:** commands/cases and observed pass/failure outcomes, with durable evidence links.
 - **Integration:** feature/bug branch, work commits, integration commit on `main`, post-merge verification, and safe local branch cleanup result.
 - **Documentation:** relevant design/architecture and other document updates, or why none were needed.
