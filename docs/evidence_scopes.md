@@ -1,0 +1,7 @@
+# Evidence scope acceptance
+
+Sources: [B012](../plans/01_foundation_and_contracts.md#b012), [evidence rules](../plans/00_delivery_and_evidence.md), [SMIL-010](../specs/0000_smil.md). Every case declares source, host, artifact, native-family or exact-profile scope (default host). Classification derives from actual backend capability, not an editable conformance flag. Host commands can provide static/source, logical host or checked artifact evidence; artifact scope requires independently hashed artifact expectations. None establishes native-family or exact-profile conformance.
+
+No qualified native execution adapter exists at this stage. Native backend requests are explicitly unavailable, host requests for native scope are nonconforming, and synthetic/mock engines are always labeled nonconforming. Supplying an independent-engine label or profile name cannot award qualification. Actual native adapters, authority/image/trace checks and 38-profile qualification remain their planned later work. Source/host/artifact success never implies another boundary or native execution.
+
+The collector records scope/classification/native_conforming=false and refuses unavailable/nonconforming cases. The auditor recomputes classification and rejects altered claims; requirement links must match a supported case's actual declared scope. Requirements keep their independently read minimum scopes. A case's positive/negative role remains explicit; no scope or role is inferred from process exit alone. Existing host manifests retain their prior behavior.

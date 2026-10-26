@@ -12,3 +12,4 @@
 - [Receipt audit and requirement closure](proof_audit.md)
 - [Requirement obligation inventory](requirement_inventory.md)
 - [Guarded runtime fixtures](guarded_fixtures.md)
+- [Evidence scope acceptance](evidence_scopes.md)
