@@ -9,9 +9,9 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | State | Count |
 | --- | --- |
 | Completed with verified evidence | 8 |
-| In progress | 0 |
+| In progress | 1 |
 | Blocked or split | 0 |
-| Pending | 1,935 |
+| Pending | 1,934 |
 | Total indexed increments | 1,943 |
 
 **Next step: [9 — BT08](#step-9).** Step 8 is complete with [integration and cleanup evidence](evidence/BT07.md). This file records implementation progress, not the completion of writing the plan.
@@ -22,6 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 9 | BT08 | 1 | 2026-10-26T10:00:03Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/BT08.md) |
 | 8 | BT07 | 1 | 2026-10-26T09:59:31Z | 2026-10-26T10:00:02Z | 31 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/BT07.md) |
 | 7 | BT06 | 1 | 2026-10-26T09:59:15Z | 2026-10-26T09:59:31Z | 16 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/BT06.md) |
 | 6 | BT05 | 1 | 2026-10-26T09:58:58Z | 2026-10-26T09:59:15Z | 17 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/BT05.md) |

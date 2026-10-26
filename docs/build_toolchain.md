@@ -84,3 +84,7 @@ Use `/opt/homebrew/Cellar/uv/0.13.5/bin/uv` (0.13.5). Source: existing Homebrew 
 ## macOS Black pin
 
 Use `/opt/homebrew/Cellar/black/26.10.1/libexec/bin/black` (26.10.1). Source: Homebrew core black bottle, provisioned with HOMEBREW_NO_AUTO_UPDATE=1 brew install black (exit 0). Requalify on replacement. [Receipt](../plans/evidence/BT07.md). This is a host-local tool selection.
+
+## macOS Pylint pin
+
+Use `/opt/homebrew/Cellar/pylint/4.1.3/libexec/bin/pylint` (4.1.3). Source: Homebrew core pylint bottle, provisioned with HOMEBREW_NO_AUTO_UPDATE=1 brew install pylint (exit 0). Requalify on replacement. [Receipt](../plans/evidence/BT08.md). This is a host-local tool selection.
