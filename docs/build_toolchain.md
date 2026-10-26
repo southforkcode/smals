@@ -72,3 +72,7 @@ BT03 provisions Homebrew `python@3.13` 3.13.18. Use `/opt/homebrew/Cellar/python
 ## macOS clang-format pin
 
 Use `/Library/Developer/CommandLineTools/usr/bin/clang-format` (Apple 21.0.0 (clang-2100.3.34.2)). Source: Apple Command Line Tools, verified Apple signature chain. Requalify on replacement. [Receipt](../plans/evidence/BT04.md). This is a host-local tool selection.
+
+## macOS clang-tidy pin
+
+Use `/opt/homebrew/Cellar/llvm@21/21.1.8_1/bin/clang-tidy` (21.1.8 (Homebrew llvm@21 21.1.8_1)). Source: existing Homebrew core llvm@21 bottle; no installation. Requalify on replacement. [Receipt](../plans/evidence/BT05.md). This is a host-local tool selection.
