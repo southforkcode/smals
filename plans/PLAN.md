@@ -31,6 +31,8 @@ Latest review: [retrospective and forward corrections](evidence/process-timing-r
 
 Review timing after every attempt in its existing receipt. Next periodic timing/process review and full checkpoint: **primary step 30**; review sooner after three consecutive >10-minute totals or a material split. Count retries, children and scheduled checkpoints with their primary step; separately requested process maintenance has its own timing record. Active/waiting breakdowns are unknown where unmeasured. See the linked review for specific corrections to the next ready increments and measurement limitations.
 
+Process-review maintenance: `2026-10-26T13:57:43Z`–`2026-10-26T14:02:06Z`, 263 elapsed seconds; active/waiting unknown. [Review and integration](evidence/process-timing-review.md#integration-and-work-timing).
+
 ## Work timing log
 
 This records the agent's development work on a step, not software runtime. Add an attempt when work starts and finish its record when the attempt completes or stops, including unsuccessful, blocked, and split work. Keep earlier attempts when resuming. Successful work includes integration and branch cleanup. Empty end/elapsed fields mean work is still in progress. Active/waiting time is `unknown` unless independently measured; observed elapsed time is not a measure of compute time. Full timing context belongs in the linked plan evidence.
