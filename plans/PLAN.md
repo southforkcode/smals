@@ -9,9 +9,9 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | State | Count |
 | --- | --- |
 | Completed with verified evidence | 3 |
-| In progress | 0 |
+| In progress | 1 |
 | Blocked or split | 0 |
-| Pending | 1,940 |
+| Pending | 1,939 |
 | Total indexed increments | 1,943 |
 
 **Next step: [4 — BT03](#step-4).** Step 3 is complete with [verified CMake qualification, integration and cleanup evidence](evidence/BT02.md). This file records implementation progress, not the completion of writing the plan.
@@ -22,6 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 4 | BT03 | 1 | 2026-10-26T09:55:57Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/BT03.md) |
 | 3 | BT02 | 1 | 2026-10-26T09:51:17Z | 2026-10-26T09:54:54Z | 217 | 10 active minutes | unknown / unknown | Completed; observed UTC clock bounds | [BT02 evidence](evidence/BT02.md#development-work-timing) |
 | 2 | BT01 | 1 | 2026-10-26T09:46:44Z | 2026-10-26T09:50:49Z | 245 | 10 active minutes | unknown / unknown | Completed; observed UTC clock bounds | [BT01 evidence](evidence/BT01.md#development-work-timing) |
 | 1 | B001 | 1 | 2026-10-26T09:25:04Z | 2026-10-26T09:40:12Z | 908 | 10 active minutes | unknown / unknown | Completed; retrospectively recorded observed window, not exact full effort | [Timing and limitations](evidence/B001.md#development-work-timing) |
