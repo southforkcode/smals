@@ -88,3 +88,7 @@ Use `/opt/homebrew/Cellar/black/26.10.1/libexec/bin/black` (26.10.1). Source: Ho
 ## macOS Pylint pin
 
 Use `/opt/homebrew/Cellar/pylint/4.1.3/libexec/bin/pylint` (4.1.3). Source: Homebrew core pylint bottle, provisioned with HOMEBREW_NO_AUTO_UPDATE=1 brew install pylint (exit 0). Requalify on replacement. [Receipt](../plans/evidence/BT08.md). This is a host-local tool selection.
+
+## Periodic full checkpoint
+
+Use `bash scripts/checkpoint.sh` on an already configured host build. Set SMIL_BUILD_DIR and qualified SMIL_CMAKE/SMIL_CTEST/SMIL_UV paths as needed. The script builds with acceptance gates, runs native CTest cases and each Python suite once via discovery, and audits the requirement inventory. CTest tool groups are excluded only because Python discovery runs all of them plus the remaining tool tests; this avoids duplicate full-suite execution. Use targeted CTest labels/proof case sets between the every-tenth-primary-step checkpoints. Windows recipe: run the four equivalent commands from PowerShell with the configured build directory and qualified tools; no Windows result is claimed here.

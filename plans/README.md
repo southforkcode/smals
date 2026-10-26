@@ -8,7 +8,7 @@ Follow the repository [agent development process](../AGENTS.md) for requirements
 
 Implement the [15 effective specifications](../specs/README.md) through small, observable increments. The plan covers all **435 requirement keys**, the checked runtime/toolchain, and all **38 reference CPU/mode profiles**. It contains **1,946 indexed increments** (including the B008.1, B009.1 and B012.1 acceptance children), including individual requirement audits and exact-profile qualification shards. Current completion and evidence are recorded in PLAN.md.
 
-Each increment targets **10 minutes of active agent work**, with a **15-minute hard stop** and evidence-driven subdivision when the estimate is wrong. Every row has dependencies, a narrow deliverable, a runnable demonstration/pass condition, and requirement links. The size/evidence policy is in [00](00_delivery_and_evidence.md); repeated work is explicitly expanded rather than hidden in a large “implement backend” task.
+Execution now targets a **rolling ten-increment average below five minutes elapsed**, with targeted checks and a full safety checkpoint every tenth primary step. Original row estimates remain available for comparison. Stop scope growth early and split distinct material work; record verified closeout overruns without creating paperwork-only children. Every row has dependencies, a narrow deliverable, a runnable demonstration/pass condition, and requirement links. The size/evidence policy is in [00](00_delivery_and_evidence.md); repeated work is explicitly expanded rather than hidden in a large “implement backend” task.
 
 ## Documents
 
