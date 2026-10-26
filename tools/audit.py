@@ -227,6 +227,27 @@ def case_observation_errors(root, out, manifest, receipt):
     return errors
 
 
+def receipt_registration(root, increment, receipt):
+    """Validate registration identity once before auditing dependent observations."""
+    LOGGER.debug("Entering receipt_registration")
+    manifest_path = root / "plans/verification/increments" / f"{increment}.json"
+    manifest, error = read_json(manifest_path)
+    if error:
+        return None, [error]
+    errors = manifest_errors(manifest, increment)
+    if errors:
+        return None, errors
+    if (
+        receipt["schema"] != "smals.proof.v1"
+        or receipt["increment"] != increment
+        or receipt["manifest_path"] != str(manifest_path.relative_to(root))
+        or receipt["manifest_sha256"] != digest(manifest_path)
+        or receipt["targets"] != manifest["targets"]
+    ):
+        return None, ["receipt manifest/target identity mismatch"]
+    return manifest, []
+
+
 def audit_receipt(root, increment, out):
     """Return diagnostics; malformed external metadata cannot become a pass."""
     LOGGER.debug("Entering audit_receipt: %s", increment)
@@ -237,24 +258,11 @@ def audit_receipt(root, increment, out):
     if error:
         return [error]
     try:
-        manifest_path = root / "plans/verification/increments" / f"{increment}.json"
-        manifest, error = read_json(manifest_path)
-        if error:
-            return [error]
-        errors = manifest_errors(manifest, increment)
-        if errors:
-            return errors
-        if (
-            receipt["schema"] != "smals.proof.v1"
-            or receipt["increment"] != increment
-            or receipt["manifest_path"] != str(manifest_path.relative_to(root))
-            or receipt["manifest_sha256"] != digest(manifest_path)
-            or receipt["targets"] != manifest["targets"]
-        ):
-            return ["receipt manifest/target identity mismatch"]
-        errors.extend(timing_errors(receipt["work_timing"]))
-        errors.extend(dependency_errors(root, manifest, receipt))
-        errors.extend(observation_errors(root, out, manifest, receipt))
+        manifest, errors = receipt_registration(root, increment, receipt)
+        if not errors:
+            errors.extend(timing_errors(receipt["work_timing"]))
+            errors.extend(dependency_errors(root, manifest, receipt))
+            errors.extend(observation_errors(root, out, manifest, receipt))
         return errors
     except (OSError, ValueError, TypeError, KeyError, AttributeError) as failure:
         LOGGER.error("Malformed receipt metadata: %s", failure)
