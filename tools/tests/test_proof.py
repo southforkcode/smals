@@ -205,6 +205,7 @@ class ProofTests(unittest.TestCase):
             {"expected_exit": "0"},
             {"backend": "unknown"},
             {"profile": 17},
+            {"case_set": 17},
             {"stdout_contains": [""]},
             {"artifacts": [{}]},
             {"stdout_contains": [], "artifacts": []},

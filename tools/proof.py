@@ -1,6 +1,6 @@
 """Collect bounded command evidence from explicit increment manifests."""
 
-from dataclasses import dataclass, replace
+from dataclasses import dataclass, field, replace
 import hashlib
 import json
 import logging
@@ -11,6 +11,7 @@ import sys
 import time
 
 from tools.evidence_policy import assess_case
+from tools.selection import ProofSelection, select_cases
 
 LOGGER = logging.getLogger(__name__)
 
@@ -25,6 +26,7 @@ class ProofRequest:
     cmake: str
     seed: int = 0
     work_timing: Path | None = None
+    selection: ProofSelection = field(default_factory=ProofSelection)
 
 
 def digest(path: Path) -> str:
@@ -96,6 +98,7 @@ def case_errors(case):
         "engine_kind",
         "profile",
         "family",
+        "case_set",
     }
     if (
         not isinstance(case, dict)
@@ -121,6 +124,11 @@ def case_errors(case):
         or isinstance(case["expected_exit"], bool)
     ):
         return ["case status/timeout must be bounded"]
+    if "case_set" in case and (
+        not isinstance(case["case_set"], str)
+        or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", case["case_set"])
+    ):
+        return ["case_set must be a safe nonempty name"]
     return expectation_errors(case)
 
 
@@ -316,6 +324,12 @@ def input_metadata(request, manifest, receipt):
     return []
 
 
+def remaining_timeout(request, limit):
+    """Limit every child process to the proof's remaining execution budget."""
+    LOGGER.debug("Entering remaining_timeout")
+    return max(0.001, min(limit, request.selection.deadline - time.monotonic()))
+
+
 def git_metadata(request, receipt):
     """Capture committed revision/tree identity separately from input hashes."""
     LOGGER.debug("Entering git_metadata")
@@ -324,7 +338,7 @@ def git_metadata(request, receipt):
         ("revision", ["git", "rev-parse", "HEAD"]),
         ("tree", ["git", "rev-parse", "HEAD^{tree}"]),
     ):
-        record = capture(root, out, name, argv, 10)
+        record = capture(root, out, name, argv, remaining_timeout(request, 10))
         receipt["commands"].append(record)
         if record["exit_code"] != 0:
             return [f"cannot identify git {name}"]
@@ -359,7 +373,13 @@ def tool_metadata(request, manifest, receipt):
         path = Path(executable).resolve() if executable else Path("/unavailable")
         if not path.is_file():
             return [f"tool unavailable: {name}"]
-        record = capture(root, out, f"tool-{name}", [str(path), "--version"], 10)
+        record = capture(
+            root,
+            out,
+            f"tool-{name}",
+            [str(path), "--version"],
+            remaining_timeout(request, 10),
+        )
         receipt["commands"].append(record)
         if record["exit_code"] != 0:
             return [f"tool version failed: {name}"]
@@ -378,6 +398,8 @@ def run_cases(request, manifest, receipt):
     root, out, cmake, seed = request.root, request.out, request.cmake, request.seed
     build = (root / manifest["build_dir"]).resolve()
     errors = []
+    if time.monotonic() >= request.selection.deadline:
+        return ["proof execution budget exhausted before build"]
     record = capture(
         root,
         out,
@@ -389,12 +411,14 @@ def run_cases(request, manifest, receipt):
             "--target",
             *manifest["targets"],
         ],
-        120,
+        remaining_timeout(request, 120),
     )
     receipt["commands"].append(record)
     if record["timed_out"] or record["exit_code"] != 0:
         return ["declared build target failed or timed out"]
     for index, case in enumerate(manifest["cases"]):
+        if time.monotonic() >= request.selection.deadline:
+            return [*errors, "proof execution budget exhausted before remaining cases"]
         classification = assess_case(case)
         if not classification["available"]:
             receipt["cases"].append(
@@ -409,7 +433,7 @@ def run_cases(request, manifest, receipt):
             out,
             f"case-{index}",
             expand_argv(case, root, build, seed),
-            case["timeout_seconds"],
+            remaining_timeout(request, case["timeout_seconds"]),
         )
         observed_errors, artifacts = evaluate_case(root, out, case, record)
         receipt["cases"].append(
@@ -425,22 +449,44 @@ def run_cases(request, manifest, receipt):
     return errors
 
 
-def collect(request, receipt):
+def proof_registration(request, receipt):
     """Collect a closed registration through explicit boundary checks."""
-    LOGGER.debug("Entering collect: %s", request.increment)
+    LOGGER.debug("Entering proof_registration: %s", request.increment)
     path = request.root / "plans/verification/increments" / f"{request.increment}.json"
     manifest, error = read_json(path)
     if error:
-        return [error]
+        return None, [error]
     errors = manifest_errors(manifest, request.increment)
     if errors:
-        return errors
+        return None, errors
+    selected, errors = select_cases(
+        manifest,
+        request.selection.case_set,
+        request.selection.shard,
+        request.selection.budget_seconds,
+    )
+    if errors:
+        return None, errors
+    manifest = {**manifest, "cases": selected}
+    receipt["selection"] = {
+        "case_set": request.selection.case_set,
+        "shard": request.selection.shard,
+    }
     receipt.update(
         manifest_path=str(path.relative_to(request.root)),
         manifest_sha256=digest(path),
         targets=manifest["targets"],
         seed=request.seed,
     )
+    return manifest, []
+
+
+def collect(request, receipt):
+    """Collect metadata and execution only after registration is valid."""
+    LOGGER.debug("Entering collect")
+    manifest, errors = proof_registration(request, receipt)
+    if errors:
+        return errors
     errors = input_metadata(request, manifest, receipt)
     if errors:
         return errors
@@ -456,7 +502,15 @@ def collect(request, receipt):
 def run_proof(request: ProofRequest):
     """Write a failed or passed receipt; never reuse a nonempty output directory."""
     LOGGER.debug("Entering run_proof: %s", request.increment)
-    request = replace(request, root=request.root.resolve(), out=request.out.resolve())
+    started = time.monotonic()
+    request = replace(
+        request,
+        root=request.root.resolve(),
+        out=request.out.resolve(),
+        selection=replace(
+            request.selection, deadline=started + request.selection.budget_seconds
+        ),
+    )
     out, increment = request.out, request.increment
     receipt = {
         "schema": "smals.proof.v1",
@@ -466,6 +520,7 @@ def run_proof(request: ProofRequest):
         "commands": [],
         "cases": [],
         "work_timing": None,
+        "budget_seconds": request.selection.budget_seconds,
     }
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", increment):
         receipt["errors"] = ["invalid increment identifier"]
@@ -479,6 +534,9 @@ def run_proof(request: ProofRequest):
         for record in [*receipt["commands"], *receipt["cases"]]:
             if not record.get("unavailable"):
                 receipt["errors"].extend(capture_errors(out, record))
+        receipt["proof_elapsed_seconds"] = time.monotonic() - started
+        if receipt["proof_elapsed_seconds"] > request.selection.budget_seconds:
+            receipt["errors"].append("proof execution exceeded its total budget")
         receipt["passed"] = not receipt["errors"]
         (out / "receipt.json").write_text(
             json.dumps(receipt, indent=2) + "\n", encoding="utf-8"

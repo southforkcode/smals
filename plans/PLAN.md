@@ -9,9 +9,9 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | State | Count |
 | --- | --- |
 | Completed with verified evidence | 23 |
-| In progress | 0 |
+| In progress | 1 |
 | Blocked or split | 0 |
-| Pending | 1,923 |
+| Pending | 1,922 |
 | Total indexed increments | 1,946 |
 
 **Next step: [21 — B013](#step-21).** Step 20 is complete with [integration and cleanup evidence](evidence/B012.md). This file records implementation progress, not the completion of writing the plan.
@@ -22,6 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 21 | B013 | 2 | 2026-10-26T12:30:17Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/B013.md) |
 | 20 | B012 | 2 | 2026-10-26T12:26:48Z | 2026-10-26T12:30:17Z | 209 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B012.md) |
 | 20.1 | B012.1 | 1 | 2026-10-26T12:20:44Z | 2026-10-26T12:26:48Z | 364 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B012.1.md) |
 | 21 | B013 | 1 | 2026-10-26T12:20:11Z | 2026-10-26T12:20:44Z | 33 | 10 active minutes | unknown / unknown | Stopped: prerequisite timing closeout | [Evidence](evidence/B013.md) |

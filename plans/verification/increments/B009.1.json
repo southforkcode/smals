@@ -32,7 +32,7 @@
         "unittest",
         "tools.tests.test_proof"
       ],
-      "timeout_seconds": 120,
+      "timeout_seconds": 60,
       "expected_exit": 0,
       "stderr_contains": [
         "OK"
@@ -46,7 +46,7 @@
         "unittest",
         "tools.tests.test_audit"
       ],
-      "timeout_seconds": 120,
+      "timeout_seconds": 60,
       "expected_exit": 0,
       "stderr_contains": [
         "OK"
