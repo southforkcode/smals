@@ -1,12 +1,14 @@
 #include "support/diagnostic.hpp"
+#include "support/logging.hpp"
 
 #include <array>
 #include <iostream>
+#include <sstream>
 #include <utility>
 
 namespace smil {
 std::string_view phase_name(Phase phase) {
-  std::clog << "debug: entering phase_name\n";
+  log_entry("phase_name", std::clog);
   static constexpr std::array<std::string_view, 6> names{
       "command-line", "parsing", "verification",
       "binding",      "linking", "execution"};
@@ -28,17 +30,19 @@ constexpr std::array<Stage, 5> stages{
      {"run", Command::run, Phase::execution}}};
 Diagnostic emit(Diagnostic error, std::ostream &log) {
   const auto phase = phase_name(error.phase);
-  log << "error[" << error.code << "] " << phase << ' ' << error.span.source
-      << ':' << error.span.line << ':' << error.span.column << " ["
-      << error.span.byte_begin << ',' << error.span.byte_end
-      << "): " << error.reason << '\n';
+  std::ostringstream message;
+  message << "error[" << error.code << "] " << phase << ' ' << error.span.source
+          << ':' << error.span.line << ':' << error.span.column << " ["
+          << error.span.byte_begin << ',' << error.span.byte_end
+          << "): " << error.reason;
+  log_error("diagnostic", message.str(), log);
   return error;
 }
 } // namespace
 
 Result<Command> parse_command(std::span<const std::string_view> args,
                               std::ostream &log) {
-  log << "debug: entering parse_command\n";
+  log_entry("parse_command", log);
   if (args.size() == 1 && args[0] == "--version") {
     return Command::version;
   }
@@ -59,7 +63,7 @@ Result<Command> parse_command(std::span<const std::string_view> args,
 
 Result<void> report_unavailable(Command command, std::string_view input,
                                 std::ostream &log) {
-  log << "debug: entering report_unavailable\n";
+  log_entry("report_unavailable", log);
   for (const auto &stage : stages) {
     if (stage.command == command) {
       return std::unexpected(

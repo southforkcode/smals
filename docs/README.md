@@ -14,3 +14,4 @@
 - [Guarded runtime fixtures](guarded_fixtures.md)
 - [Evidence scope acceptance](evidence_scopes.md)
 - [Bounded proof selections](proof_shards.md)
+- [Structured logging and branch coverage](structured_logging.md)
