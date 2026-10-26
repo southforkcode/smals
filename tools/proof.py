@@ -10,6 +10,8 @@ import subprocess
 import sys
 import time
 
+from tools.evidence_policy import assess_case
+
 LOGGER = logging.getLogger(__name__)
 
 
@@ -90,6 +92,10 @@ def case_errors(case):
         "artifacts",
         "backend",
         "kind",
+        "scope",
+        "engine_kind",
+        "profile",
+        "family",
     }
     if (
         not isinstance(case, dict)
@@ -121,7 +127,7 @@ def case_errors(case):
 def expectation_errors(case):
     """Require independent output expectations and a declared backend."""
     LOGGER.debug("Entering expectation_errors")
-    if case.get("backend", "host") not in ("host", "unavailable") or case.get(
+    if case.get("backend", "host") not in ("host", "native", "unavailable") or case.get(
         "kind", "positive"
     ) not in ("positive", "negative", "boundary"):
         return ["unavailable backend: no adapter is registered"]
@@ -146,7 +152,18 @@ def expectation_errors(case):
         and not artifacts
     ):
         return ["each case needs an independent output or artifact expectation"]
-    return []
+    if any(
+        not isinstance(case[key], str) or not case[key]
+        for key in ("profile", "family")
+        if key in case
+    ):
+        return ["profile/family metadata must be nonempty strings"]
+    classification = assess_case(case)
+    return (
+        [classification["reason"]]
+        if classification["classification"] == "invalid"
+        else []
+    )
 
 
 def execute(root, argv, timeout):
@@ -378,9 +395,14 @@ def run_cases(request, manifest, receipt):
     if record["timed_out"] or record["exit_code"] != 0:
         return ["declared build target failed or timed out"]
     for index, case in enumerate(manifest["cases"]):
-        if case.get("backend", "host") == "unavailable":
-            receipt["cases"].append({"id": case["id"], "unavailable": True})
-            errors.append(f"backend unavailable for {case['id']}")
+        classification = assess_case(case)
+        if not classification["available"]:
+            receipt["cases"].append(
+                {"id": case["id"], "unavailable": True, **classification}
+            )
+            errors.append(
+                f"unavailable/nonconforming {case['id']}: {classification['reason']}"
+            )
             continue
         record = capture(
             root,
@@ -396,6 +418,7 @@ def run_cases(request, manifest, receipt):
                 "id": case["id"],
                 "artifacts": artifacts,
                 "errors": observed_errors,
+                **classification,
             }
         )
         errors.extend(f"{case['id']}: {item}" for item in observed_errors)

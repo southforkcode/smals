@@ -8,6 +8,7 @@ import re
 import subprocess
 import tempfile
 
+from tools.evidence_policy import assess_case
 from tools.proof import (
     capture,
     capture_errors,
@@ -212,9 +213,14 @@ def case_observation_errors(root, out, manifest, receipt):
     ]:
         return [*errors, "missing, extra or reordered registered cases"]
     for case, record in zip(manifest["cases"], receipt["cases"]):
-        if case.get("backend", "host") == "unavailable" or record.get("unavailable"):
+        classification = assess_case(case)
+        if not classification["available"] or record.get("unavailable"):
             errors.append("unavailable backend is not passing evidence")
             continue
+        if any(record.get(key) != value for key, value in classification.items()):
+            errors.append(
+                "evidence scope/classification differs from actual capability"
+            )
         errors.extend(command_errors(out, record))
         if record["argv"] != expand_argv(case, root, build, receipt["seed"]) or record[
             "cwd"
@@ -363,7 +369,8 @@ def audit_link(root, link):
     if (
         not cases
         or link["kind"] != cases[0].get("kind", "positive")
-        or link["scope"] != "host"
+        or not assess_case(cases[0])["available"]
+        or link["scope"] != assess_case(cases[0])["scope"]
     ):
         errors.append(
             "missing case, mismatched case kind or unsupported evidence scope"
