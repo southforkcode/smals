@@ -9,8 +9,8 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | State | Count |
 | --- | --- |
 | Completed with verified evidence | 16 |
-| In progress | 0 |
-| Blocked or split | 1 |
+| In progress | 1 |
+| Blocked or split | 0 |
 | Pending | 1,927 |
 | Total indexed increments | 1,944 |
 
@@ -22,6 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 16 | B008 | 2 | 2026-10-26T11:00:54Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/B008.md) |
 | 16.1 | B008.1 | 1 | 2026-10-26T10:53:34Z | 2026-10-26T11:00:54Z | 440 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B008.1.md) |
 | 16 | B008 | 1 | 2026-10-26T10:40:11Z | 2026-10-26T10:52:54Z | 763 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B008.md) |
 | 15 | B007 | 1 | 2026-10-26T10:36:02Z | 2026-10-26T10:40:11Z | 249 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B007.md) |
@@ -123,7 +124,7 @@ The sections below follow useful advancement: build and evidence, source verific
 - [x] <a id="step-13"></a>**Step 13 — [B005](01_foundation_and_contracts.md#b005)**: Add Result/Diagnostic with phase, code, source span and reason Evidence: [B005 completion](evidence/B005.md); merged, verified and local branch deleted.
 - [x] <a id="step-14"></a>**Step 14 — [B006](01_foundation_and_contracts.md#b006)**: Add test fixture registry and bounded case runner with deterministic seeds, positive and negative expected outcomes. Evidence: [B006 completion](evidence/B006.md); merged, verified and local branch deleted.
 - [x] <a id="step-15"></a>**Step 15 — [B007](01_foundation_and_contracts.md#b007)**: Add structured observable trace records for value, memory, device, fault, lifecycle and resource events Evidence: [B007 completion](evidence/B007.md); merged, verified and local branch deleted.
-- [ ] <a id="step-16"></a>**Step 16 — [B008](01_foundation_and_contracts.md#b008)**: Reopened/split for B008.1; original implementation: scripts/prove.py --increment ID --out DIR to build changed targets, run registered cases and save exit codes/timing/raw logs/artifact hashes. Evidence: [B008 completion](evidence/B008.md); merged, verified and local branch deleted.
+- [ ] <a id="step-16"></a>**Step 16 — [B008](01_foundation_and_contracts.md#b008)**: Complete after B008.1; implementation: scripts/prove.py --increment ID --out DIR to build changed targets, run registered cases and save exit codes/timing/raw logs/artifact hashes. Evidence: [B008 completion](evidence/B008.md); merged, verified and local branch deleted.
 - [x] <a id="step-16.1"></a>**Step 16.1 — [B008.1](01_foundation_and_contracts.md#b008.1)**: Revalidate every captured build/tool/case log and command record before passing a receipt. Evidence: [B008.1 completion](evidence/B008.1.md); merged, verified and local branch deleted.
 - [ ] <a id="step-17"></a>**Step 17 — [B009](01_foundation_and_contracts.md#b009)**: Add scripts/audit_evidence.py --increment ID and --requirement KEY --closure Evidence: pending.
 - [ ] <a id="step-18"></a>**Step 18 — [B010](01_foundation_and_contracts.md#b010)**: Seed plans/verification/requirements/<KEY>.json with all 435 exact requirement texts/digests, clause obligations and initially missing evidence links. Evidence: pending.
