@@ -1,0 +1,38 @@
+{
+  "schema": "smals.increment.v1",
+  "increment": "B008",
+  "targets": [
+    "quality",
+    "smil_tests"
+  ],
+  "build_dir": "build/smil",
+  "inputs": [
+    "CMakeLists.txt",
+    "src/**/*.cpp",
+    "src/**/*.hpp",
+    "test/**/*.cpp",
+    "test/**/*.hpp",
+    "tools/proof.py",
+    "tools/tests/test_proof.py",
+    "scripts/prove.py",
+    "tools/check_python.py",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "cases": [
+    {
+      "id": "proof.behavior",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "tools.tests.test_proof"
+      ],
+      "timeout_seconds": 120,
+      "expected_exit": 0,
+      "stderr_contains": [
+        "OK"
+      ]
+    }
+  ]
+}
