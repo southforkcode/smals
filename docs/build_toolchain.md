@@ -80,3 +80,7 @@ Use `/opt/homebrew/Cellar/llvm@21/21.1.8_1/bin/clang-tidy` (21.1.8 (Homebrew llv
 ## macOS uv pin
 
 Use `/opt/homebrew/Cellar/uv/0.13.5/bin/uv` (0.13.5). Source: existing Homebrew core uv bottle; no installation. Requalify on replacement. [Receipt](../plans/evidence/BT06.md). This is a host-local tool selection.
+
+## macOS Black pin
+
+Use `/opt/homebrew/Cellar/black/26.10.1/libexec/bin/black` (26.10.1). Source: Homebrew core black bottle, provisioned with HOMEBREW_NO_AUTO_UPDATE=1 brew install black (exit 0). Requalify on replacement. [Receipt](../plans/evidence/BT07.md). This is a host-local tool selection.
