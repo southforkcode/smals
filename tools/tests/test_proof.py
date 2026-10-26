@@ -226,3 +226,33 @@ class ProofTests(unittest.TestCase):
         self.path.write_text("{invalid", encoding="utf-8")
         request = ProofRequest(self.root, "FIXTURE", self.root / "json", self.cmake)
         self.assertFalse(run_proof(request)["passed"])
+
+    def test_all_command_logs_required(self):
+        """Missing build/tool/record evidence cannot survive a later case."""
+        original = proof.capture
+        for lost in ["build.stdout", "tool-cmake.stderr", "case-0.json"]:
+
+            def lose_evidence(*args, lost_file=lost):
+                record = original(*args)
+                if args[2] == "case-0":
+                    (args[1] / lost_file).unlink()
+                return record
+
+            with self.subTest(lost=lost):
+                with mock.patch("tools.proof.capture", side_effect=lose_evidence):
+                    receipt = self.collect("lost-" + lost)
+                self.assertFalse(receipt["passed"], lost)
+
+    def test_changed_log_hash(self):
+        """Final hash validation detects modified evidence and malformed metadata."""
+        original = proof.capture
+
+        def change_log(*args):
+            record = original(*args)
+            if args[2] == "case-0":
+                (args[1] / "build.stdout").write_text("tampered", encoding="utf-8")
+            return record
+
+        with mock.patch("tools.proof.capture", side_effect=change_log):
+            self.assertFalse(self.collect()["passed"])
+        self.assertTrue(proof.capture_errors(self.root, {"record": {}}))
