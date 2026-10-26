@@ -11,6 +11,7 @@
 #include <string>
 
 bool diagnostic_cases();
+bool trace_cases();
 
 namespace {
 struct Options {
@@ -78,8 +79,12 @@ Observation reject_case(std::uint64_t seed) {
   const std::array<std::string_view, 1> args{input};
   return {smil::parse_command(args, std::clog).has_value(), input};
 }
-constexpr std::array<Case, 3> registry{
-    {{"version", true, version_case},
+Observation traces_case(std::uint64_t) {
+  return {trace_cases(), "observable-records"};
+}
+constexpr std::array<Case, 4> registry{
+    {{"trace.records", true, traces_case},
+     {"version", true, version_case},
      {"diagnostics", true, fields_case},
      {"command.reject", false, reject_case}}};
 } // namespace
