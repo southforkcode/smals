@@ -1,6 +1,6 @@
 # Requirement Traceability Matrix
 
-Source: [specifications](../specs/README.md). Closure method: [delivery/evidence](00_delivery_and_evidence.md). Exact requirement text stays authoritative in specs; this matrix does not restate or weaken it. All requirements start **open**. The listed implementation increments are contributions, not automatic completion credit. The required empirical cases and clause-level evidence live in the planned `test/conformance/requirements/<KEY>.json` manifests.
+Source: [specifications](../specs/README.md). Closure method: [delivery/evidence](00_delivery_and_evidence.md). Exact requirement text stays authoritative in specs; this matrix does not restate or weaken it. All requirements start **open**. The listed implementation increments are contributions, not automatic completion credit. The required empirical cases and clause-level evidence live in the planned `plans/verification/requirements/<KEY>.json` manifests.
 
 | Requirement | Primary implementation increments | Minimum evidence scopes | Closure increment |
 | --- | --- | --- | --- |

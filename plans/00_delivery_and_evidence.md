@@ -32,9 +32,9 @@ Each increment table supplies its prerequisites, bounded change, empirical pass 
 
 ## Increment definition of done
 
-Follow the repository [agent development process](../AGENTS.md): use a separate feature branch per step, or a bug branch for a separately handled bug fix; record the work there; self-review; merge into `main`; and verify the merged result. Human review is needed only for exceptional issues outside the authority of the specifications, plans, standards, and accepted engineering practice. Integration and post-merge checks are part of the increment budget, not unbounded follow-up work.
+Follow the repository [agent development process](../AGENTS.md): use a separate feature branch per step, or a bug branch for a separately handled bug fix; record the work there; self-review; merge into `main`; verify the merged result; and safely delete the merged local branch. Human review is needed only for exceptional issues outside the authority of the specifications, plans, standards, and accepted engineering practice. Integration, post-merge checks, and cleanup are part of the increment budget, not unbounded follow-up work. Apply the agent process's build-host matrix to relevant changes: macOS primary, Linux x64 and ARM64 container execution, and explicitly untested Windows x64 compatibility.
 
-An increment is complete only when its narrow implementation is present, relevant formatter/linter and meaningful branch checks pass, the table's demonstration matches expected values/effects/diagnostics, affected regression shards are green, its feature/bug branch is merged into `main`, the merged result is verified, and its receipt is verifiable. Update both completion checklists only after those conditions hold. A plan document, TODO, named helper, generated schema, successful compilation, process exit0 or screenshot is insufficient evidence of a behavioral requirement by itself.
+An increment is complete only when its narrow implementation is present, relevant formatter/linter and meaningful branch checks pass, the table's demonstration matches expected values/effects/diagnostics, affected regression shards are green, its feature/bug branch is merged into `main`, the merged result is verified, its merged local branch is safely deleted, and its receipt is verifiable. Update both completion checklists only after those conditions hold. A plan document, TODO, named helper, generated schema, successful compilation, process exit0 or screenshot is insufficient evidence of a behavioral requirement by itself.
 
 For code behavior, write the new cases first and observe failure for the intended behavioral reason before implementing the fix. At least one positive and one discriminating negative/boundary case should exercise the new behavior, unless the row documents why one is inapplicable. Tests compare independently expected values/bytes/traces or a justified independent oracle. They do not merely call the same production function twice or snapshot its unchecked output. Retain the initial failing observation and subsequent passing evidence. A targeted wrong-result/guard mutation is useful when validating the harness or when the ordinary test-first failure does not establish the needed discrimination; it is not extra mandatory work for every increment. Documentation-only changes use appropriate validation instead of artificial behavioral tests.
 
@@ -45,11 +45,11 @@ Project branch coverage is checked for the newly changed implementation unit. Ex
 The following commands **do not exist yet**. B002–B013 implement and test them before later tasks depend on them. In the bootstrap rows, record direct configure/build/CTest/formatter command output first, then ingest it through the runner once available. Every subsequent table row implicitly uses:
 
 ```sh
-uv run python scripts/prove.py --increment <ID> --out build/evidence/<ID>/<attempt>
+uv run python scripts/prove.py --increment <ID> --out temp/evidence/<ID>/<attempt>
 uv run python scripts/audit_evidence.py --increment <ID>
 ```
 
-The proof runner resolves `test/conformance/increments/<ID>.json`, builds only declared relevant targets, executes the registered CTest/CLI/oracle/emulator cases, and checks all expected outputs. No shell wildcard or successful empty selection can count as a passing test. A row's future implementation paths are proposals, not links to files that already exist. Sample direct commands are:
+The proof runner resolves `plans/verification/increments/<ID>.json`, builds only declared relevant targets, executes the registered CTest/CLI/oracle/emulator cases, and checks all expected outputs. No shell wildcard or successful empty selection can count as a passing test. A row's future implementation paths are proposals, not links to files that already exist. Sample direct commands are:
 
 ```sh
 cmake -S . -B build/smil
@@ -59,7 +59,7 @@ ctest --test-dir build/smil --output-on-failure -L <increment-ID>
 
 Each receipt records increment/attempt, feature/bug branch, work commits, integration commit on `main`, post-merge verification, base/revision and relevant transitive source hashes, spec and contract digests, tool versions/hashes, exact argv/environment/seed/shard, input fixture IDs/digests, expected and actual values/bytes/diagnostics/effect traces, command exit status, timing, generated artifact hashes, changed-unit coverage and prerequisite receipt references. Native receipts additionally retain exact target/mode, independent engine/ISA provenance, image/segment/map digests, register/SP/canary observations and monitor transaction trace. Failed/blocked/timed-out/skipped cases remain explicitly nonpassing.
 
-Raw logs/images/traces go under ignored build/evidence/. Store compact receipt indexes/obligations and reproducible fixture expectations under test/evidence/ and test/conformance/. Preserve or content-address the raw proof artifacts referenced by a completed receipt; an absent artifact cannot prove completion. Each checksum has a raw artifact; a hand-edited “passed” field is never authoritative.
+Keep durable evidence summaries in plan documents, normally `plans/evidence/<ID>.md`, and process-only obligation/runner mappings under `plans/verification/`. Raw logs/images/traces/inventories go under ignored `temp/evidence/`. Keep domain fixture expectations in `test/`; do not put plan status, step IDs, branch/commit receipts, or evidence statements in source/test code or comments. Summarize actual observations in the durable plan record and reference temporary raw artifacts when useful. A temporary artifact's absence is not proof that a check passed; retain sufficient observations and commands to understand and reproduce the result. A hand-edited “passed” field is never authoritative.
 
 ## Requirement closure is separate from task completion
 

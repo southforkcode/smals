@@ -6,7 +6,7 @@ Source: [specification index](../specs/README.md). Delivery and evidence rules: 
 
 ## Missing authority and exact profile slots
 
-Paths: test/contracts/, versioned normative amendments if needed. Recover originals first. An unresolved/draft contract is a legitimate blocked state, never a completed interoperability claim. CE descriptive helper roles must be matched to actual recovered names rather than treated as new source/runtime contracts.
+Paths: plans/contracts/, versioned normative amendments if needed. Recover originals first. An unresolved/draft contract is a legitimate blocked state, never a completed interoperability claim. CE descriptive helper roles must be matched to actual recovered names rather than treated as new source/runtime contracts.
 
 | Increment / estimate | Prerequisites | Bounded deliverable | Demonstration and pass condition | Requirements advanced |
 | --- | --- | --- | --- | --- |
