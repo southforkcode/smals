@@ -1,0 +1,7 @@
+build/
+temp/
+
+*.pyc
+*.o
+*.local
+*.local.*
