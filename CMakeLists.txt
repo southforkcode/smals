@@ -42,3 +42,12 @@ foreach(mode format-check format-fix lint)
     VERBATIM)
 endforeach()
 add_custom_target(quality ALL DEPENDS format-check lint)
+
+find_program(SMIL_UV NAMES uv REQUIRED)
+add_custom_target(python-check
+  COMMAND "${SMIL_UV}" run --locked python tools/check_python.py
+  WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}" VERBATIM)
+add_custom_target(python-format
+  COMMAND "${SMIL_UV}" run --locked python tools/check_python.py --fix
+  WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}" VERBATIM)
+add_dependencies(quality python-check)
