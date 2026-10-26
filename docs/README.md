@@ -5,3 +5,4 @@
 - [Build foundation](build_foundation.md)
 - [Retired design index](retired/README.md)
 - [Python tool acceptance](python_tools.md)
+- [Diagnostics and command boundary](diagnostics.md)
