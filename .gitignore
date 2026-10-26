@@ -5,3 +5,5 @@ temp/
 *.o
 *.local
 *.local.*
+.venv/
+__pycache__/

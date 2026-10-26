@@ -1,0 +1,7 @@
+# Python tool acceptance
+
+Sources: [standards](../STANDARDS.md), [B004](../plans/01_foundation_and_contracts.md#b004). Python 3.13 is selected by .python-version and requires-python; uv.lock pins Black/Pylint and transitive PyPI tool packages. Python is used only for scripts/tools; C++ core stays under src/.
+
+`uv run --locked python tools/check_python.py` discovers .py files only under scripts/ and tools/ and fails on an empty selection, absent tools or any nonzero Black/Pylint result. It invokes packages through the environment's interpreter, avoiding unrelated global executables. The default CMake quality acceptance depends on this check; `python-format` applies Black separately. CMake locates uv through a configurable portable cache entry. Return statuses are error values; OS process exceptions are translated to explicit diagnostics at the boundary. The checker logs function entry and error reasons through standard logging; shared native logging is separate.
+
+Behavioral tests create temporary script/tool roots and verify formatted valid input, actual Black/Pylint failures and empty input. Fixture text lives in test code strings so deliberately invalid sources do not become normal lint inputs. On Linux, provision uv and a 3.13 interpreter in each architecture separately and record actual runs. Windows recipe: `uv sync --locked --python 3.13`, `uv run --locked python -m unittest discover -s tools/tests`, `uv run --locked python tools/check_python.py`; CMake uses `-DSMIL_UV=<qualified uv.exe>`. Windows is unavailable here.
