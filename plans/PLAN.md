@@ -10,15 +10,15 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | --- | --- |
 | Completed with verified evidence | 25 |
 | In progress | 0 |
-| Blocked or split | 0 |
-| Pending | 1,921 |
-| Total indexed increments | 1,946 |
+| Blocked or split | 1 |
+| Pending | 1,922 |
+| Total indexed increments | 1,948 |
 
-**Next step: [23 — B015](#step-23).** Step 22 is complete with [integration and cleanup evidence](evidence/B014.md). This file records implementation progress, not the completion of writing the plan.
+**Next action: [23.1 — B015.1](#step-23.1), then 23.2 and parent 23 closeout.** Step 22 is complete with [integration and cleanup evidence](evidence/B014.md). This file records implementation progress, not the completion of writing the plan.
 
 ## Safety checkpoint cadence
 
-Full checkpoints are due at primary steps 10, 20, 30, ...; children do not move the cadence. Ordinary increments use targeted affected checks and one post-merge smoke on unchanged implementation inputs. Current target: rolling ten-increment average below five minutes elapsed, including checkpoint time; historical attempts/estimates remain unchanged.
+Full checkpoints are due at primary steps 10, 20, 30, ...; children do not move the cadence. Ordinary increments use targeted affected checks and one post-merge smoke on unchanged implementation inputs. Current target: 5–10 minutes elapsed per step, reviewed over ten primary steps including child/retry/checkpoint costs; historical attempts/estimates remain unchanged.
 
 | Primary milestone | Status / applicable evidence | Next full checkpoint |
 | --- | --- | --- |
@@ -27,7 +27,9 @@ Full checkpoints are due at primary steps 10, 20, 30, ...; children do not move 
 
 ### Timing baseline and target
 
-Recorded primary steps 12–21, including resumed attempts and children, total 9,168 elapsed seconds: **916.8 seconds (15.28 minutes) per primary step**. Active/waiting time is unknown where unmeasured. This known-record baseline excludes later ad-hoc process/checkpoint maintenance whose separate duration is not measured; future cadence checkpoints are timed inside the primary increment. It exceeds the new <300-second target; no improvement is claimed yet. Keep child/resume costs with their parent so splitting cannot improve the denominator artificially. Ad-hoc user-requested process work is recorded separately.
+Latest review: [retrospective and forward corrections](evidence/process-timing-review.md). Completed primary steps **13–22**, including all recorded retries/children, total **10,404 seconds**: mean **17.34 minutes**, median **19.53 minutes**, **7/10 above ten minutes**. The current **5–10 minute** target is not achieved. Steps 4–22 total 12,064 seconds (mean 10.58 minutes); their six fast tool-provisioning steps should not mask the slower implementation work. Historical 12–21 baseline (9,168 seconds / 10 = 15.28 minutes) remains an earlier observation, not the current window.
+
+Review timing after every attempt in its existing receipt. Next periodic timing/process review and full checkpoint: **primary step 30**; review sooner after three consecutive >10-minute totals or a material split. Count retries, children and scheduled checkpoints with their primary step; separately requested process maintenance has its own timing record. Active/waiting breakdowns are unknown where unmeasured. See the linked review for specific corrections to the next ready increments and measurement limitations.
 
 ## Work timing log
 
@@ -35,6 +37,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 23 | B015 | 1 | 2026-10-26T13:39:07Z | 2026-10-26T13:57:43Z | 1116 | 10 active minutes | unknown / unknown | Stopped; material split, implementation incomplete | [Evidence](evidence/B015.md) |
 | 22 | B014 | 2 | 2026-10-26T13:12:19Z | 2026-10-26T13:39:07Z | 1608 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B014.md) |
 | 22 | B014 | 1 | 2026-10-26T12:47:59Z | 2026-10-26T12:52:30Z | 271 | 10 active minutes | unknown / unknown | Stopped for user-requested process update; no implementation | [Evidence](evidence/B014.md) |
 | 21 | B013 | 2 | 2026-10-26T12:30:17Z | 2026-10-26T12:47:59Z | 1062 | 10 active minutes | unknown / unknown | Completed with elapsed overrun; retained under user-authorized efficiency policy | [Evidence](evidence/B013.md) |
@@ -70,7 +73,7 @@ This records the agent's development work on a step, not software runtime. Add a
 ## Executing a numbered step
 
 1. Capture a real UTC work-start time before analyzing the selected step; record it as a new attempt in the work timing log and step evidence once its work branch is available. Resolve the number here, then read its linked increment and the [delivery/evidence rules](00_delivery_and_evidence.md). Verify actual prerequisite completion and evidence before starting implementation. The initial sequence places every declared prerequisite before its consumer, expands every dependency group, and puts the required build tools before their use.
-2. Check out a feature branch from current `main`, or a bug branch for a separately handled bug fix, and record this step's work there. Execute only that increment, targeting the current rolling average below five minutes elapsed, with targeted checks and reserved closeout time; stop new implementation at 15 minutes and record any verified closeout overrun as defined in 00. Historical row estimates remain unchanged. Its full linked pass condition is authoritative; the short description here is a navigation aid. Do not proceed automatically to the next numbered step.
+2. Check out a feature branch from current `main`, or a bug branch for a separately handled bug fix, and record this step's work there. Execute only that increment, targeting 5–10 minutes elapsed per step, with targeted checks and reserved closeout time; stop new implementation at 15 minutes and record any verified closeout overrun as defined in 00. Historical row estimates remain unchanged. Its full linked pass condition is authoritative; the short description here is a navigation aid. Do not proceed automatically to the next numbered step.
 3. Complete the development loop, merge the branch into `main`, verify the merged result, and safely delete the merged local feature/bug branch. Capture the work-end timestamp and calculate elapsed seconds; record them with the attempt's outcome and any independently measured active/waiting time. Then check **both** this file's step and the corresponding detailed increment. Replace this row's “Evidence: pending” with a durable receipt/log link containing the work and integration commit IDs, post-merge evidence, and branch cleanup result. Update the progress counts and next-step pointer in this file and commit the completion bookkeeping. Completion requires the merge, cleanup, linked demonstration, and empirical evidence; an unmerged or unverified change remains open. Routine human review is not a prerequisite. Before the evidence runner exists, retain direct command/output evidence as specified in the bootstrap rules.
 4. If correctness, required evidence or material scope remains incomplete, capture the attempt's stop time/outcome and leave both completion boxes open. Record timing overruns separately; an otherwise verified merged increment is not reopened solely for elapsed time. Add the reason and current status to this row; update the central counts and next-action pointer. Never silently skip a prerequisite or check off a blocked step. Independent work may be requested explicitly by its own step number once its prerequisites are satisfied.
 5. If subdivision is needed, insert stable child steps such as **87.1**, **87.2** immediately below step 87, linked to bounded child increments such as `S007.1`. Keep step 87 open until its original obligations and evidence are satisfied. Report the next child number explicitly. Existing integer step numbers never change; include new children in the progress totals. Apply the same process when new prerequisite work is discovered.
@@ -160,7 +163,9 @@ The sections below follow useful advancement: build and evidence, source verific
 - [x] <a id="step-20.1"></a>**Step 20.1 — [B012.1](01_foundation_and_contracts.md#b012.1)**: Bounded receipt and integration closeout after the evidence-scope timebox overrun. Evidence: [B012.1 completion](evidence/B012.1.md); merged, verified and local branch deleted.
 - [x] <a id="step-21"></a>**Step 21 — [B013](01_foundation_and_contracts.md#b013)**: Expose CTest labels per increment and scripts/prove.py --case-set/--shard for bounded reruns Evidence: [B013 completion](evidence/B013.md); merged, verified and local branch deleted.
 - [x] <a id="step-22"></a>**Step 22 — [B014](01_foundation_and_contracts.md#b014)**: Create one runnable placeholder-free example module and a command expectation file Evidence: [B014 completion](evidence/B014.md); merged, verified and local branch deleted.
-- [ ] <a id="step-23"></a>**Step 23 — [B015](01_foundation_and_contracts.md#b015)**: Add the shared structured entry/debug/error logging API and changed-unit branch-coverage reporting convention required by repository code standards. Evidence: pending.
+- [ ] <a id="step-23"></a>**Step 23 — [B015](01_foundation_and_contracts.md#b015)**: Add the shared structured entry/debug/error logging API and changed-unit branch-coverage reporting convention required by repository code standards. Status: split and incomplete; [attempt evidence](evidence/B015.md). Complete children 23.1 and 23.2 before closing B015.
+- [ ] <a id="step-23.1"></a>**Step 23.1 — [B015.1](01_foundation_and_contracts.md#b015.1)**: Implement shared structured logging and migrate diagnostic/CLI/trace callers; exact JSON, origin-error and debug/release checks. Evidence: pending.
+- [ ] <a id="step-23.2"></a>**Step 23.2 — [B015.2](01_foundation_and_contracts.md#b015.2)**: Add changed-unit coverage instrumentation/reporting and demonstrate incomplete rejection followed by complete branch coverage. Evidence: pending.
 
 ## Steps 24–68: Complete source parsing and semantic verification
 
