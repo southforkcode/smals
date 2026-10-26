@@ -11,10 +11,23 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | Completed with verified evidence | 24 |
 | In progress | 0 |
 | Blocked or split | 0 |
-| Pending | 1,922 |
+| Pending | 1,921 |
 | Total indexed increments | 1,946 |
 
 **Next step: [22 — B014](#step-22).** Step 21 is complete with [integration and cleanup evidence](evidence/B013.md). This file records implementation progress, not the completion of writing the plan.
+
+## Safety checkpoint cadence
+
+Full checkpoints are due at primary steps 10, 20, 30, ...; children do not move the cadence. Ordinary increments use targeted affected checks and one post-merge smoke on unchanged implementation inputs. Current target: rolling ten-increment average below five minutes elapsed, including checkpoint time; historical attempts/estimates remain unchanged.
+
+| Primary milestone | Status / applicable evidence | Next full checkpoint |
+| --- | --- | --- |
+| 10 | Full then-existing native/host checks recorded in [B002](evidence/B002.md) | 20 |
+| 20 | [Current-input full checkpoint](evidence/development-efficiency.md) after step 21: macOS/Linux ARM64/Linux x64 each pass 7 native cases + 50 Python tests; quality and 435-open inventory pass | 30 |
+
+### Timing baseline and target
+
+Recorded primary steps 12–21, including resumed attempts and children, total 9,168 elapsed seconds: **916.8 seconds (15.28 minutes) per primary step**. Active/waiting time is unknown where unmeasured. This baseline exceeds the new <300-second target; no improvement is claimed yet. Keep child/resume costs with their parent so splitting cannot improve the denominator artificially. Ad-hoc user-requested process work is recorded separately.
 
 ## Work timing log
 
@@ -22,9 +35,10 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 21 | B013 | 2 | 2026-10-26T12:30:17Z | 2026-10-26T12:47:59Z | 1062 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B013.md) |
+| 22 | B014 | 1 | 2026-10-26T12:47:59Z | 2026-10-26T12:52:30Z | 271 | 10 active minutes | unknown / unknown | Stopped for user-requested process update; no implementation | [Evidence](evidence/B014.md) |
+| 21 | B013 | 2 | 2026-10-26T12:30:17Z | 2026-10-26T12:47:59Z | 1062 | 10 active minutes | unknown / unknown | Completed with elapsed overrun; retained under user-authorized efficiency policy | [Evidence](evidence/B013.md) |
 | 20 | B012 | 2 | 2026-10-26T12:26:48Z | 2026-10-26T12:30:17Z | 209 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B012.md) |
-| 20.1 | B012.1 | 1 | 2026-10-26T12:20:44Z | 2026-10-26T12:26:48Z | 364 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B012.1.md) |
+| 20.1 | B012.1 | 1 | 2026-10-26T12:20:44Z | 2026-10-26T12:26:48Z | 364 | 5 active minutes | unknown / unknown | Completed | [Evidence](evidence/B012.1.md) |
 | 21 | B013 | 1 | 2026-10-26T12:20:11Z | 2026-10-26T12:20:44Z | 33 | 10 active minutes | unknown / unknown | Stopped: prerequisite timing closeout | [Evidence](evidence/B013.md) |
 | 20 | B012 | 1 | 2026-10-26T12:01:22Z | 2026-10-26T12:20:10Z | 1128 | 10 active minutes | unknown / unknown | Over budget; verified implementation retained, closeout reopened | [Evidence](evidence/B012.md) |
 | 19 | B011 | 2 | 2026-10-26T11:51:36Z | 2026-10-26T12:01:22Z | 586 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B011.md) |
@@ -55,9 +69,9 @@ This records the agent's development work on a step, not software runtime. Add a
 ## Executing a numbered step
 
 1. Capture a real UTC work-start time before analyzing the selected step; record it as a new attempt in the work timing log and step evidence once its work branch is available. Resolve the number here, then read its linked increment and the [delivery/evidence rules](00_delivery_and_evidence.md). Verify actual prerequisite completion and evidence before starting implementation. The initial sequence places every declared prerequisite before its consumer, expands every dependency group, and puts the required build tools before their use.
-2. Check out a feature branch from current `main`, or a bug branch for a separately handled bug fix, and record this step's work there. Execute only that increment, targeting 10 minutes of active work with a hard stop at 15 minutes, including integration and verification. Its full linked pass condition is authoritative; the short description here is a navigation aid. Do not proceed automatically to the next numbered step.
+2. Check out a feature branch from current `main`, or a bug branch for a separately handled bug fix, and record this step's work there. Execute only that increment, targeting the current rolling average below five minutes elapsed, with targeted checks and reserved closeout time; stop new implementation at 15 minutes and record any verified closeout overrun as defined in 00. Historical row estimates remain unchanged. Its full linked pass condition is authoritative; the short description here is a navigation aid. Do not proceed automatically to the next numbered step.
 3. Complete the development loop, merge the branch into `main`, verify the merged result, and safely delete the merged local feature/bug branch. Capture the work-end timestamp and calculate elapsed seconds; record them with the attempt's outcome and any independently measured active/waiting time. Then check **both** this file's step and the corresponding detailed increment. Replace this row's “Evidence: pending” with a durable receipt/log link containing the work and integration commit IDs, post-merge evidence, and branch cleanup result. Update the progress counts and next-step pointer in this file and commit the completion bookkeeping. Completion requires the merge, cleanup, linked demonstration, and empirical evidence; an unmerged or unverified change remains open. Routine human review is not a prerequisite. Before the evidence runner exists, retain direct command/output evidence as specified in the bootstrap rules.
-4. If blocked, failing, or over budget, capture the attempt's stop time and elapsed seconds with that outcome, and leave both completion boxes open. Add the reason and current status to this row; update the central counts and next-action pointer. Never silently skip a prerequisite or check off a blocked step. Independent work may be requested explicitly by its own step number once its prerequisites are satisfied.
+4. If correctness, required evidence or material scope remains incomplete, capture the attempt's stop time/outcome and leave both completion boxes open. Record timing overruns separately; an otherwise verified merged increment is not reopened solely for elapsed time. Add the reason and current status to this row; update the central counts and next-action pointer. Never silently skip a prerequisite or check off a blocked step. Independent work may be requested explicitly by its own step number once its prerequisites are satisfied.
 5. If subdivision is needed, insert stable child steps such as **87.1**, **87.2** immediately below step 87, linked to bounded child increments such as `S007.1`. Keep step 87 open until its original obligations and evidence are satisfied. Report the next child number explicitly. Existing integer step numbers never change; include new children in the progress totals. Apply the same process when new prerequisite work is discovered.
 6. If an already completed step is requested again, validate its receipt and report its result; rerun only when evidence is stale or the user requests a rerun. If an earlier dependency becomes stale, reopen affected steps and update the central progress before claiming completion.
 
