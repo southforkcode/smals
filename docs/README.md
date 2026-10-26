@@ -6,3 +6,4 @@
 - [Retired design index](retired/README.md)
 - [Python tool acceptance](python_tools.md)
 - [Diagnostics and command boundary](diagnostics.md)
+- [Bounded behavioral case runner](test_runner.md)
