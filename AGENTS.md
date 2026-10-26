@@ -25,6 +25,7 @@ Target 10 minutes of active work, with the plan's hard stop at 15 minutes. Inclu
 - Record the step's code, tests, design/architecture changes, other affected documentation, and immediate evidence on that branch in focused commits. Do not accumulate several numbered steps on one long-lived feature branch. A blocked or split step remains open; retain its branch and committed partial work with an explicit status instead of merging it as complete.
 - After tests, simplicity review, and documentation pass, bring the branch up to date with `main`, resolve any conflicts without discarding other work, and rerun the affected checks. Merge it into `main` and verify the resulting state there. Keep this integration and verification inside the increment's time budget; if they cannot finish, record a bounded continuation and leave the step open.
 - Record the feature/bug branch, work commit IDs, integration commit ID, and post-merge evidence. Update the central and detailed completion records only after the merge and verification succeed. Commit final status/evidence bookkeeping so completion is durable; that bookkeeping must not introduce untested implementation changes.
+- After a successful merge and post-merge verification, switch to `main` and delete the merged local feature/bug branch with the safe merged-branch deletion command (`git branch -d <branch>`). Record cleanup in the completion evidence. Do not force-delete an unmerged branch or remove a blocked step's work. Clean up a remote branch only when the remote publication workflow is explicitly authorized; local branch cleanup does not imply pushing. A step remains open until required local branch cleanup succeeds.
 - Proceed through ordinary commits, conflict resolution, self-review, and merging without requesting routine human review. Use the specifications, plans, project standards, and accepted engineering practices to make implementation decisions. Seek human input only for an exceptional issue that cannot be resolved within that authority, such as a material unresolved contract conflict or a necessary destructive action affecting unrelated work. Follow actual tool permission requirements when they apply. Merging locally does not itself request remote publication or pushing.
 
 ## Development loop
@@ -41,11 +42,34 @@ Target 10 minutes of active work, with the plan's hard stop at 15 minutes. Inclu
 
 6. **Retest and fix.** After implementation and refactoring, rerun the new cases, affected regression tests, and required formatting/lint checks. Cover changed implementation branches as required by project standards. Broaden testing when shared behavior or unresolved failures justify it. Fix failures and repeat the loop within the timebox; a refactor is not finished until its affected behavior is retested. Record unavailable checks as missing evidence, never as passing.
 
-7. **Reconcile documentation and evidence.** Update every document affected by the final change: design/architecture, usage examples, test expectations, requirement mappings, and plan details as applicable. Record newly discovered work as described below. Preserve exact commands, inputs/seeds, expected and observed outcomes, failures and subsequent passes, and relevant artifact hashes or traces. Use the plan's proof runner and receipts once implemented; before then, retain direct command/output evidence. A concise durable record with reproducible artifacts is sufficient; do not add another reporting system.
+7. **Reconcile documentation and evidence.** Update every document affected by the final change: design/architecture, usage examples, test expectations, requirement mappings, and plan details as applicable. Record newly discovered work as described below. Preserve exact commands, inputs/seeds, expected and observed outcomes, failures and subsequent passes, and relevant artifact hashes or traces. Keep durable evidence summaries in plan documents under `plans/`, and raw logs or temporary artifacts under ignored `temp/`. Use the plan's proof runner and receipts once implemented; before then, retain direct command/output evidence. A concise durable record with reproducible artifacts is sufficient; do not add another reporting system.
 
-8. **Merge, verify, report, and mark completion.** Merge the step's feature/bug branch into `main` using the discipline above, and verify the affected behavior on the merged result. Produce a concise report identifying the step/increment, behavior delivered, relevant requirement keys, design changes, branch/work/integration commits, checks run and their observed outcomes, evidence links, and any deferred work or blockers. Mark complete only after the acceptance criteria, review, retest, affected documentation, merge, and post-merge verification are satisfied. Check both the detailed increment and its numbered entry in `plans/PLAN.md`, add the evidence reference there, and update central progress counts and the next-step pointer. Include these updates in the final report. A requirement is verified only through its separate closure criteria; completing an increment does not automatically verify every requirement it advances.
+8. **Merge, verify, clean up, report, and mark completion.** Merge the step's feature/bug branch into `main` using the discipline above, verify the affected behavior on the merged result, and delete the merged local branch safely. Produce a concise report identifying the step/increment, behavior delivered, relevant requirement keys, design changes, branch/work/integration commits, cleanup result, checks run and their observed outcomes, evidence links, and any deferred work or blockers. Mark complete only after the acceptance criteria, review, retest, affected documentation, merge, post-merge verification, and local branch cleanup are satisfied. Check both the detailed increment and its numbered entry in `plans/PLAN.md`, add the evidence reference there, and update central progress counts and the next-step pointer. Include these updates in the final report. A requirement is verified only through its separate closure criteria; completing an increment does not automatically verify every requirement it advances.
 
 Keep one brief working note or existing receipt for the loop rather than creating paperwork for each phase. The final report can reference that evidence instead of repeating raw logs.
+
+## Keep process records out of product and test code
+
+`src/` contains implementation code. `test/` contains behavioral tests, their support code, and domain fixtures. Neither directory is a home for planning, completion status, evidence reports, branch/commit records, agent working notes, or commentary claiming that a numbered step or requirement was proved. Do not add those statements to source/test comments or assertions. Ordinary assertions of required behavior and explanations of a test's technical purpose remain appropriate.
+
+Keep requirement-to-case mappings and increment runner metadata under `plans/verification/`; keep durable evidence summaries in `plans/evidence/*.md` or the relevant plan document. Put raw command output, runtime traces, inventories, and intermediate proof files under ignored `temp/evidence/`. Plan documents should summarize their observations and link to the temporary artifacts as useful; temporary files are not tracked product inputs. Keep normal product fixtures in `test/`, and map their domain test IDs to steps externally rather than embedding plan IDs in test code.
+
+## Build hosts and portability
+
+The compiler/toolchain's build hosts are distinct from the CPUs and runtime environments targeted by generated SMIL programs. Use this host matrix when designing build configuration, dependencies, scripts, and platform-sensitive code:
+
+| Build host | Development and verification policy |
+| --- | --- |
+| macOS | Primary development/build platform. Run the affected native build, tests, formatters, and linters here first. |
+| Linux x64 (`linux/amd64`) | Supported host. Use a container to configure, build, and run the affected tests when build/platform-sensitive changes require Linux verification. |
+| Linux ARM64 (`linux/arm64`) | Supported host. Use a separate container architecture to configure, build, and run the affected tests; one architecture's results do not certify the other. |
+| Windows x64 | Supported host to preserve in code and build design. Windows builds cannot be tested in the current development environment; report them as untested and retain a documented build/test recipe for later Windows execution. |
+
+Prefer portable CMake/C++ and explicit platform adapters. Avoid unconditional Apple-only APIs, shell utilities, paths, or compiler flags in shared build paths. Do not broaden the dependency set solely to abstract a hypothetical platform difference.
+
+For changes affecting builds, platform adapters, filesystem/process behavior, or shared portability assumptions, exercise both Linux container architectures when an appropriate runtime is available. Record the engine, image/tag or digest, selected architecture, toolchain, exact commands, and actual test results. An image pull or cross-compilation alone is not execution proof; emulated execution is acceptable when explicitly identified. Missing container support or failed execution is missing evidence to record and address in a bounded plan increment, not a passing Linux check.
+
+Use narrow macOS regression checks for routine platform-independent changes unless their scope or failures warrant the container matrix. Do not turn every small edit into an all-platform rebuild. Never claim Windows verification from Linux/container results. Record Windows validation as unavailable here, with the remaining obligation linked to the affected build work; seek actual Windows execution through a suitable environment when it becomes available.
 
 ## Newly identified work and deferral
 
@@ -64,7 +88,7 @@ Use a short report, scaled to the change:
 
 - **Step/result:** numbered step and increment ID; delivered behavior or explicit incomplete status.
 - **Verification:** commands/cases and observed pass/failure outcomes, with durable evidence links.
-- **Integration:** feature/bug branch, work commits, integration commit on `main`, and post-merge verification result.
+- **Integration:** feature/bug branch, work commits, integration commit on `main`, post-merge verification, and safe local branch cleanup result.
 - **Documentation:** relevant design/architecture and other document updates, or why none were needed.
 - **Follow-up/progress:** recorded deferred IDs or blockers; completion state in both plan locations and the next step/action.
 

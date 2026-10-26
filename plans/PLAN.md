@@ -9,18 +9,18 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | State | Count |
 | --- | --- |
 | Completed with verified evidence | 0 |
-| In progress | 0 |
+| In progress | 1 |
 | Blocked or split | 0 |
-| Pending | 1,943 |
+| Pending | 1,942 |
 | Total indexed increments | 1,943 |
 
-**Next step: [1 — B001](#step-1).** All steps start open. This file records implementation progress, not the completion of writing the plan.
+**Current step: [1 — B001](#step-1), in progress.** Completion evidence is being recorded before integration. This file records implementation progress, not the completion of writing the plan.
 
 ## Executing a numbered step
 
 1. Resolve the number here, then read its linked increment and the [delivery/evidence rules](00_delivery_and_evidence.md). Verify actual prerequisite completion and evidence before starting. The initial sequence places every declared prerequisite before its consumer, expands every dependency group, and puts the required build tools before their use.
 2. Check out a feature branch from current `main`, or a bug branch for a separately handled bug fix, and record this step's work there. Execute only that increment, targeting 10 minutes of active work with a hard stop at 15 minutes, including integration and verification. Its full linked pass condition is authoritative; the short description here is a navigation aid. Do not proceed automatically to the next numbered step.
-3. Complete the development loop, merge the branch into `main`, and verify the merged result. Then check **both** this file's step and the corresponding detailed increment. Replace this row's “Evidence: pending” with a durable receipt/log link containing the work and integration commit IDs and post-merge evidence. Update the progress counts and next-step pointer in this file and commit the completion bookkeeping. Completion requires the merge, linked demonstration, and empirical evidence; an unmerged or unverified change remains open. Routine human review is not a prerequisite. Before the evidence runner exists, retain direct command/output evidence as specified in the bootstrap rules.
+3. Complete the development loop, merge the branch into `main`, verify the merged result, and safely delete the merged local feature/bug branch. Then check **both** this file's step and the corresponding detailed increment. Replace this row's “Evidence: pending” with a durable receipt/log link containing the work and integration commit IDs, post-merge evidence, and branch cleanup result. Update the progress counts and next-step pointer in this file and commit the completion bookkeeping. Completion requires the merge, cleanup, linked demonstration, and empirical evidence; an unmerged or unverified change remains open. Routine human review is not a prerequisite. Before the evidence runner exists, retain direct command/output evidence as specified in the bootstrap rules.
 4. If blocked, failing, or over budget, leave both completion boxes open. Add the reason and current status to this row; update the central counts and next-action pointer. Never silently skip a prerequisite or check off a blocked step. Independent work may be requested explicitly by its own step number once its prerequisites are satisfied.
 5. If subdivision is needed, insert stable child steps such as **87.1**, **87.2** immediately below step 87, linked to bounded child increments such as `S007.1`. Keep step 87 open until its original obligations and evidence are satisfied. Report the next child number explicitly. Existing integer step numbers never change; include new children in the progress totals. Apply the same process when new prerequisite work is discovered.
 6. If an already completed step is requested again, validate its receipt and report its result; rerun only when evidence is stale or the user requests a rerun. If an earlier dependency becomes stale, reopen affected steps and update the central progress before claiming completion.
@@ -84,7 +84,7 @@ The sections below follow useful advancement: build and evidence, source verific
 
 ## Steps 1–23: Build tools and trustworthy evidence
 
-- [ ] <a id="step-1"></a>**Step 1 — [B001](01_foundation_and_contracts.md#b001)**: Create/check out a dedicated implementation branch without discarding existing work Evidence: pending.
+- [ ] <a id="step-1"></a>**Step 1 — [B001](01_foundation_and_contracts.md#b001)**: Create/check out a dedicated implementation branch without discarding existing work. Evidence: [B001 record](evidence/B001.md); in progress, integration and cleanup pending.
 - [ ] <a id="step-2"></a>**Step 2 — [BT01](01_foundation_and_contracts.md#bt01)**: Validate or provision only clang21 through established approved sources Evidence: pending.
 - [ ] <a id="step-3"></a>**Step 3 — [BT02](01_foundation_and_contracts.md#bt02)**: Validate or provision only CMake through established approved sources Evidence: pending.
 - [ ] <a id="step-4"></a>**Step 4 — [BT03](01_foundation_and_contracts.md#bt03)**: Validate or provision only Python3.13 through established approved sources Evidence: pending.
@@ -101,7 +101,7 @@ The sections below follow useful advancement: build and evidence, source verific
 - [ ] <a id="step-15"></a>**Step 15 — [B007](01_foundation_and_contracts.md#b007)**: Add structured observable trace records for value, memory, device, fault, lifecycle and resource events Evidence: pending.
 - [ ] <a id="step-16"></a>**Step 16 — [B008](01_foundation_and_contracts.md#b008)**: Implement scripts/prove.py --increment ID --out DIR to build changed targets, run registered cases and save exit codes/timing/raw logs/artifact hashes. Evidence: pending.
 - [ ] <a id="step-17"></a>**Step 17 — [B009](01_foundation_and_contracts.md#b009)**: Add scripts/audit_evidence.py --increment ID and --requirement KEY --closure Evidence: pending.
-- [ ] <a id="step-18"></a>**Step 18 — [B010](01_foundation_and_contracts.md#b010)**: Seed test/conformance/requirements/<KEY>.json with all 435 exact requirement texts/digests, clause obligations and initially missing evidence links. Evidence: pending.
+- [ ] <a id="step-18"></a>**Step 18 — [B010](01_foundation_and_contracts.md#b010)**: Seed plans/verification/requirements/<KEY>.json with all 435 exact requirement texts/digests, clause obligations and initially missing evidence links. Evidence: pending.
 - [ ] <a id="step-19"></a>**Step 19 — [B011](01_foundation_and_contracts.md#b011)**: Add bounded runtime fault injection, red-zone/canary memory and deterministic resource limits to test support. Evidence: pending.
 - [ ] <a id="step-20"></a>**Step 20 — [B012](01_foundation_and_contracts.md#b012)**: Add final acceptance policy that separates source, host model, artifact, native-family and exact-profile evidence. Evidence: pending.
 - [ ] <a id="step-21"></a>**Step 21 — [B013](01_foundation_and_contracts.md#b013)**: Expose CTest labels per increment and scripts/prove.py --case-set/--shard for bounded reruns Evidence: pending.
