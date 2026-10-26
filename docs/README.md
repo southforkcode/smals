@@ -11,3 +11,4 @@
 - [Proof receipts](proof_runner.md)
 - [Receipt audit and requirement closure](proof_audit.md)
 - [Requirement obligation inventory](requirement_inventory.md)
+- [Guarded runtime fixtures](guarded_fixtures.md)
