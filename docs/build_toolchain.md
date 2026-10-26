@@ -68,3 +68,7 @@ Use a fresh output directory, verify the expected `clang smoke: 42` output, and 
 ## macOS Python pin
 
 BT03 provisions Homebrew `python@3.13` 3.13.18. Use `/opt/homebrew/Cellar/python@3.13/3.13.18/Frameworks/Python.framework/Versions/3.13/bin/python3.13` for project scripts; uv environments must use Python 3.13. Source: Homebrew core bottle, installed with `HOMEBREW_NO_AUTO_UPDATE=1 brew install python@3.13`. Requalification is required after changing the installation. [Qualification receipt](../plans/evidence/BT03.md). No shared build or design change.
+
+## macOS clang-format pin
+
+Use `/Library/Developer/CommandLineTools/usr/bin/clang-format` (Apple 21.0.0 (clang-2100.3.34.2)). Source: Apple Command Line Tools, verified Apple signature chain. Requalify on replacement. [Receipt](../plans/evidence/BT04.md). This is a host-local tool selection.
