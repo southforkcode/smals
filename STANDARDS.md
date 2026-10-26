@@ -35,6 +35,6 @@ For macOS:
 
 ## Third Party Libraries / Source
 
-All third party libraries or source are located in `thirdparty`. If it is necessary for the third party library or tool to be build from source for this project, the source is captured as a git submodule, its version is frozen (unless explicitly required to be updated). 
+All third party libraries or source are located in `thirdparty`. If it is necessary for the third party library or tool to be built from source for this project, the source is captured as a git submodule, its version is frozen (unless explicitly required to be updated).
 
 **If** a third party library or tool needs to be modified to meet the needs of the project, then the library is forked separately (project fork on github) and tracked in `thirdparty` as a git submodule (of the forked project). Note: this means we treat the source code of forked third-party libraries and/or tools as their own project.
