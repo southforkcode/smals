@@ -13,10 +13,11 @@ target_include_directories(smil_core PUBLIC src)
 target_compile_features(smil_core PUBLIC cxx_std_23)
 set_target_properties(smil_core PROPERTIES CXX_EXTENSIONS OFF)
 
-add_executable(smil_tests test/main.cpp test/cases/diagnostics.cpp test/support/runner.cpp test/cases/traces.cpp)
+add_executable(smil_tests test/main.cpp test/cases/diagnostics.cpp test/support/runner.cpp test/cases/traces.cpp test/support/guarded.cpp test/cases/guarded.cpp)
 add_executable(smil src/main.cpp)
 target_link_libraries(smil PRIVATE smil_core)
 target_link_libraries(smil_tests PRIVATE smil_core)
+target_include_directories(smil_tests PRIVATE test)
 
 include(CTest)
 if(BUILD_TESTING)
