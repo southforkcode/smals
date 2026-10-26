@@ -8,13 +8,13 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 
 | State | Count |
 | --- | --- |
-| Completed with verified evidence | 0 |
-| In progress | 1 |
+| Completed with verified evidence | 1 |
+| In progress | 0 |
 | Blocked or split | 0 |
 | Pending | 1,942 |
 | Total indexed increments | 1,943 |
 
-**Current step: [1 — B001](#step-1), in progress.** Completion evidence is being recorded before integration. This file records implementation progress, not the completion of writing the plan.
+**Next step: [2 — BT01](#step-2).** Step 1 is complete with [verified integration and cleanup evidence](evidence/B001.md). This file records implementation progress, not the completion of writing the plan.
 
 ## Executing a numbered step
 
@@ -84,7 +84,7 @@ The sections below follow useful advancement: build and evidence, source verific
 
 ## Steps 1–23: Build tools and trustworthy evidence
 
-- [ ] <a id="step-1"></a>**Step 1 — [B001](01_foundation_and_contracts.md#b001)**: Create/check out a dedicated implementation branch without discarding existing work. Evidence: [B001 record](evidence/B001.md); in progress, integration and cleanup pending.
+- [x] <a id="step-1"></a>**Step 1 — [B001](01_foundation_and_contracts.md#b001)**: Create/check out a dedicated implementation branch without discarding existing work. Evidence: [B001 completion](evidence/B001.md); merged into `main`, verified, and local branch deleted.
 - [ ] <a id="step-2"></a>**Step 2 — [BT01](01_foundation_and_contracts.md#bt01)**: Validate or provision only clang21 through established approved sources Evidence: pending.
 - [ ] <a id="step-3"></a>**Step 3 — [BT02](01_foundation_and_contracts.md#bt02)**: Validate or provision only CMake through established approved sources Evidence: pending.
 - [ ] <a id="step-4"></a>**Step 4 — [BT03](01_foundation_and_contracts.md#bt03)**: Validate or provision only Python3.13 through established approved sources Evidence: pending.
