@@ -21,7 +21,9 @@ bool diagnostic_cases() {
   if (error.phase != smil::Phase::command_line || error.code != "CLI001" ||
       error.span.source != "<command-line>" || error.span.byte_begin != 0 ||
       error.span.byte_end != 7 || error.span.line != 1 ||
-      error.span.column != 1 || error.reason != "expected exactly --version") {
+      error.span.column != 1 ||
+      error.reason !=
+          "expected --version or <parse|verify|bind|link|run> <input>") {
     return false;
   }
   const auto first = log.str().find("error[CLI001]");
@@ -31,6 +33,10 @@ bool diagnostic_cases() {
   }
   auto empty = smil::parse_command({}, log);
   if (empty || empty.error().span.byte_end != 0) {
+    return false;
+  }
+  auto no_stage = smil::report_unavailable(smil::Command::version, "", log);
+  if (no_stage || no_stage.error().code != "CLI002") {
     return false;
   }
   const std::array<std::string_view, 6> names{"command-line", "parsing",

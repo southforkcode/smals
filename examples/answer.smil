@@ -1,0 +1,8 @@
+module "example.answer.v1"
+
+export @smil_main
+
+func @smil_main() -> ([i32]) {
+^entry():
+    return [i32 42]
+}

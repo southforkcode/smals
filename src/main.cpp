@@ -12,6 +12,10 @@ int main(int argc, char **argv) {
   if (!command) {
     return 1;
   }
+  if (*command != smil::Command::version) {
+    auto unavailable = smil::report_unavailable(*command, args[1], std::cerr);
+    return unavailable ? 0 : 2;
+  }
   std::cout << "smil " << smil::tool_version << '\n';
   return 0;
 }

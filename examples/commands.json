@@ -1,0 +1,10 @@
+{
+  "input": "examples/answer.smil",
+  "commands": [
+    {"stage": "parse", "phase": "parsing", "exit": 2},
+    {"stage": "verify", "phase": "verification", "exit": 2},
+    {"stage": "bind", "phase": "binding", "exit": 2},
+    {"stage": "link", "phase": "linking", "exit": 2},
+    {"stage": "run", "phase": "execution", "exit": 2}
+  ]
+}

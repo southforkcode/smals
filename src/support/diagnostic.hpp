@@ -31,8 +31,10 @@ struct Diagnostic {
   std::string reason;
 };
 template <typename T> using Result = std::expected<T, Diagnostic>;
-enum class Command { version };
+enum class Command { version, parse, verify, bind, link, run };
 std::string_view phase_name(Phase phase);
 Result<Command> parse_command(std::span<const std::string_view> args,
                               std::ostream &log);
+Result<void> report_unavailable(Command command, std::string_view input,
+                                std::ostream &log);
 } // namespace smil

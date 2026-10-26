@@ -35,7 +35,8 @@ class CommandTests(unittest.TestCase):
             self.assertEqual(result.stdout, "")
             self.assertEqual(result.stderr.count("error[CLI001]"), 1)
             self.assertIn(
-                "command-line <command-line>:1:1 [0,7): expected exactly --version",
+                "command-line <command-line>:1:1 [0,7): "
+                "expected --version or <parse|verify|bind|link|run> <input>",
                 result.stderr,
             )
             self.assertFalse(output.exists())
