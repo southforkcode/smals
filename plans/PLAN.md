@@ -8,13 +8,13 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 
 | State | Count |
 | --- | --- |
-| Completed with verified evidence | 5 |
-| In progress | 1 |
+| Completed with verified evidence | 6 |
+| In progress | 0 |
 | Blocked or split | 0 |
 | Pending | 1,937 |
 | Total indexed increments | 1,943 |
 
-**Next step: [6 — BT05](#step-6).** Step 5 is complete with [integration and cleanup evidence](evidence/BT04.md). This file records implementation progress, not the completion of writing the plan.
+**Next step: [7 — BT06](#step-7).** Step 6 is complete with [integration and cleanup evidence](evidence/BT05.md). This file records implementation progress, not the completion of writing the plan.
 
 ## Work timing log
 
@@ -22,7 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 6 | BT05 | 1 | 2026-10-26T09:58:58Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/BT05.md) |
+| 6 | BT05 | 1 | 2026-10-26T09:58:58Z | 2026-10-26T09:59:15Z | 17 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/BT05.md) |
 | 5 | BT04 | 1 | 2026-10-26T09:58:30Z | 2026-10-26T09:58:58Z | 28 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/BT04.md) |
 | 4 | BT03 | 1 | 2026-10-26T09:55:57Z | 2026-10-26T09:58:17Z | 140 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/BT03.md) |
 | 3 | BT02 | 1 | 2026-10-26T09:51:17Z | 2026-10-26T09:54:54Z | 217 | 10 active minutes | unknown / unknown | Completed; observed UTC clock bounds | [BT02 evidence](evidence/BT02.md#development-work-timing) |
@@ -102,7 +102,7 @@ The sections below follow useful advancement: build and evidence, source verific
 - [x] <a id="step-3"></a>**Step 3 — [BT02](01_foundation_and_contracts.md#bt02)**: Validate or provision only CMake through established approved sources. Evidence: [BT02 completion](evidence/BT02.md); merged into `main`, verified, and local branch deleted.
 - [x] <a id="step-4"></a>**Step 4 — [BT03](01_foundation_and_contracts.md#bt03)**: Validate or provision only Python3.13 through established approved sources Evidence: [BT03 completion](evidence/BT03.md); merged, verified and local branch deleted.
 - [x] <a id="step-5"></a>**Step 5 — [BT04](01_foundation_and_contracts.md#bt04)**: Validate or provision only clang-format through established approved sources Evidence: [BT04 completion](evidence/BT04.md); merged, verified and local branch deleted.
-- [ ] <a id="step-6"></a>**Step 6 — [BT05](01_foundation_and_contracts.md#bt05)**: Validate or provision only clang-tidy through established approved sources Evidence: pending.
+- [x] <a id="step-6"></a>**Step 6 — [BT05](01_foundation_and_contracts.md#bt05)**: Validate or provision only clang-tidy through established approved sources Evidence: [BT05 completion](evidence/BT05.md); merged, verified and local branch deleted.
 - [ ] <a id="step-7"></a>**Step 7 — [BT06](01_foundation_and_contracts.md#bt06)**: Validate or provision only uv through established approved sources Evidence: pending.
 - [ ] <a id="step-8"></a>**Step 8 — [BT07](01_foundation_and_contracts.md#bt07)**: Validate or provision only Black through established approved sources Evidence: pending.
 - [ ] <a id="step-9"></a>**Step 9 — [BT08](01_foundation_and_contracts.md#bt08)**: Validate or provision only Pylint through established approved sources Evidence: pending.
