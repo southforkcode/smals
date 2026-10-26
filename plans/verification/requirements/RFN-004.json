@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RFN-004",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Raised outcomes shall use packet tags/payloads without native unwinding. Both normal/raised completion shall expire callee locals before the caller edge; frontend cleanups shall remain explicit CFG operations.",
+  "text_sha256": "0c06b78df129aa601089521c37f52f3b2d9b94ebed51c7fc531102f1b9ddb113",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Raised outcomes shall use packet tags/payloads without native unwinding.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Both normal/raised completion shall expire callee locals before the caller edge",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "frontend cleanups shall remain explicit CFG operations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

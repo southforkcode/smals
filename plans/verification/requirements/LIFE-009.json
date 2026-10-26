@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-009",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Initializers shall run serially on the lifecycle agent. Among ready nodes, the coordinator shall choose the unsigned UTF-8 byte-smallest ID; a node shall run at most once. Factory success shall install its object before completing; hook success shall complete on normal return.",
+  "text_sha256": "cae800f4273baa6cb8dd89a97c129633d6ef0bf8256bb2f825aacf0a9152f6f7",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Initializers shall run serially on the lifecycle agent.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Among ready nodes, the coordinator shall choose the unsigned UTF-8 byte-smallest ID",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "a node shall run at most once.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Factory success shall install its object before completing",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "hook success shall complete on normal return.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

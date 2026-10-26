@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RCPU-003",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "`ppc970-32` shall use 32-bit execution, not a 64-bit pointer or ELF ABI. 286 real/protected shall be separate contracts. RISC encoders shall enforce execution-state and delay-slot restrictions from the family table/manifest.",
+  "text_sha256": "f0e0fea3056b365edfb226b65bd2b0df36f4b50f791aaabce76b159e72bc3d33",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`ppc970-32` shall use 32-bit execution, not a 64-bit pointer or ELF ABI. 286 real/protected shall be separate contracts.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "RISC encoders shall enforce execution-state and delay-slot restrictions from the family table/manifest.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

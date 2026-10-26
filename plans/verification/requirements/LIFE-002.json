@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-002",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Bootstrap shall establish CPU/runtime/stacks, reserve all global allocations/final locations, apply relocations, and install every constant initializer before any SMIL initializer action. Constant globals shall then be ready. Instance initialization shall occur once, not on import, ordinary factory calls, or reentry.",
+  "text_sha256": "8a27c2f97fb0c15e84d071ec31bc73e5dc77e3e10b300769367440e380821547",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Bootstrap shall establish CPU/runtime/stacks, reserve all global allocations/final locations, apply relocations, and install every constant initializer before any SMIL initializer action.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Constant globals shall then be ready.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Instance initialization shall occur once, not on import, ordinary factory calls, or reentry.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

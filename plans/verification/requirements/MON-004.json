@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MON-004",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "68k/PowerPC/ARM/MIPS/SPARC shall use manifest-defined synchronous monitor traps/registers with service 0 read, 1 write, 2 fence. Services shall perform the exact nonspeculative transaction, return read bytes in the specified register, restore SP/mode, and obey clobbers. Trap instruction availability alone shall not prove service availability.",
+  "text_sha256": "ad33c9a6935247eb2e6923d66c26d8df5576763834cc427955f584d95575be4c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "68k/PowerPC/ARM/MIPS/SPARC shall use manifest-defined synchronous monitor traps/registers with service 0 read, 1 write, 2 fence.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Services shall perform the exact nonspeculative transaction, return read bytes in the specified register, restore SP/mode, and obey clobbers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Trap instruction availability alone shall not prove service availability.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

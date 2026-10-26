@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CMP-002",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Known incompatible contracts shall be rejected unless an explicit adapter separates them. An initial exact-version layout/ABI policy shall not be relaxed without an explicit compatibility rule. Checked reference profiles shall use their stronger exact-component policy.",
+  "text_sha256": "1bdc17beede46ef5ce6c6e4d5c066ca978bac3a83c61aa72833499df88851e58",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Known incompatible contracts shall be rejected unless an explicit adapter separates them.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "An initial exact-version layout/ABI policy shall not be relaxed without an explicit compatibility rule.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Checked reference profiles shall use their stronger exact-component policy.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

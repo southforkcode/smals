@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PTR-011",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "`ptr_offset` shall fault with `invalid_pointer_operation` for null (including plus zero), expired/address-only bases, out-of-extent results, or unrepresentable positions. One-past may move back in bounds; unaligned formation itself shall be permitted.",
+  "text_sha256": "2fe25e406be62ba2c52e3c97c68886354c607f8e17e809bd8698f7fccf4f2a3d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`ptr_offset` shall fault with `invalid_pointer_operation` for null (including plus zero), expired/address-only bases, out-of-extent results, or unrepresentable positions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "One-past may move back in bounds",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "unaligned formation itself shall be permitted.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

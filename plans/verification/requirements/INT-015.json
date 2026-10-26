@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "INT-015",
+  "spec_path": "specs/0004_integer_operations.md",
+  "spec_sha256": "9dc0600df10568223c669046bd8bf05101d8dc596859a646ee8bb3b1cd11303b",
+  "text": "`cmp` shall accept two matching integer types and return `i1`: `eq/ne` compare bits; `ult/ule/ugt/uge` compare U values; `slt/sle/sgt/sge` compare S values. Other value kinds shall use their dedicated comparison operations.",
+  "text_sha256": "f412c763b1091ce438f5b9e39c87f3c0873c543175cdbafcc502bafecd05aa37",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`cmp` shall accept two matching integer types and return `i1`: `eq/ne` compare bits",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`ult/ule/ugt/uge` compare U values",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "`slt/sle/sgt/sge` compare S values.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Other value kinds shall use their dedicated comparison operations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

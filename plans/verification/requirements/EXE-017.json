@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-017",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "`on_exit` state/agent checks shall precede callback target checks. Division shall check zero before quotient overflow and work allocation. User `trap` shall commit its identifier when reached without application allocation.",
+  "text_sha256": "1977299685489920fb54c5f6c556f09e4a90496689193076444c39a6dbe8a3bb",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`on_exit` state/agent checks shall precede callback target checks.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Division shall check zero before quotient overflow and work allocation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "User `trap` shall commit its identifier when reached without application allocation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

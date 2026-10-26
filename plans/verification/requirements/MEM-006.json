@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MEM-006",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "Ordinary access expansion/combination shall preserve source footprints, validity, fault priority, initialization, and concurrency. It shall not add reads or read/modify/writes to neighboring independently accessible fields even if their eventual values would match.",
+  "text_sha256": "616d1bdbdbffe2f69ed656307ed9abdf8d7eb4afd86f49a7760eec0076ba8111",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Ordinary access expansion/combination shall preserve source footprints, validity, fault priority, initialization, and concurrency.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall not add reads or read/modify/writes to neighboring independently accessible fields even if their eventual values would match.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

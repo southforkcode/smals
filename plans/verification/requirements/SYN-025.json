@@ -1,0 +1,32 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-025",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "The parser shall preserve unresolved named types for later resolution. Semantic verification shall reject invalid literal payload kinds, result counts, types, names, dominance, and target requirements even when their syntax parses.",
+  "text_sha256": "7bc98084eeb8769fc73ae2765d0b68c8ae8487d7289b9c41e1c78f8458918023",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The parser shall preserve unresolved named types for later resolution.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Semantic verification shall reject invalid literal payload kinds, result counts, types, names, dominance, and target requirements even when their syntax parses.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

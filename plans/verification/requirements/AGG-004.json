@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-004",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "`record_get value field(path)` shall require a record value and return the selected field's type/value without storage access or source mutation. A pointer/global symbol shall not substitute for the record value.",
+  "text_sha256": "7a74ecf16da2b926422bc3bd288f9454997067fe65ecb942e1937cfd35273c97",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`record_get value field(path)` shall require a record value and return the selected field's type/value without storage access or source mutation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A pointer/global symbol shall not substitute for the record value.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

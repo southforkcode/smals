@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-005",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "`iN` shall represent an N-bit signless pattern for every positive mathematical width N in unbound SMIL. Individual operations shall select signed/unsigned interpretation. `i1` shall contain exactly the patterns zero and one. Target support limits shall be checked separately.",
+  "text_sha256": "de66b492556a12eff30bc7bd555dbb077debf3853924c7b3147388faa818e9e4",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`iN` shall represent an N-bit signless pattern for every positive mathematical width N in unbound SMIL.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Individual operations shall select signed/unsigned interpretation.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "`i1` shall contain exactly the patterns zero and one.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Target support limits shall be checked separately.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

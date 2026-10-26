@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-002",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Interface digest shall be canonical-JSON SHA-256 under REF-003. Exports shall sort by canonical `[namespace,name]` UTF-8 bytes. Bodies, private data outside the public closure, paths, timestamps, diagnostics, and build notes shall be excluded. Owner requirements shall not be lifecycle edges or recursively embedded digests.",
+  "text_sha256": "a9686dc785a442f3e9ceb7cf051c1ab94b3f6b803ae1d0a102d127104c87daf5",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Interface digest shall be canonical-JSON SHA-256 under REF-003.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Exports shall sort by canonical `[namespace,name]` UTF-8 bytes.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Bodies, private data outside the public closure, paths, timestamps, diagnostics, and build notes shall be excluded.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Owner requirements shall not be lifecycle edges or recursively embedded digests.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

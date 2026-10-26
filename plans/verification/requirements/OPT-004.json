@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OPT-004",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "A dominating guard shall justify later uses only while its lifetime/readiness/ownership/alias facts remain stable. Unknown calls, permitted writes, concurrent actors, or lifecycle transitions shall invalidate facts as applicable.",
+  "text_sha256": "6f0335584ee815e768a61169d6008893d155d414d8e52398f4904b58680e092e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A dominating guard shall justify later uses only while its lifetime/readiness/ownership/alias facts remain stable.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Unknown calls, permitted writes, concurrent actors, or lifecycle transitions shall invalidate facts as applicable.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

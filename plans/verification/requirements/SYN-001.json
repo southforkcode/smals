@@ -1,0 +1,32 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-001",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "A source consumer shall select `smil.source.v1` through its documented interface or build settings; it shall not infer a dialect from a CPU, filename, or host language.",
+  "text_sha256": "09f56314ef73d43f06594a0b42e640fde2bde1d87a913aeb2b748a305e5e3e63",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A source consumer shall select `smil.source.v1` through its documented interface or build settings",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "it shall not infer a dialect from a CPU, filename, or host language.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

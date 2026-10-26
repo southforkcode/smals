@@ -1,0 +1,32 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-007",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "A qualified name shall contain exactly one `alias::member`, with one optional value/constant sigil before the alias and no internal whitespace, comment, or continuation. SSA and block names shall not be qualified.",
+  "text_sha256": "1dcdbfc2fe58764a37739e55c176f3147f37be9c658c54807c61e672461d174c",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A qualified name shall contain exactly one `alias::member`, with one optional value/constant sigil before the alias and no internal whitespace, comment, or continuation.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "SSA and block names shall not be qualified.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

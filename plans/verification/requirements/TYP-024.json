@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-024",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Each record declaration shall create one nominal type with ordered zero-based fields. Equal field lists shall not make distinct declarations interchangeable. Aliases/imports shall preserve the originating identity. A record type declaration shall not create a value or object.",
+  "text_sha256": "558689e62d7366f5e21d6502a6f0c7d092ef002b8750413244b32b141bc7dc97",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each record declaration shall create one nominal type with ordered zero-based fields.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Equal field lists shall not make distinct declarations interchangeable.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Aliases/imports shall preserve the originating identity.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "A record type declaration shall not create a value or object.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

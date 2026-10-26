@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "DEV-005",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "An agent's MMIO transactions shall retain textual execution order, including across contracts. The selected contracts shall implement that order compatibly; individual access shall not imply a completion barrier for ordinary memory/device work.",
+  "text_sha256": "7b9b2f5137696e016f90a8ee19d3acd8ec0b9d5434e550c308e24139f3c63546",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "An agent's MMIO transactions shall retain textual execution order, including across contracts.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "The selected contracts shall implement that order compatibly",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "individual access shall not imply a completion barrier for ordinary memory/device work.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

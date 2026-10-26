@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CST-003",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "`[R zero]` shall recursively construct integer-zero fields, typed data/callable null fields, and inline record-zero fields. Recursion shall stop at references and allocate no targets. It shall require a record type and shall not mean zeroing representation/padding bytes.",
+  "text_sha256": "54fa57406364d12fb50753753cf8afe5c2204a12472a22076fc10a822cdabdfd",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`[R zero]` shall recursively construct integer-zero fields, typed data/callable null fields, and inline record-zero fields.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Recursion shall stop at references and allocate no targets.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "It shall require a record type and shall not mean zeroing representation/padding bytes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

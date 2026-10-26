@@ -1,0 +1,56 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-023",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "One-result operations shall bind one SSA name; pair-result operations shall bind two in specified order; zero-result operations shall have no binding. Calls shall bind exactly their resolved result count. There shall be no implicit result discard or discard placeholder.",
+  "text_sha256": "9f9a64ccf1c5e9fe1c7921132da9adcbe0be79a78d6ad9ebd23378c0ec7331c2",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "One-result operations shall bind one SSA name",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "pair-result operations shall bind two in specified order",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "zero-result operations shall have no binding.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Calls shall bind exactly their resolved result count.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "There shall be no implicit result discard or discard placeholder.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

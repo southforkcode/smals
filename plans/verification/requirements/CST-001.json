@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CST-001",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "A constant initializer shall be a typed scalar/null, named constant, global symbolic address, function-address expression, complete record initializer, recursive record-zero initializer, or permitted constant expression. It shall have the required resolved type with no implicit conversion or content load.",
+  "text_sha256": "e6e57fd3c3c8bb4055e66d5f9e7a0bc351f1f7e80994259909de82f34c2b3363",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A constant initializer shall be a typed scalar/null, named constant, global symbolic address, function-address expression, complete record initializer, recursive record-zero initializer, or permitted constant expression.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall have the required resolved type with no implicit conversion or content load.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

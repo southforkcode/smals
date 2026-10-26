@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-009",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Exports shall record namespace, spelling, kind, type label, and value only for named constants; globals shall additionally record mutability/space/initialization mode. Alias exports shall point to resolved descriptors rather than create nominal types.",
+  "text_sha256": "3634ade80e76a5627cbeb42763f038a5e36543b2b5712a7df85222708e390770",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Exports shall record namespace, spelling, kind, type label, and value only for named constants",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "globals shall additionally record mutability/space/initialization mode.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Alias exports shall point to resolved descriptors rather than create nominal types.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

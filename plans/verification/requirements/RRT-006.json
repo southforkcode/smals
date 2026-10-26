@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RRT-006",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Explicit exit shall expire abandoned locals and reset software/native call state to the reserved coordinator root before callback execution. Terminal reporting shall require no new packet/ordinary native call and shall use pre-reserved emergency/architectural exception state.",
+  "text_sha256": "6c31909890bba9fbd26f2c55910570f3231e1beae46cf04d50b53010cbffdfa8",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Explicit exit shall expire abandoned locals and reset software/native call state to the reserved coordinator root before callback execution.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Terminal reporting shall require no new packet/ordinary native call and shall use pre-reserved emergency/architectural exception state.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-011",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Before committing each next memory event, an implementation shall detect a conflict with prior completed events by another agent when at least one access is non-atomic and no application happens-before ordering exists. The new access shall then cause `data_race` before exposing a result/effect. Future unexecuted accesses shall not count as violations.",
+  "text_sha256": "820fddd1c1bf88f7038fae22312af9404ecbec2b8f65758ca8b52c6912e6f4e0",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Before committing each next memory event, an implementation shall detect a conflict with prior completed events by another agent when at least one access is non-atomic and no application happens-before ordering exists.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "The new access shall then cause `data_race` before exposing a result/effect.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Future unexecuted accesses shall not count as violations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

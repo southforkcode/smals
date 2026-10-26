@@ -1,0 +1,48 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-003",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Build configuration shall map each import identity to an exact interface/implementation. Imports shall precede other module items and shall only expose verification interfaces; importing shall neither execute code nor initialize storage.",
+  "text_sha256": "2c6e4599aac8cc5c4c59a140197afd498f3aade81bd16f28e4a075c445e5a789",
+  "required_scopes": [
+    "source",
+    "artifact",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Build configuration shall map each import identity to an exact interface/implementation.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Imports shall precede other module items and shall only expose verification interfaces",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "importing shall neither execute code nor initialize storage.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

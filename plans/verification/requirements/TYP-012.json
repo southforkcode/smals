@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-012",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Mutable `alosf` shall permit an optional initializer; absence shall establish uninitialized storage. Immutable `alosf` shall require a complete initializer and prohibit later writes through every alias. The resulting pointer shall remain an immutable SSA value in both cases.",
+  "text_sha256": "045b23a5dadec00c28d9c046922ff6680fc87a67757cd355d8c86b9f7b070d9a",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Mutable `alosf` shall permit an optional initializer",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "absence shall establish uninitialized storage.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Immutable `alosf` shall require a complete initializer and prohibit later writes through every alias.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "The resulting pointer shall remain an immutable SSA value in both cases.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SPC-002",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Each space contract shall define pointer encoding/size/allocation/alignment/null, bank/segment components, addressable objects/regions, rights/access kind, alias relationships, ordered space mappings, integer conversions/domains/reconstruction/round trips, normalized equality/one-past arithmetic, and supported device/atomic/agent/runtime behavior.",
+  "text_sha256": "fa89f5582d3d289e0c808a5d59764b66a77db373a3a16c189854efd2921c950d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each space contract shall define pointer encoding/size/allocation/alignment/null, bank/segment components, addressable objects/regions, rights/access kind, alias relationships, ordered space mappings, integer conversions/domains/reconstruction/round trips, normalized equality/one-past arithmetic, and supported device/atomic/agent/runtime behavior.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OBJ-003",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Descriptor paths shall be relative to the containing descriptor, use `/`, and reject absolute paths, backslashes, empty components, `.`/`..`, and symlink escapes. Descriptor digests shall cover canonical JSON; blob/segment digests shall cover exact bytes. Section sizes/positions shall be unsigned u32.",
+  "text_sha256": "548e2cf7b93cb20a3d8732feaa6da45f1d224e9c035f949ed40b65af9a673d1f",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Descriptor paths shall be relative to the containing descriptor, use `/`, and reject absolute paths, backslashes, empty components, `.`/`..`, and symlink escapes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Descriptor digests shall cover canonical JSON",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "blob/segment digests shall cover exact bytes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Section sizes/positions shall be unsigned u32.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

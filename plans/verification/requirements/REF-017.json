@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-017",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Native translation shall preserve normalized coordinates: real 8086 shall use `segment=physical>>4`, `offset=physical&15` with recomputation before wrapping; 286 protected shall use code selector 0x08 and data selectors `0x10+8*k` for sixteen 64-KiB windows; MIPS shall use uncached KSEG1 for low reference physical memory. Other exact translations shall come from manifests.",
+  "text_sha256": "d41d581d7b18b8f42c902bb5097bd3255887766a9af636e3ac7ab0ba68fcdbc3",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Native translation shall preserve normalized coordinates: real 8086 shall use `segment=physical>>4`, `offset=physical&15` with recomputation before wrapping",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "286 protected shall use code selector 0x08 and data selectors `0x10+8*k` for sixteen 64-KiB windows",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "MIPS shall use uncached KSEG1 for low reference physical memory.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Other exact translations shall come from manifests.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

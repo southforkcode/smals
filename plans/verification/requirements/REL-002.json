@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REL-002",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Targets shall distinguish canonical symbol keys, consuming-object type labels, continuation triples `[module,function,label]`, exact profile region keys, and `[module,section]` keys. Regions shall authorize pointers only when the profile establishes their associated storage/device identity. Private machine references shall not fabricate source pointers.",
+  "text_sha256": "7ae9070e793fe9c5c30c4b83e0e0e5de64f9f575541a02509ad97d8f30e84cc6",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Targets shall distinguish canonical symbol keys, consuming-object type labels, continuation triples `[module,function,label]`, exact profile region keys, and `[module,section]` keys.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Regions shall authorize pointers only when the profile establishes their associated storage/device identity.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Private machine references shall not fabricate source pointers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

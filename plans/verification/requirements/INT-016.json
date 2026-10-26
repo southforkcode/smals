@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "INT-016",
+  "spec_path": "specs/0004_integer_operations.md",
+  "spec_sha256": "9dc0600df10568223c669046bd8bf05101d8dc596859a646ee8bb3b1cd11303b",
+  "text": "`zext [iM] x` and `sext [iM] x` shall require `M > N`, retain N source bits, and fill added high bits with zero or the source sign bit respectively. `trunc [iM] x` shall require `M < N` and retain exactly the low M bits without saturation/fault.",
+  "text_sha256": "9f2bad9f1d63259276a20dc7f2ba56a2b29bc84935f1f04f786e21a7020bf060",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`zext [iM] x` and `sext [iM] x` shall require `M > N`, retain N source bits, and fill added high bits with zero or the source sign bit respectively.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`trunc [iM] x` shall require `M < N` and retain exactly the low M bits without saturation/fault.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

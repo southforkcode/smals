@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CST-015",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "Constant `fnaddr` shall identify a declared function without executing its body. Constant `fn_eq`/`fn_ne` shall require resolved function identity independent of unresolved interposition/placement. Code/data casts and numeric code-address constants shall remain unsupported.",
+  "text_sha256": "6897c07d6f0ff542932c1cbdae02e00309af1d51668df4fde80fca8a63b98f8b",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Constant `fnaddr` shall identify a declared function without executing its body.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Constant `fn_eq`/`fn_ne` shall require resolved function identity independent of unresolved interposition/placement.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Code/data casts and numeric code-address constants shall remain unsupported.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

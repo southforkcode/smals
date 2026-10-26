@@ -1,0 +1,48 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-011",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Bound exported constants shall reduce to integer/null/record/address/function forms; remaining expressions shall indicate incomplete binding. Address forms shall retain root allocation/path through checked-pointer relocation, not become arbitrary numeric addresses.",
+  "text_sha256": "092b4815123f3f5d86c6a86681ab704c1d7b2689decb8457173319ba059bed52",
+  "required_scopes": [
+    "source",
+    "artifact",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Bound exported constants shall reduce to integer/null/record/address/function forms",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "remaining expressions shall indicate incomplete binding.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Address forms shall retain root allocation/path through checked-pointer relocation, not become arbitrary numeric addresses.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-018",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "A function opening brace shall occur on its header's logical line. Its opening brace, each block-header colon, and every operation/terminator shall be followed by a logical newline. A function closing brace shall occupy its own logical line.",
+  "text_sha256": "d849802d4506ec745555384579e38395890dcf9d62b330890502e6128ba094d0",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A function opening brace shall occur on its header's logical line.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Its opening brace, each block-header colon, and every operation/terminator shall be followed by a logical newline.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A function closing brace shall occupy its own logical line.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

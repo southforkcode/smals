@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-024",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Exit/registration outside running, unauthorized agents, and nested coordinator startup/shutdown shall cause `invalid_lifecycle_transition`. For registration, state/agent validation shall precede target validity, then reservation. Callback faults/traps shall abort further orderly shutdown.",
+  "text_sha256": "bbcd77b15d621ad3fc8b3922e31ece5acc39c244e37fb8bc76d485b7cbed5cc6",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Exit/registration outside running, unauthorized agents, and nested coordinator startup/shutdown shall cause `invalid_lifecycle_transition`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "For registration, state/agent validation shall precede target validity, then reservation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Callback faults/traps shall abort further orderly shutdown.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

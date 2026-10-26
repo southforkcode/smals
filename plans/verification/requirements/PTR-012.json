@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PTR-012",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "`ptr_diff [iM] left right` shall require matching pointer types and two live positions in one allocation, including one-past; it shall return the signed byte difference `left_offset-right_offset` or fault if its signed iM range/domain is violated. Equal addresses of different allocations shall not suffice.",
+  "text_sha256": "82d272fc44d15fefba6b03e5349bed703edfd5e5f562bd78418fef0f78e5fee6",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`ptr_diff [iM] left right` shall require matching pointer types and two live positions in one allocation, including one-past",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "it shall return the signed byte difference `left_offset-right_offset` or fault if its signed iM range/domain is violated.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Equal addresses of different allocations shall not suffice.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

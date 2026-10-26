@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-011",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "Record/integer allocation padding shall not be logical value data; typed loads shall not require its initialization and typed stores shall not promise its contents/preservation. Inline immutability shall not recursively make pointed-to objects immutable.",
+  "text_sha256": "54ff6d0841be091e79dc2b1a336970503c157548f4cf3cba84980b79f1efa134",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Record/integer allocation padding shall not be logical value data",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "typed loads shall not require its initialization and typed stores shall not promise its contents/preservation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Inline immutability shall not recursively make pointed-to objects immutable.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

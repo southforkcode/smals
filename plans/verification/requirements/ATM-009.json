@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-009",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "Happens-before shall be the transitive closure of agent sequencing, observed-write synchronization, and explicit environment ordering edges. Thread/interrupt entry, exit, handoff, and creation shall add edges only under their environment contract.",
+  "text_sha256": "5098d7816382b87fb3c964663ce7bbaba0275cabf3bb32d59c9969f056450369",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Happens-before shall be the transitive closure of agent sequencing, observed-write synchronization, and explicit environment ordering edges.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Thread/interrupt entry, exit, handoff, and creation shall add edges only under their environment contract.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-009",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Type-name positions shall exclude `ptr`, `fnptr`, `varargs`, and the `i[0-9]+` family, including declaration binders and type exports. Other keywords/opcodes shall be contextual lowercase spellings; sigiled names such as `@add` shall be permitted.",
+  "text_sha256": "89f45a20685b0c0cb34c859912e17fc93b1287476ef23fc165147b4702d5411a",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Type-name positions shall exclude `ptr`, `fnptr`, `varargs`, and the `i[0-9]+` family, including declaration binders and type exports.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Other keywords/opcodes shall be contextual lowercase spellings",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "sigiled names such as `@add` shall be permitted.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

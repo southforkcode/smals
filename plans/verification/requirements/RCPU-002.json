@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RCPU-002",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Reference 68k emission shall exclude MOVEP, CAS/CAS2, long multiply/divide, bitfield, floating-point, and MMU instructions. Required logical behavior shall use conforming helpers/expansions. Processor model succession shall not imply an unrestricted instruction superset.",
+  "text_sha256": "430c2464b7e23547e307a0295c7e0fc020999d7a788c536af7e0d69c0bba0437",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Reference 68k emission shall exclude MOVEP, CAS/CAS2, long multiply/divide, bitfield, floating-point, and MMU instructions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Required logical behavior shall use conforming helpers/expansions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Processor model succession shall not imply an unrestricted instruction superset.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

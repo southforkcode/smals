@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-009",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Runtime storage shall begin with a 128-byte context, followed by `object_slots*48` registry bytes, `callback_slots*8` callback bytes, then private scratch, within manifest capacities. Registry fields shall use the ordered target-endian u32 contract; zero identity shall mark an unused slot.",
+  "text_sha256": "3e139d8021f77d865a6fb10bc27972fde3695edae93e5730f29a40d964b97af1",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Runtime storage shall begin with a 128-byte context, followed by `object_slots*48` registry bytes, `callback_slots*8` callback bytes, then private scratch, within manifest capacities.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Registry fields shall use the ordered target-endian u32 contract",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "zero identity shall mark an unused slot.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

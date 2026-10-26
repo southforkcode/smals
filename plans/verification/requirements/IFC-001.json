@@ -1,0 +1,35 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-001",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "`smil.interface.v1` shall contain format, canonical logical payload, `interface_sha256`, and optional nonsemantic `notes`. Payload shall include module identity, target, export table, complete public type graph, normalized exported constants, and byte-sorted unique `requires_modules` foreign owners.",
+  "text_sha256": "a6a3add67cdeea0102ec6d44d60fb459ed960c45a0ba353bd410079976b45971",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`smil.interface.v1` shall contain format, canonical logical payload, `interface_sha256`, and optional nonsemantic `notes`.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Payload shall include module identity, target, export table, complete public type graph, normalized exported constants, and byte-sorted unique `requires_modules` foreign owners.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-006",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "`field_addr p field(path)` for `ptr S [R]` shall return `ptr S [F]` for the selected F, using the resolved cumulative field offset. It shall preserve allocation identity, extent, lifetime, permissions, and address space without reading/initializing any field.",
+  "text_sha256": "4a2d145cd0a0f5c01290cc6c2c1b8607e574e0581fecfb01057c659e5f6165e7",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`field_addr p field(path)` for `ptr S [R]` shall return `ptr S [F]` for the selected F, using the resolved cumulative field offset.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall preserve allocation identity, extent, lifetime, permissions, and address space without reading/initializing any field.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

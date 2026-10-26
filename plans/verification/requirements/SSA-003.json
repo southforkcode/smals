@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SSA-003",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "A same-block operation/declaration result shall be used only after its definition. A cross-block result shall be used only where its defining block dominates the use block. An operation's own outputs shall be unavailable to its inputs.",
+  "text_sha256": "2c67d51978bf979e77da1c1478d846a4327fdfd85343ce2f3b4130d69efc690e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A same-block operation/declaration result shall be used only after its definition.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A cross-block result shall be used only where its defining block dominates the use block.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "An operation's own outputs shall be unavailable to its inputs.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

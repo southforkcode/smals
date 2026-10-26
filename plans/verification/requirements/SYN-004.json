@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-004",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "`//` shall introduce a comment through the physical newline or EOF without consuming its statement boundary. Quotes/backslashes in comments shall have no special effect. Block comments, `#` comments, preprocessing, includes, and macros shall be rejected.",
+  "text_sha256": "ce3f868efd1e216b206a4ba3ff1b69341549c1343f3b193131ad9955348080e5",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`//` shall introduce a comment through the physical newline or EOF without consuming its statement boundary.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Quotes/backslashes in comments shall have no special effect.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Block comments, `#` comments, preprocessing, includes, and macros shall be rejected.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

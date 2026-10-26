@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MON-001",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "`smil.ref.monitor.v1` shall be the sole predefined device contract and expose the eight logical registers below, with only i8 transactions, exactly once per access, no widening/posting/DMA/shared RAM. Other widths/directions shall be rejected when known or fault at access.",
+  "text_sha256": "ce7d56fd6e9c2961f58da0e32122f75476e7c88d4f09a6e53218f5cc51441845",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`smil.ref.monitor.v1` shall be the sole predefined device contract and expose the eight logical registers below, with only i8 transactions, exactly once per access, no widening/posting/DMA/shared RAM.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Other widths/directions shall be rejected when known or fault at access.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

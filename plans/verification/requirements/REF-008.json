@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-008",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Null shall have all pointer fields zero. Address-only data/ROM values shall have identity/offset/rights zero and nonzero cached coordinate. Equality shall distinguish null then compare cached coordinates, including expired values. Access/arithmetic shall require live matching registry identity, consistent coordinate/offset, rights, valid view, and readiness.",
+  "text_sha256": "2eb258e8add006ab5df6d3ae8b46fb0ef7489798f263b30514464aad6eab640c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Null shall have all pointer fields zero.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Address-only data/ROM values shall have identity/offset/rights zero and nonzero cached coordinate.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Equality shall distinguish null then compare cached coordinates, including expired values.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Access/arithmetic shall require live matching registry identity, consistent coordinate/offset, rights, valid view, and readiness.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

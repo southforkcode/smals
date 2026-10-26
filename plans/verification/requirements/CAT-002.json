@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CAT-002",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Every ID-bearing location shall be rewritten/tracked, including helper specializations, callable signatures, statically materialized packets/descriptors, object root types, function refs, and lifecycle records. No provisional numeric ID shall be embedded untracked; profile-fixed constants shall be the explicit exception. Layout/ABI fingerprints shall be validated before byte writes.",
+  "text_sha256": "57d0c01f57d235c541581d973b22541c37cd30f01098291de5a450f7ba07e512",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every ID-bearing location shall be rewritten/tracked, including helper specializations, callable signatures, statically materialized packets/descriptors, object root types, function refs, and lifecycle records.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "No provisional numeric ID shall be embedded untracked",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "profile-fixed constants shall be the explicit exception.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Layout/ABI fingerprints shall be validated before byte writes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

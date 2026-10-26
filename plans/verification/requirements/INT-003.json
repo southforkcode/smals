@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "INT-003",
+  "spec_path": "specs/0004_integer_operations.md",
+  "spec_sha256": "9dc0600df10568223c669046bd8bf05101d8dc596859a646ee8bb3b1cd11303b",
+  "text": "`add`, `sub`, `mul`, and `neg` shall return `bits_N` of mathematical addition, subtraction, multiplication, or negation. Overflow shall wrap without a fault, saturation, or undefined value.",
+  "text_sha256": "1d5857b209bcb5bc74595582ee3587d39fb1086a571235d67c3bab42875724fc",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`add`, `sub`, `mul`, and `neg` shall return `bits_N` of mathematical addition, subtraction, multiplication, or negation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Overflow shall wrap without a fault, saturation, or undefined value.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

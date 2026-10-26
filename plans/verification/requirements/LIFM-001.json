@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFM-001",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Every dynamic global/startup declaration shall contribute one lifecycle record with the fields below. Constant globals shall have no nodes. Global definitions/nodes shall agree one-to-one; actual factory/hook/callback contracts and supported ABI shall validate, with callback ABI obtained from its own descriptor.",
+  "text_sha256": "536536ba57b586507a7d7d18875b7a4bb61952b96d2981678d7b4e3e265cc7e4",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every dynamic global/startup declaration shall contribute one lifecycle record with the fields below.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Constant globals shall have no nodes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Global definitions/nodes shall agree one-to-one",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "actual factory/hook/callback contracts and supported ABI shall validate, with callback ABI obtained from its own descriptor.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

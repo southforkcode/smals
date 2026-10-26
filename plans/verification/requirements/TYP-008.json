@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-008",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Function parameters shall be entry-block parameter definitions, rather than separate bindings in the signature. Operation and `alosf` results shall become available only after their definition; all uses shall satisfy [0006](0006_control_flow_and_ssa.md).",
+  "text_sha256": "1d0bdd896a6284f47cde726b9cbd574e3841363e9ef274c5299d1b9abafa2c89",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Function parameters shall be entry-block parameter definitions, rather than separate bindings in the signature.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Operation and `alosf` results shall become available only after their definition",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "all uses shall satisfy [0006](0006_control_flow_and_ssa.md).",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

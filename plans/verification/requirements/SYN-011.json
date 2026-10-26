@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-011",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Integer tokens shall be optional adjacent `-` followed by canonical decimal digits or lowercase `0x` and one or more hexadecimal digits. Negative zero and either case of hex digits shall be accepted. Leading `+`, decimal leading zeros, separated minus, suffixes, digit separators, binary/octal/floating notation shall be rejected.",
+  "text_sha256": "a53bb7e5d4a1258a64b3ce2b7b04cd697e57cc68b701328c8a3711fab9ae291b",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Integer tokens shall be optional adjacent `-` followed by canonical decimal digits or lowercase `0x` and one or more hexadecimal digits.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Negative zero and either case of hex digits shall be accepted.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Leading `+`, decimal leading zeros, separated minus, suffixes, digit separators, binary/octal/floating notation shall be rejected.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

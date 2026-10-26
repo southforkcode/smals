@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-005",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "A selected link shall match every locked whole-interface digest. Changes to exported values/types/storage/effects/profile shall invalidate old locks; private body changes with identical canonical interfaces shall not require client recompilation, but the build shall still pin/check the changed object digest. Digests shall not imply provider trust.",
+  "text_sha256": "857a1fea61ee2d50e03a98a6861b7261d6675b6c2abf5d48a9204837d6af3638",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A selected link shall match every locked whole-interface digest.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Changes to exported values/types/storage/effects/profile shall invalidate old locks",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "private body changes with identical canonical interfaces shall not require client recompilation, but the build shall still pin/check the changed object digest.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Digests shall not imply provider trust.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

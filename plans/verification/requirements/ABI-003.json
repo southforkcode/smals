@@ -1,0 +1,30 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ABI-003",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "The ABI shall additionally define helper interfaces/versions, function-reference representation/indirect transfers, additional-argument descriptors/receipt/forwarding, exceptional discrimination/carriers/ownership/adapters, lifecycle callback interfaces/agents, registration guarantees, and quiescence.",
+  "text_sha256": "24c58084dc27191bbe8082b50a8824a0edca5e9f3f70780ca278446445125d9b",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The ABI shall additionally define helper interfaces/versions, function-reference representation/indirect transfers, additional-argument descriptors/receipt/forwarding, exceptional discrimination/carriers/ownership/adapters, lifecycle callback interfaces/agents, registration guarantees, and quiescence.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

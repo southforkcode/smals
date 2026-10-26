@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SSA-009",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "Verification shall diagnose violations even in structurally reachable blocks whose edges are never selected for a particular constant input. Unexecuted ordinary faulting operations shall not cause runtime faults merely because verification examines them.",
+  "text_sha256": "d7abc62f7fd190794d091b86d2f4b90e57aaaa92650019fe2d863da9823d522e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Verification shall diagnose violations even in structurally reachable blocks whose edges are never selected for a particular constant input.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Unexecuted ordinary faulting operations shall not cause runtime faults merely because verification examines them.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

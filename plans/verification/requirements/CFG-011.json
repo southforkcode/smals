@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-011",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "`call`/`call_indirect` and ordinary potentially faulting arithmetic/pointer/memory operations shall remain ordinary operations. Possible terminal events shall not create normal successor edges or exempt their blocks from an explicit terminator.",
+  "text_sha256": "bfa3029fe4a7996bafb0c077ad39edf142ce87753951a5c2180f08a3e1b1ad05",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`call`/`call_indirect` and ordinary potentially faulting arithmetic/pointer/memory operations shall remain ordinary operations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Possible terminal events shall not create normal successor edges or exempt their blocks from an explicit terminator.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

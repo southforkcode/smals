@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OPT-003",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Record scalarization shall preflight the complete logical access before any result/write; access widening/splitting shall retain legal source footprints and neighboring independence. Multi-agent physical splitting shall not introduce conflicts. Logical preflight shall not imply aggregate atomicity.",
+  "text_sha256": "99f3e81156df2ef5017670e6234b34bd52aafedc168e754409fc07a348a7d9ed",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Record scalarization shall preflight the complete logical access before any result/write",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "access widening/splitting shall retain legal source footprints and neighboring independence.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Multi-agent physical splitting shall not introduce conflicts.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Logical preflight shall not imply aggregate atomicity.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

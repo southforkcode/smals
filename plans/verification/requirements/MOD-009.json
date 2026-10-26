@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-009",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Definitions shall be unique by canonical key/kind. Weak/common/tentative definitions, first-definition wins, interposition, COMDAT, and implicit native-name fallback shall be absent. Selected required function declarations shall resolve to exactly one compatible definition.",
+  "text_sha256": "970ab1f4e95a020b951286e4af558c576b314f725f1de0cb3fadf6663bfebf56",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Definitions shall be unique by canonical key/kind.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Weak/common/tentative definitions, first-definition wins, interposition, COMDAT, and implicit native-name fallback shall be absent.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Selected required function declarations shall resolve to exactly one compatible definition.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-003",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Canonical JSON digests shall be SHA-256 of UTF-8 JSON with sorted object keys, no insignificant whitespace, unescaped non-ASCII, no normalization, and significant array order. Duplicate keys/floating numbers shall be rejected. Index shall pin profile digests; profiles shall pin shared-contract digest; no digest shall include itself.",
+  "text_sha256": "e5832fd3a6af07a0b6c46379888cecad46546e5258355eeec76dfa093c16ab20",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Canonical JSON digests shall be SHA-256 of UTF-8 JSON with sorted object keys, no insignificant whitespace, unescaped non-ASCII, no normalization, and significant array order.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Duplicate keys/floating numbers shall be rejected.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Index shall pin profile digests",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "profiles shall pin shared-contract digest",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "no digest shall include itself.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

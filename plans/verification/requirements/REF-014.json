@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-014",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Data/ROM integer round trips shall preserve every accepted numeric value exactly. Pointer round trips shall cover null and uniquely mapped live strict-interior positions with canonical object/space rights, excluding expired, one-past, and attenuated-rights values. Adjacent boundaries may reconstruct a different allocation; no hidden integer provenance shall be retained.",
+  "text_sha256": "7d4772e2ad84ac5db4450bc52c846be0e4e3a3e5416c4c23ae4a98473d8f252b",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Data/ROM integer round trips shall preserve every accepted numeric value exactly.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Pointer round trips shall cover null and uniquely mapped live strict-interior positions with canonical object/space rights, excluding expired, one-past, and attenuated-rights values.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Adjacent boundaries may reconstruct a different allocation",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "no hidden integer provenance shall be retained.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

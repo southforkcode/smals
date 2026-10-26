@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RRT-001",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Catalogs shall distinguish integers, pointers, callable value representations, nominal records, internal result tuples, and signatures. Aliases shall share identities. Canonical finite structural keys shall stop at nominal identities, include resolved ABI/attributes/effects, exclude provisional numeric IDs, and be UTF-8 canonical-JSON sorted before numbering.",
+  "text_sha256": "e15ea14b86bd3da6fca56bedd2480fb118f90dd272eeee2b471c421d4757a6b4",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Catalogs shall distinguish integers, pointers, callable value representations, nominal records, internal result tuples, and signatures.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Aliases shall share identities.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Canonical finite structural keys shall stop at nominal identities, include resolved ABI/attributes/effects, exclude provisional numeric IDs, and be UTF-8 canonical-JSON sorted before numbering.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

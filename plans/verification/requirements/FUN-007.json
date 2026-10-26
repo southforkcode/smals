@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "FUN-007",
+  "spec_path": "specs/0005_functions_and_calls.md",
+  "spec_sha256": "cd2a1853be5b61df6b6906f48fdfddddc8999d79639bba6ebb2bed38ec88bc41",
+  "text": "`return` shall terminate the invocation with exactly its normal result list and expire its locals. A record result shall be one result, distinct from multiple scalar results. Returning a pointer shall not extend its target lifetime. Infinite execution shall not waive block-termination rules.",
+  "text_sha256": "d3b7c2cf03eb3e0abe9f79541da09a37afc3970948a2fa7a6d5ae3c6279f6b28",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`return` shall terminate the invocation with exactly its normal result list and expire its locals.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A record result shall be one result, distinct from multiple scalar results.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Returning a pointer shall not extend its target lifetime.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Infinite execution shall not waive block-termination rules.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

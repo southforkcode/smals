@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-013",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Data/ROM `ptrtoint` shall zero-extend cached coordinate (null to zero), including expired-value inspection, within manifest `data_rom_encoding_max`. `inttoptr` zero shall be null; a uniquely containing live strict-interior position shall reconstruct canonical association/rights in that space; an unregistered coordinate shall become address-only.",
+  "text_sha256": "0c03252ebc9b4579af4b00ccf981f125abd4599d2d7b78516c42d3b69d75252d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Data/ROM `ptrtoint` shall zero-extend cached coordinate (null to zero), including expired-value inspection, within manifest `data_rom_encoding_max`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`inttoptr` zero shall be null",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "a uniquely containing live strict-interior position shall reconstruct canonical association/rights in that space",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "an unregistered coordinate shall become address-only.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

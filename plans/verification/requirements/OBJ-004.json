@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OBJ-004",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Relocation addends shall be canonical signed decimal strings without plus, leading zeros, or negative zero. All evaluation shall use mathematical integers. Unknown semantic fields/enums/formats/contracts, duplicate JSON keys, floats, malformed UTF-8, and non-scalar strings shall be errors; nonsemantic notes shall remain confined to `notes`.",
+  "text_sha256": "b58fa044098a8b33cfc4c81cbfaba1d65d5692e1ff3c11244f2bf948f40483e5",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Relocation addends shall be canonical signed decimal strings without plus, leading zeros, or negative zero.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "All evaluation shall use mathematical integers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Unknown semantic fields/enums/formats/contracts, duplicate JSON keys, floats, malformed UTF-8, and non-scalar strings shall be errors",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "nonsemantic notes shall remain confined to `notes`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-005",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Imports shall expose only the provider's explicit exports through the chosen qualifier, with no unqualified injection, transitive exposure, wildcard, public rename, or re-export. A client naming another owner's export shall import that owner directly.",
+  "text_sha256": "fa7bf222af678c3a836ea931efc2199dfee2cd3604990e6ae2d6566b89bec784",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Imports shall expose only the provider's explicit exports through the chosen qualifier, with no unqualified injection, transitive exposure, wildcard, public rename, or re-export.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A client naming another owner's export shall import that owner directly.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

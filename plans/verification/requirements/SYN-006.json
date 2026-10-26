@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-006",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Numeric SSA names shall use `%0` or `%` followed by a nonzero decimal digit and further decimal digits. Numeric names shall not imply register slots or automatic numbering. Other sigiled namespaces and qualifiers shall not admit numeric names.",
+  "text_sha256": "81edb150577bc509fdcd6764c44343a5fcacd06b0992180e2563e3a89135a4b8",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Numeric SSA names shall use `%0` or `%` followed by a nonzero decimal digit and further decimal digits.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Numeric names shall not imply register slots or automatic numbering.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Other sigiled namespaces and qualifiers shall not admit numeric names.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

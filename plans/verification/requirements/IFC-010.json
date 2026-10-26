@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-010",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Constant transport shall use the closed tagged forms below. Named-constant/alias references shall be expanded before publication. Expressions shall use only permitted constant operations, ordered arguments and valid paths, with unused argument/path arrays empty.",
+  "text_sha256": "bfb42aa93549d79af93edbd9213d0f94e545d11d2562bfc46655e4d680cedf97",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Constant transport shall use the closed tagged forms below.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Named-constant/alias references shall be expanded before publication.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Expressions shall use only permitted constant operations, ordered arguments and valid paths, with unused argument/path arrays empty.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

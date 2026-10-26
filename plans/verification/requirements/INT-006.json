@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "INT-006",
+  "spec_path": "specs/0004_integer_operations.md",
+  "spec_sha256": "9dc0600df10568223c669046bd8bf05101d8dc596859a646ee8bb3b1cd11303b",
+  "text": "For signed a and nonzero b, let q be a/b rounded toward zero and r = a-b*q. `sdiv` shall return q when representable; `srem` shall return r with dividend sign when nonzero and `abs(r) < abs(b)`.",
+  "text_sha256": "c951e4edaec68735bd6cbe9e615de0bd369c5b625c193011969ba4d6fa58b22b",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "For signed a and nonzero b, let q be a/b rounded toward zero and r = a-b*q.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`sdiv` shall return q when representable",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "`srem` shall return r with dividend sign when nonzero and `abs(r) < abs(b)`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

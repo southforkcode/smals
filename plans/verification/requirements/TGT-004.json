@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TGT-004",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Target-bound serialized SMIL/objects shall record sufficient resolved contract identities/digests, CPU requirements, and exposed-interface information to reproduce and validate target-dependent decisions. Changing layout/ABI shall invalidate every dependent transformation rather than merely replace an identifier.",
+  "text_sha256": "98ec6ed272da3860c31defcb5ad9509f3434e403acd9d6541757bb6587519abb",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Target-bound serialized SMIL/objects shall record sufficient resolved contract identities/digests, CPU requirements, and exposed-interface information to reproduce and validate target-dependent decisions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Changing layout/ABI shall invalidate every dependent transformation rather than merely replace an identifier.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

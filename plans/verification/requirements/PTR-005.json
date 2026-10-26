@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PTR-005",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "A field derivation shall retain the enclosing allocation's bounds rather than restrict arithmetic to that field. Typed view rules shall still prohibit invented subobjects or crossing into another allocation.",
+  "text_sha256": "45ee980beb8e5cf9e6cb35d6db1384ef4215e3072adcd885f7a664741b30dead",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A field derivation shall retain the enclosing allocation's bounds rather than restrict arithmetic to that field.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Typed view rules shall still prohibit invented subobjects or crossing into another allocation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

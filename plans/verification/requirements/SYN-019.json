@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-019",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Outside strings/comments, a backslash followed by optional spaces/tabs, optional `//` comment, and a physical newline shall join exactly that newline as separating whitespace. A final backslash at EOF shall be rejected. Continuation shall not join token fragments.",
+  "text_sha256": "06ca5143c6f5f9902ef7ce436ebeebf589867d170640b9c036f6a2c1548f97ce",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Outside strings/comments, a backslash followed by optional spaces/tabs, optional `//` comment, and a physical newline shall join exactly that newline as separating whitespace.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A final backslash at EOF shall be rejected.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Continuation shall not join token fragments.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

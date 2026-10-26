@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-012",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Application entry and callbacks/interrupt handlers that could observe incomplete globals shall remain gated until initialization completes. Any initialization-time asynchronous service shall have an environment contract preventing unrestricted access to incomplete state.",
+  "text_sha256": "90f97998f29e7eb7da108a2a2936aed0707dd3afcca00641d69f3dfeeba7be84",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Application entry and callbacks/interrupt handlers that could observe incomplete globals shall remain gated until initialization completes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Any initialization-time asynchronous service shall have an environment contract preventing unrestricted access to incomplete state.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

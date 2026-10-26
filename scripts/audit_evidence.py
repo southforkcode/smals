@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from tools.inventory import audit_inventory  # pylint: disable=wrong-import-position
 from tools.audit import (  # pylint: disable=wrong-import-position
     audit_receipt,
     audit_requirement,
@@ -20,12 +21,17 @@ def main() -> int:
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--increment")
     group.add_argument("--requirement")
+    group.add_argument("--inventory", action="store_true")
     parser.add_argument("--closure", action="store_true")
     parser.add_argument(
         "--root", type=Path, default=Path(__file__).resolve().parents[1]
     )
     parser.add_argument("--receipt", type=Path)
     args = parser.parse_args()
+    if args.inventory:
+        summary, errors = audit_inventory(args.root)
+        print(json.dumps({**summary, "errors": errors}))
+        return 1 if errors else 0
     if args.requirement:
         errors = (
             audit_requirement(args.root, args.requirement)

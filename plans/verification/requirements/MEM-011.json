@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MEM-011",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "Checks may be omitted only when validity is established for every reached use. Missing runtime support shall cause rejection rather than unchecked host-language behavior. Potentially faulting unused pointer/access operations shall retain their terminal-event behavior.",
+  "text_sha256": "b6c698176236eb20b3fb8d07b9c196f79fc775ed80dfaedd0bbc780b8a004dc8",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Checks may be omitted only when validity is established for every reached use.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Missing runtime support shall cause rejection rather than unchecked host-language behavior.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Potentially faulting unused pointer/access operations shall retain their terminal-event behavior.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

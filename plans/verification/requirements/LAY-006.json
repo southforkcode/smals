@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LAY-006",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Ordinary nonempty records shall lay out fields in order from offset zero, align each field start to its alignment, reserve its allocation size, set record alignment to the maximum field alignment, and round final size up to that alignment for allocation. Representation shall end at the final field allocation before record tail padding.",
+  "text_sha256": "2cae867edc9fbbc849c4ba275426af755d215a9c759801155524b2fbde3d3e1b",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Ordinary nonempty records shall lay out fields in order from offset zero, align each field start to its alignment, reserve its allocation size, set record alignment to the maximum field alignment, and round final size up to that alignment for allocation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Representation shall end at the final field allocation before record tail padding.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

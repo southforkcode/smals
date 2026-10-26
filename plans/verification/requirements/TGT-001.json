@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TGT-001",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "A target profile shall be a versioned selection of CPU configuration, data layout, ABI, platform environment, and runtime interfaces. Each component identifier shall resolve to exactly one contract; incompatible changes shall receive a new version. CPU name alone shall not constitute a profile.",
+  "text_sha256": "6ddca0c877e6c24b5a98322c36fd1486a28096efb94fc737b4a9c8731cb09896",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A target profile shall be a versioned selection of CPU configuration, data layout, ABI, platform environment, and runtime interfaces.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Each component identifier shall resolve to exactly one contract",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "incompatible changes shall receive a new version.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "CPU name alone shall not constitute a profile.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

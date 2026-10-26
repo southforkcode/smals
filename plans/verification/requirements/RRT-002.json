@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RRT-002",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Image metadata shall describe type sizes/alignment/fields/references, callable parameters/results/effects, globals/rights/readiness, and native function/continuation entries. Generated ROM tables/specialized checkers shall agree with the descriptor. Runtime-private Raw/FrameRaw/count/mode carriers shall not be source pointers or forge association.",
+  "text_sha256": "d24e9c3f39461431af1a46019b833b795d290e40a9292d349594f1687fadf502",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Image metadata shall describe type sizes/alignment/fields/references, callable parameters/results/effects, globals/rights/readiness, and native function/continuation entries.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Generated ROM tables/specialized checkers shall agree with the descriptor.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Runtime-private Raw/FrameRaw/count/mode carriers shall not be source pointers or forge association.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

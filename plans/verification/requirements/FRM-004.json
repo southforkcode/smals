@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "FRM-004",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "The 8008 shall use software continuation IDs and static jump dispatch for generated and compiler-introduced helper calls/returns. Generated `CALL`, `RST`, and `RET` shall be absent; hardware return-stack depth shall not cap logical recursion.",
+  "text_sha256": "0af630e7f1aedc1183d4d30e2b6f59a1911215d46b78cb9a48e3ed46bf42d90e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The 8008 shall use software continuation IDs and static jump dispatch for generated and compiler-introduced helper calls/returns.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Generated `CALL`, `RST`, and `RET` shall be absent",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "hardware return-stack depth shall not cap logical recursion.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

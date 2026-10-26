@@ -1,0 +1,48 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-008",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Final catalogs shall distinguish a function-reference representation from its synthesized `[\"signature\",callable_key]` and normal carrier `[\"tuple\",ordered_result_keys]`. The borrowed `varargs` token shall not be an exported/storable descriptor. Private runtime carriers shall use exact contract-tagged runtime descriptors and shall not appear in source exports/ordinary globals.",
+  "text_sha256": "3e4b8c7008309820dbe5ed608639f5c217a180a01e62f81df470974242d487f7",
+  "required_scopes": [
+    "source",
+    "artifact",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Final catalogs shall distinguish a function-reference representation from its synthesized `[\"signature\",callable_key]` and normal carrier `[\"tuple\",ordered_result_keys]`.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "The borrowed `varargs` token shall not be an exported/storable descriptor.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Private runtime carriers shall use exact contract-tagged runtime descriptors and shall not appear in source exports/ordinary globals.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

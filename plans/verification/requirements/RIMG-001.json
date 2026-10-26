@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RIMG-001",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Reference executable format shall be `smil.ref.image.v1` with UTF-8 JSON descriptor and fixed-placement raw segments, recording target/contracts/digests, entry, segment bounds/kinds/digests, catalogs, initialization order, and user IDs. Segments shall lie wholly in permitted regions; unmapped holes shall not be ordinary RAM.",
+  "text_sha256": "0de6ac9946b837f204941fe750ce9866ece710a8fb07619c5ff42f40c16d18b2",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Reference executable format shall be `smil.ref.image.v1` with UTF-8 JSON descriptor and fixed-placement raw segments, recording target/contracts/digests, entry, segment bounds/kinds/digests, catalogs, initialization order, and user IDs.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Segments shall lie wholly in permitted regions",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "unmapped holes shall not be ordinary RAM.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

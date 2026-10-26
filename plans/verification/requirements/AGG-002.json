@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-002",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "A field path shall be a nonempty list of zero-based nonnegative decimal indices. Each index shall select an existing field; each intermediate field shall resolve to an inline record. Empty, negative, out-of-range, dynamic, or pointer-traversing paths shall be statically rejected without wrapping indices.",
+  "text_sha256": "3f9d2407497aa79bcbe4bbd00763ee8fcfa376488f79b7a96575d548ff179b98",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A field path shall be a nonempty list of zero-based nonnegative decimal indices.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Each index shall select an existing field",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "each intermediate field shall resolve to an inline record.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Empty, negative, out-of-range, dynamic, or pointer-traversing paths shall be statically rejected without wrapping indices.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

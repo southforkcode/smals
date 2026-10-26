@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-016",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "ROM shall contain constant-initialized immutable objects also accessible by read-only data views. Data/ROM mappings shall preserve identity/position/rights; data-to-ROM shall fault for RAM. Mappings between I/O and any other space shall be unsupported; the reference monitor shall have no data-space device aliases.",
+  "text_sha256": "ba7830059a455535a0ea89677a30e2a0868d378fbe5a24766c0681ab1b6dbca8",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "ROM shall contain constant-initialized immutable objects also accessible by read-only data views.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Data/ROM mappings shall preserve identity/position/rights",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "data-to-ROM shall fault for RAM.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Mappings between I/O and any other space shall be unsupported",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "the reference monitor shall have no data-space device aliases.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

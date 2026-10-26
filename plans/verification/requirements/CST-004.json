@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CST-004",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "Local record initializers shall recursively accept already available values and constants under TYP-013. Ordinary runtime record construction shall use `record_make`; local syntax shall not permit loads, calls, later SSA values, or SSA operands in parenthesized constant expressions.",
+  "text_sha256": "e2cfa899020c8ae6a0a571b4db3409d665a1a7fcc19147a3a2fdc5ebfd040ced",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Local record initializers shall recursively accept already available values and constants under TYP-013.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Ordinary runtime record construction shall use `record_make`",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "local syntax shall not permit loads, calls, later SSA values, or SSA operands in parenthesized constant expressions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

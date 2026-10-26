@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-016",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "`on_exit ref` shall append one callback entry with no result, require an authorized agent in running state, and require a valid non-null supported-ABI fixed non-raising zero-parameter/zero-result callable. Repeated registrations shall be distinct. Failed validity/capacity shall append nothing.",
+  "text_sha256": "4d40494106ddd13cf4f44a9734f8a1a55f2bdba00ce050183404e26615b5fdca",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`on_exit ref` shall append one callback entry with no result, require an authorized agent in running state, and require a valid non-null supported-ABI fixed non-raising zero-parameter/zero-result callable.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Repeated registrations shall be distinct.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Failed validity/capacity shall append nothing.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-009",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "`trap` shall require a decoded constant identifier beginning `user.` with nonempty suffix, have no results/successors, and terminate with that fault while preserving preceding effects and promising no cleanup. It shall not mean undefined `unreachable`.",
+  "text_sha256": "e33058da1934522d94e54f30404379534ce547b5814baaebace7727877165d72",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`trap` shall require a decoded constant identifier beginning `user.` with nonempty suffix, have no results/successors, and terminate with that fault while preserving preceding effects and promising no cleanup.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall not mean undefined `unreachable`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

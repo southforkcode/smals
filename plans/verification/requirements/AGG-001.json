@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-001",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "A record SSA value shall contain a complete defined value for every field. Pointer fields shall hold pointer values rather than copies of their target objects; construction/copy shall not dereference those targets.",
+  "text_sha256": "a52849b379efbc3d5a4d87950850f4c5fa46680e4790921ff785fb3418406119",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A record SSA value shall contain a complete defined value for every field.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Pointer fields shall hold pointer values rather than copies of their target objects",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "construction/copy shall not dereference those targets.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

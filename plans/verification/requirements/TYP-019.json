@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-019",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "`$name = const initializer` shall define one immutable typed value inferred from its constant initializer, without an addressable object or source-visible allocation. A pointer-valued constant shall not make its target immutable.",
+  "text_sha256": "52cf9e9ee4860aa59a6e72078e413f2b18bfb70ca5d35927753e132e79bc4f94",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`$name = const initializer` shall define one immutable typed value inferred from its constant initializer, without an addressable object or source-visible allocation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A pointer-valued constant shall not make its target immutable.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

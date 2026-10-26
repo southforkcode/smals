@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-007",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Not-ready/finalized globals shall select their lifecycle fault before initialized-bit checks. External regions and foreign output contracts shall explicitly establish entry/output initialization; a signature or unknown call alone shall not prove initialization. Unsupported boundaries shall require an adapter or rejection.",
+  "text_sha256": "e250e47445ebcaad4b562aba782212e018a39dee10765eb1dedabaa765931ece",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Not-ready/finalized globals shall select their lifecycle fault before initialized-bit checks.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "External regions and foreign output contracts shall explicitly establish entry/output initialization",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "a signature or unknown call alone shall not prove initialization.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Unsupported boundaries shall require an adapter or rejection.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

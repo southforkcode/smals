@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PTR-010",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "`ptr_offset base delta` shall interpret the complete integer delta as signed two's complement, add it mathematically to a live associated position, and preserve pointer type/space/association/restrictions. It shall neither scale by pointee size nor truncate/wrap the delta.",
+  "text_sha256": "fbfe12f888428ef4c37cc6c3c8111b739b72f6923166d2db9c85692cc9ff3d82",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`ptr_offset base delta` shall interpret the complete integer delta as signed two's complement, add it mathematically to a live associated position, and preserve pointer type/space/association/restrictions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall neither scale by pointee size nor truncate/wrap the delta.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

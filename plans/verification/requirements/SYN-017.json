@@ -1,0 +1,48 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-017",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Newlines in parentheses, brackets, record field/initializer braces, and switch-case braces shall be whitespace. Function-body braces shall preserve statement boundaries. Delimiters shall match; lists shall require commas and prohibit trailing commas.",
+  "text_sha256": "8b340357c7844e530acde7296cfddb37fd1889053a30e55b754628f48572b44c",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Newlines in parentheses, brackets, record field/initializer braces, and switch-case braces shall be whitespace.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Function-body braces shall preserve statement boundaries.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Delimiters shall match",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "lists shall require commas and prohibit trailing commas.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

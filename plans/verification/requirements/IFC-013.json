@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-013",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Interface JSON shall reject invalid UTF-8/non-scalar strings, duplicate keys, floats, unknown semantic fields/enums/versions, and unresolved required contracts. Optional tool notes shall be confined to `notes`. Exact closed field shapes shall require the companion schema identified in [0000](0000_smil.md#unavailable-normative-inputs).",
+  "text_sha256": "ba6f115bc76503ae6762510a7f79b961b379e3f280b2730719f2097b87fff044",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Interface JSON shall reject invalid UTF-8/non-scalar strings, duplicate keys, floats, unknown semantic fields/enums/versions, and unresolved required contracts.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Optional tool notes shall be confined to `notes`.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Exact closed field shapes shall require the companion schema identified in [0000](0000_smil.md#unavailable-normative-inputs).",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

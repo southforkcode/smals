@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-009",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "A backend may use equivalent flags/bitmaps/type walkers/proofs; omitted tracking shall require a sound proof at every read. Private metadata operations shall not be source events/races but shall be synchronized and inaccessible through source pointers. Missing metadata shall never imply an initialized value.",
+  "text_sha256": "eda77bde1e392af3eaed50b3bb867a03aa6be11592d5bd7f66b5a64b9a1738ff",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A backend may use equivalent flags/bitmaps/type walkers/proofs",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "omitted tracking shall require a sound proof at every read.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Private metadata operations shall not be source events/races but shall be synchronized and inaccessible through source pointers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Missing metadata shall never imply an initialized value.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

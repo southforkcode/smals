@@ -1,0 +1,30 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SMIL-001",
+  "spec_path": "specs/0000_smil.md",
+  "spec_sha256": "3a23f85c2c5659b7edbae538509c1a36889cff667cd9b83a79a236e5bdf98a01",
+  "text": "SMIL shall represent computations as typed, immutable SSA values and storage changes as explicit operations.",
+  "text_sha256": "cea7334cd3f36befca915cdaffe50cdca304f316ba92b0199224c4520d327b90",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "SMIL shall represent computations as typed, immutable SSA values and storage changes as explicit operations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

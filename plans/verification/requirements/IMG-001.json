@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IMG-001",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "The `smil.ref.image.v1` descriptor shall retain required top-level format/profile/digests/entry/segment/initialization/user-fault fields and contain catalogs `types`, `objects`, `functions`, `continuations`, `modules`, and `link`. Provenance shall reside within catalogs rather than silently changing profile digests.",
+  "text_sha256": "4ab629d0c1db937a2349f84b77f2d61198a856cbbd017d3a545d0a1fe4bb5969",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The `smil.ref.image.v1` descriptor shall retain required top-level format/profile/digests/entry/segment/initialization/user-fault fields and contain catalogs `types`, `objects`, `functions`, `continuations`, `modules`, and `link`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Provenance shall reside within catalogs rather than silently changing profile digests.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

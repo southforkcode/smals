@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RFN-003",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "All reference profiles shall support explicit typed variadic calls, receipt, and runtime forwarding. Packs shall reference a live invocation's additional descriptors; forwarding shall copy descriptors/complete values into a new packet. Type/index/count checks shall follow [0005](0005_functions_and_calls.md). Native C varargs shall require an adapter.",
+  "text_sha256": "bacb56ed7a6c9e6b074d0bdabe754ae3d7241d94b63eabacf7a78e854a717a69",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "All reference profiles shall support explicit typed variadic calls, receipt, and runtime forwarding.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Packs shall reference a live invocation's additional descriptors",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "forwarding shall copy descriptors/complete values into a new packet.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Type/index/count checks shall follow [0005](0005_functions_and_calls.md).",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "Native C varargs shall require an adapter.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

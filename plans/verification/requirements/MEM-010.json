@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MEM-010",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "Verifiers shall reject statically known immutable-target/access-kind mismatches through aliases, field derivations, offsets, casts, and supported mappings. Invalid static paths/types/forms shall be diagnostics; otherwise supported execution-dependent invalid values shall use runtime faults.",
+  "text_sha256": "a1b074e974127c50ce79823c7e34c83df7023d2565fa9297da7adba1560c358e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Verifiers shall reject statically known immutable-target/access-kind mismatches through aliases, field derivations, offsets, casts, and supported mappings.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Invalid static paths/types/forms shall be diagnostics",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "otherwise supported execution-dependent invalid values shall use runtime faults.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

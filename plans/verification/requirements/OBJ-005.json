@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OBJ-005",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Definitions shall record canonical key/kind/type as applicable, export visibility, section/offset/extent/alignment, and global space/mutability/initialization mode. A constant global shall carry its constant tree; a dynamic global shall have null tree and exactly one matching lifecycle node. Named source constants shall not be allocated definitions.",
+  "text_sha256": "4aceb7acb0e0ae347382b92d7072f4e4e9305a9ef903741eb889d0e7130a1619",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Definitions shall record canonical key/kind/type as applicable, export visibility, section/offset/extent/alignment, and global space/mutability/initialization mode.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A constant global shall carry its constant tree",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "a dynamic global shall have null tree and exactly one matching lifecycle node.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Named source constants shall not be allocated definitions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

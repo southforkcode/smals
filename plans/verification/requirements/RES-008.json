@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RES-008",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Reference v2 locals shall reserve a half-open ID range only when `next_allocation_id + count` fits u32. `UINT32_MAX` shall be an exhausted next-counter sentinel, never a new local identity. Required increments and live-slot charges (including monitor/reserved globals) shall not be waived by dead-code elimination.",
+  "text_sha256": "4a258da0103939c13681a2e72ccbcf71b23c39dc9cd1aca9142f6ff9a20995e9",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Reference v2 locals shall reserve a half-open ID range only when `next_allocation_id + count` fits u32.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`UINT32_MAX` shall be an exhausted next-counter sentinel, never a new local identity.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Required increments and live-slot charges (including monitor/reserved globals) shall not be waived by dead-code elimination.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

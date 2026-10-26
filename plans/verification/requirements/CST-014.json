@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CST-014",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "Constant `ptrtoint`/`inttoptr` shall require complete numeric evaluation under the bound profile without unresolved final global addresses. Symbolic integer-address relocations, arbitrary arithmetic on unresolved addresses, and arbitrary linker-side expression evaluation shall be rejected.",
+  "text_sha256": "d10a3beb2cc142213bca2dda55d4f0afeb626cc770221f144e4e3ff83521dd0c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Constant `ptrtoint`/`inttoptr` shall require complete numeric evaluation under the bound profile without unresolved final global addresses.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Symbolic integer-address relocations, arbitrary arithmetic on unresolved addresses, and arbitrary linker-side expression evaluation shall be rejected.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

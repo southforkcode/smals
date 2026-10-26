@@ -1,0 +1,35 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-006",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Type labels shall derive from sorted canonical keys: integer `[\"integer\",N]`, pointer `[\"pointer\",space,pointee_key]`, record nominal identity, and callable key with ordered typed/attributed parameters/results, variadic flag, optional raised key, and ABI. Keys shall use no provisional label/runtime ID.",
+  "text_sha256": "89b59e5e6447f7d1d642dd267f064451ef0098353aea1a358807eed216d315cf",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Type labels shall derive from sorted canonical keys: integer `[\"integer\",N]`, pointer `[\"pointer\",space,pointee_key]`, record nominal identity, and callable key with ordered typed/attributed parameters/results, variadic flag, optional raised key, and ABI.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Keys shall use no provisional label/runtime ID.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

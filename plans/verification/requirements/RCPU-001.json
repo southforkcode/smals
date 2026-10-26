@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RCPU-001",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Every emitted instruction shall be legal for the exact selected mode/subset. Intel 32-bit variants shall use the 80386 integer baseline without implicit x87/MMX/SSE/CMOV/CMPXCHG8B. PowerPC shall use the contracted common 32-bit integer subset without implicit POWER/floating/vector operations.",
+  "text_sha256": "90c6575ee3a675a76fe87befcc84250c4897aef8ee32a82dd59f3546fea53684",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every emitted instruction shall be legal for the exact selected mode/subset.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Intel 32-bit variants shall use the 80386 integer baseline without implicit x87/MMX/SSE/CMOV/CMPXCHG8B.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "PowerPC shall use the contracted common 32-bit integer subset without implicit POWER/floating/vector operations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-013",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Local declarations shall initialize in declaration order using the exact object type. Initializer inputs shall be constants, entry parameters, earlier available declaration results, or complete nested local record initializers; the declaration's own result and later definitions shall be unavailable. No load, call, or arbitrary executable expression shall be implied.",
+  "text_sha256": "6fc8fa5a19c76702920a0c660a6e7568affecf884eb1c1ba4366a46165c95f5c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Local declarations shall initialize in declaration order using the exact object type.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Initializer inputs shall be constants, entry parameters, earlier available declaration results, or complete nested local record initializers",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "the declaration's own result and later definitions shall be unavailable.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "No load, call, or arbitrary executable expression shall be implied.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

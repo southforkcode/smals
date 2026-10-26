@@ -1,0 +1,35 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-026",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "A record's name and later type declarations in its scope shall be available when resolving recursive definitions. Finite layout shall not imply that an object fits a particular target.",
+  "text_sha256": "6c9be6066343c3dba1d9c65f6d1d000a846dd3f599692ab52188aa44c82b2414",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A record's name and later type declarations in its scope shall be available when resolving recursive definitions.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Finite layout shall not imply that an object fits a particular target.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

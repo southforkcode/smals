@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IDN-004",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Each nominal owner shall supply authoritative descriptors. Imported snapshots shall match the selected owner and shall not replace a missing owner. Comparison/key construction shall stop at nominal references to avoid infinite expansion; alias/by-value cycles shall remain invalid.",
+  "text_sha256": "fa7d2fd953d538879cd006e6b6fef22571f927fba7ccbdba598299b5f9f03dde",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each nominal owner shall supply authoritative descriptors.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Imported snapshots shall match the selected owner and shall not replace a missing owner.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Comparison/key construction shall stop at nominal references to avoid infinite expansion",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "alias/by-value cycles shall remain invalid.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

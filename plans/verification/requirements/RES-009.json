@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RES-009",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Different valid lowerings may have different physical exhaustion points, but changes shall preserve non-resource semantics and mandated accounting, regenerate the execution plan/digests/provenance, and obey ABI/lifetime/association constraints including inlining and tail calls. No portable fixed recursion depth shall be implied.",
+  "text_sha256": "2e62bd78d5506965832fe72a2fe6b9763b7dba2fca4cd11c593008b38d28e092",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Different valid lowerings may have different physical exhaustion points, but changes shall preserve non-resource semantics and mandated accounting, regenerate the execution plan/digests/provenance, and obey ABI/lifetime/association constraints including inlining and tail calls.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "No portable fixed recursion depth shall be implied.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

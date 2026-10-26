@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-019",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Across agents, the environment shall select the next validation/commit event consistently with sequencing/synchronization/atomic order. The first terminal event shall close the instance and determine the reported fault; no later normal operation shall commit. Authorized in-flight external activity shall retain its device contract.",
+  "text_sha256": "4f75931d99248a845c125420a59312c2bc8fdfb74d627d6ddd6376ed98730086",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Across agents, the environment shall select the next validation/commit event consistently with sequencing/synchronization/atomic order.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "The first terminal event shall close the instance and determine the reported fault",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "no later normal operation shall commit.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Authorized in-flight external activity shall retain its device contract.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

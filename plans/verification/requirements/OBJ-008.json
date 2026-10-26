@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OBJ-008",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Cross-module references shall obey exports/import locks. Ordinary aux/section/continuation labels shall remain module-private. A cross-module aux helper shall require a validated runtime contract/binding, exact callable descriptor/opcode/ordered type and integer arguments. Specialization shall use symbolic type keys until final IDs.",
+  "text_sha256": "7beca30658021cbe0b2696ef537e18e819cc48b06304e177cec3df194852b56e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Cross-module references shall obey exports/import locks.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Ordinary aux/section/continuation labels shall remain module-private.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A cross-module aux helper shall require a validated runtime contract/binding, exact callable descriptor/opcode/ordered type and integer arguments.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Specialization shall use symbolic type keys until final IDs.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

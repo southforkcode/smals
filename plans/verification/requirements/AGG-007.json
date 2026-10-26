@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-007",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "A `field_addr` base shall identify the start of a live actual R subobject. Null, expired, one-past, address-only, wrong-type, and non-boundary bases shall cause `invalid_pointer_operation` before a result. An uninitialized actual R object shall be a valid base.",
+  "text_sha256": "25389f03244acb6fba1c4a678f557ed4d160f9dcd856ae5b218b992edf8f2389",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A `field_addr` base shall identify the start of a live actual R subobject.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Null, expired, one-past, address-only, wrong-type, and non-boundary bases shall cause `invalid_pointer_operation` before a result.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "An uninitialized actual R object shall be a valid base.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-004",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Source verification shall consume build-pinned identity-to-interface/digest mappings. Objects shall lock the exact bound digest of every direct import, including type-only/constant-only imports, plus foreign owners introduced by expanded public graphs/constants. Added locks shall not add source qualifiers.",
+  "text_sha256": "a12eef706a8b12a7265127b1be9490ab535dc9c139022366ef1d52015f7a38ee",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Source verification shall consume build-pinned identity-to-interface/digest mappings.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Objects shall lock the exact bound digest of every direct import, including type-only/constant-only imports, plus foreign owners introduced by expanded public graphs/constants.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Added locks shall not add source qualifiers.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

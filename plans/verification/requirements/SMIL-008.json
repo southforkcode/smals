@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SMIL-008",
+  "spec_path": "specs/0000_smil.md",
+  "spec_sha256": "3a23f85c2c5659b7edbae538509c1a36889cff667cd9b83a79a236e5bdf98a01",
+  "text": "An ordinary executable operation with constant faulting operands shall remain well-formed when it satisfies static rules; it shall fault only if executed. A required constant expression shall instead be rejected if it cannot evaluate successfully.",
+  "text_sha256": "ad4d90e1513d66f0f86342ddc48575b9e93385f0f53610facbe049d90ab3e554",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "An ordinary executable operation with constant faulting operands shall remain well-formed when it satisfies static rules",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "it shall fault only if executed.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A required constant expression shall instead be rejected if it cannot evaluate successfully.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

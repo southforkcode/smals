@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-004",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "Each atomic access shall be indivisible for its logical value/representation with respect to every participating agent, including interoperability between native/helper paths. Ordinary encoding, i1 canonical stores, and unused-high-bit clearing shall be preserved.",
+  "text_sha256": "89318f20b5a573329a56bbf0d5431e036f2792d66bde628c64faad8e7488d734",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each atomic access shall be indivisible for its logical value/representation with respect to every participating agent, including interoperability between native/helper paths.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Ordinary encoding, i1 canonical stores, and unused-high-bit clearing shall be preserved.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

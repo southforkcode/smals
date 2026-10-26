@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "DEV-008",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "MMIO-only regions shall reject ordinary/unaligned/atomic access even through ordinary-space aliases. Core device operations shall not accept record/pointer values or imply generic volatile RAM behavior. Environment devices shall not be constructed by global initializer stores.",
+  "text_sha256": "147f40e25fb048cb3e4fea6a8eea2ab47721c0f618ef471074431f32fb19586f",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "MMIO-only regions shall reject ordinary/unaligned/atomic access even through ordinary-space aliases.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Core device operations shall not accept record/pointer values or imply generic volatile RAM behavior.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Environment devices shall not be constructed by global initializer stores.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

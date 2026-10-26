@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OBJ-009",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Version 1 shall retain all definitions/sections of selected modules, including lifecycle-only content. Equal bytes shall not coalesce distinct addressable globals; linker code folding/definition coalescing shall be absent. Any later elimination extension shall prove all roots/edges/lifecycle/runtime dependencies and recompute catalogs/placement.",
+  "text_sha256": "bf70610233bbf629b7df1965ec870e4ac565c96b5fd2fae3ceb5b3d3281116c8",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Version 1 shall retain all definitions/sections of selected modules, including lifecycle-only content.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Equal bytes shall not coalesce distinct addressable globals",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "linker code folding/definition coalescing shall be absent.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Any later elimination extension shall prove all roots/edges/lifecycle/runtime dependencies and recompute catalogs/placement.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-012",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "Values shall be initialized before reading/publication. Plain and atomic stores may initialize; atomic loads, all RMW including `xchg`, and both compare/exchange outcomes shall require a complete old value. Failed compare/exchange shall initialize nothing; fences shall read no value.",
+  "text_sha256": "ac9b2138ea77e117adc508c9bfb5a50e3b65a9957e50c45163c0a7fa6c872c17",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Values shall be initialized before reading/publication.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Plain and atomic stores may initialize",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "atomic loads, all RMW including `xchg`, and both compare/exchange outcomes shall require a complete old value.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Failed compare/exchange shall initialize nothing",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "fences shall read no value.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

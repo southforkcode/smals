@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PKT-005",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Outcome zero shall mean pending, one normal, two raised. The callee shall write selected payload before the tag; non-raising signatures shall not return tag two. Termination shall manufacture no outcome. The callee shall validate target/signature/header/descriptors before consuming arguments.",
+  "text_sha256": "d2bc6adc40b05737aaa6f463219e1cb902d03c8e6c400756c673f2c02e21e229",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Outcome zero shall mean pending, one normal, two raised.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "The callee shall write selected payload before the tag",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "non-raising signatures shall not return tag two.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Termination shall manufacture no outcome.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "The callee shall validate target/signature/header/descriptors before consuming arguments.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

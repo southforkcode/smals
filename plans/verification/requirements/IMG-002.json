@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IMG-002",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Module records shall pin selected interface/object digests. One link record shall pin link-manifest digest, exact component IDs, and contract `smil.link.v1`. Complete interface/type descriptors shall remain available for validation; retained target runtime tables shall agree with host descriptors.",
+  "text_sha256": "dfa7c9ec973250eb8c3edfc511a35a2b141b55125a69296d5c740e51f7b13474",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Module records shall pin selected interface/object digests.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "One link record shall pin link-manifest digest, exact component IDs, and contract `smil.link.v1`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Complete interface/type descriptors shall remain available for validation",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "retained target runtime tables shall agree with host descriptors.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

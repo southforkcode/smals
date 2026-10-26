@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "INT-019",
+  "spec_path": "specs/0004_integer_operations.md",
+  "spec_sha256": "9dc0600df10568223c669046bd8bf05101d8dc596859a646ee8bb3b1cd11303b",
+  "text": "Arithmetic faults shall terminate at the operation with no result, catchable payload, new normal CFG edge, or cleanup promise. Zero-divisor checking shall precede quotient overflow and helper/work-buffer reservation.",
+  "text_sha256": "ac9330577868746327f220b08d32fb658972c92bd0560fa7ea30385016e621a0",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Arithmetic faults shall terminate at the operation with no result, catchable payload, new normal CFG edge, or cleanup promise.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Zero-divisor checking shall precede quotient overflow and helper/work-buffer reservation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

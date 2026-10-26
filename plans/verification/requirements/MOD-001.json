@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-001",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "A module shall be the unit of source ownership, separate compilation, and lifecycle registration. Its publishable source shall begin with one explicit nonempty NUL-free UTF-8 identity string, before target/imports. Identity shall compare exact decoded scalar sequences, without case/path/Unicode normalization, filename inference, or version-range resolution.",
+  "text_sha256": "58a4810880564c0ba0a616b4ec4a1d6c8520ab3662515d7fd096b581c6ab668b",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A module shall be the unit of source ownership, separate compilation, and lifecycle registration.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Its publishable source shall begin with one explicit nonempty NUL-free UTF-8 identity string, before target/imports.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Identity shall compare exact decoded scalar sequences, without case/path/Unicode normalization, filename inference, or version-range resolution.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}
