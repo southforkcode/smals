@@ -9,8 +9,8 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | State | Count |
 | --- | --- |
 | Completed with verified evidence | 18 |
-| In progress | 0 |
-| Blocked or split | 1 |
+| In progress | 1 |
+| Blocked or split | 0 |
 | Pending | 1,926 |
 | Total indexed increments | 1,945 |
 
@@ -22,6 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 17 | B009 | 2 | 2026-10-26T11:27:45Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/B009.md) |
 | 17.1 | B009.1 | 1 | 2026-10-26T11:23:31Z | 2026-10-26T11:26:58Z | 207 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B009.1.md) |
 | 17 | B009 | 1 | 2026-10-26T11:06:51Z | 2026-10-26T11:22:57Z | 966 | 10 active minutes | unknown / unknown | Split; elapsed ceiling overrun, lint/integration pending | [Evidence](evidence/B009.md) |
 | 16 | B008 | 2 | 2026-10-26T11:00:54Z | 2026-10-26T11:06:50Z | 356 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B008.md) |
