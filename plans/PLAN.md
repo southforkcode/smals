@@ -8,13 +8,13 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 
 | State | Count |
 | --- | --- |
-| Completed with verified evidence | 18 |
-| In progress | 1 |
+| Completed with verified evidence | 19 |
+| In progress | 0 |
 | Blocked or split | 0 |
 | Pending | 1,926 |
 | Total indexed increments | 1,945 |
 
-**Next step: [17 — B009](#step-17).** Step 17.1 is complete with [integration and cleanup evidence](evidence/B009.1.md). This file records implementation progress, not the completion of writing the plan.
+**Next step: [18 — B010](#step-18).** Step 17 is complete with [integration and cleanup evidence](evidence/B009.md). This file records implementation progress, not the completion of writing the plan.
 
 ## Work timing log
 
@@ -22,7 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 17 | B009 | 2 | 2026-10-26T11:27:45Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/B009.md) |
+| 17 | B009 | 2 | 2026-10-26T11:27:45Z | 2026-10-26T11:29:01Z | 76 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B009.md) |
 | 17.1 | B009.1 | 1 | 2026-10-26T11:23:31Z | 2026-10-26T11:26:58Z | 207 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B009.1.md) |
 | 17 | B009 | 1 | 2026-10-26T11:06:51Z | 2026-10-26T11:22:57Z | 966 | 10 active minutes | unknown / unknown | Split; elapsed ceiling overrun, lint/integration pending | [Evidence](evidence/B009.md) |
 | 16 | B008 | 2 | 2026-10-26T11:00:54Z | 2026-10-26T11:06:50Z | 356 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B008.md) |
@@ -129,7 +129,7 @@ The sections below follow useful advancement: build and evidence, source verific
 - [x] <a id="step-15"></a>**Step 15 — [B007](01_foundation_and_contracts.md#b007)**: Add structured observable trace records for value, memory, device, fault, lifecycle and resource events Evidence: [B007 completion](evidence/B007.md); merged, verified and local branch deleted.
 - [x] <a id="step-16"></a>**Step 16 — [B008](01_foundation_and_contracts.md#b008)**: Complete after B008.1; implementation: scripts/prove.py --increment ID --out DIR to build changed targets, run registered cases and save exit codes/timing/raw logs/artifact hashes. Evidence: [B008 completion](evidence/B008.md); merged, verified and local branch deleted.
 - [x] <a id="step-16.1"></a>**Step 16.1 — [B008.1](01_foundation_and_contracts.md#b008.1)**: Revalidate every captured build/tool/case log and command record before passing a receipt. Evidence: [B008.1 completion](evidence/B008.1.md); merged, verified and local branch deleted.
-- [ ] <a id="step-17"></a>**Step 17 — [B009](01_foundation_and_contracts.md#b009)**: Add scripts/audit_evidence.py --increment ID and --requirement KEY --closure Evidence: pending.
+- [x] <a id="step-17"></a>**Step 17 — [B009](01_foundation_and_contracts.md#b009)**: Add scripts/audit_evidence.py --increment ID and --requirement KEY --closure Evidence: [B009 completion](evidence/B009.md); merged, verified and local branch deleted.
 - [x] <a id="step-17.1"></a>**Step 17.1 — [B009.1](01_foundation_and_contracts.md#b009.1)**: Finish auditor acceptance, host verification and integration. Evidence: [B009.1 completion](evidence/B009.1.md); merged, verified and local branch deleted.
 - [ ] <a id="step-18"></a>**Step 18 — [B010](01_foundation_and_contracts.md#b010)**: Seed plans/verification/requirements/<KEY>.json with all 435 exact requirement texts/digests, clause obligations and initially missing evidence links. Evidence: pending.
 - [ ] <a id="step-19"></a>**Step 19 — [B011](01_foundation_and_contracts.md#b011)**: Add bounded runtime fault injection, red-zone/canary memory and deterministic resource limits to test support. Evidence: pending.
