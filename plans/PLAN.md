@@ -8,8 +8,8 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 
 | State | Count |
 | --- | --- |
-| Completed with verified evidence | 25 |
-| In progress | 1 |
+| Completed with verified evidence | 26 |
+| In progress | 0 |
 | Blocked or split | 1 |
 | Pending | 1,921 |
 | Total indexed increments | 1,948 |
@@ -39,7 +39,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 23.1 | B015.1 | 1 | 2026-10-26T14:36:18Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/B015.1.md) |
+| 23.1 | B015.1 | 1 | 2026-10-26T14:36:18Z | 2026-10-26T14:41:16Z | 298 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B015.1.md) |
 | 23 | B015 | 1 | 2026-10-26T13:39:07Z | 2026-10-26T13:57:43Z | 1116 | 10 active minutes | unknown / unknown | Stopped; material split, implementation incomplete | [Evidence](evidence/B015.md) |
 | 22 | B014 | 2 | 2026-10-26T13:12:19Z | 2026-10-26T13:39:07Z | 1608 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B014.md) |
 | 22 | B014 | 1 | 2026-10-26T12:47:59Z | 2026-10-26T12:52:30Z | 271 | 10 active minutes | unknown / unknown | Stopped for user-requested process update; no implementation | [Evidence](evidence/B014.md) |
@@ -167,7 +167,7 @@ The sections below follow useful advancement: build and evidence, source verific
 - [x] <a id="step-21"></a>**Step 21 — [B013](01_foundation_and_contracts.md#b013)**: Expose CTest labels per increment and scripts/prove.py --case-set/--shard for bounded reruns Evidence: [B013 completion](evidence/B013.md); merged, verified and local branch deleted.
 - [x] <a id="step-22"></a>**Step 22 — [B014](01_foundation_and_contracts.md#b014)**: Create one runnable placeholder-free example module and a command expectation file Evidence: [B014 completion](evidence/B014.md); merged, verified and local branch deleted.
 - [ ] <a id="step-23"></a>**Step 23 — [B015](01_foundation_and_contracts.md#b015)**: Add the shared structured entry/debug/error logging API and changed-unit branch-coverage reporting convention required by repository code standards. Status: split and incomplete; [attempt evidence](evidence/B015.md). Complete children 23.1 and 23.2 before closing B015.
-- [ ] <a id="step-23.1"></a>**Step 23.1 — [B015.1](01_foundation_and_contracts.md#b015.1)**: Implement shared structured logging and migrate diagnostic/CLI/trace callers; exact JSON, origin-error and debug/release checks. Evidence: pending.
+- [x] <a id="step-23.1"></a>**Step 23.1 — [B015.1](01_foundation_and_contracts.md#b015.1)**: Implement shared structured logging and migrate diagnostic/CLI/trace callers; exact JSON, origin-error and debug/release checks. Evidence: [B015.1 completion](evidence/B015.1.md); merged, verified and local branch deleted.
 - [ ] <a id="step-23.2"></a>**Step 23.2 — [B015.2](01_foundation_and_contracts.md#b015.2)**: Add changed-unit coverage instrumentation/reporting and demonstrate incomplete rejection followed by complete branch coverage. Evidence: pending.
 
 ## Steps 24–68: Complete source parsing and semantic verification
