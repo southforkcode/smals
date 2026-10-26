@@ -200,6 +200,25 @@ def capture(root, out, name, argv, timeout):
     return {**record, "record": {"path": path.name, "sha256": digest(path)}}
 
 
+def capture_errors(out, record):
+    """Require intact command JSON and both streams at finalization/audit."""
+    LOGGER.debug("Entering capture_errors")
+    errors = []
+    for key in ("record", "stdout", "stderr"):
+        metadata = record.get(key)
+        if not isinstance(metadata, dict) or set(metadata) != {"path", "sha256"}:
+            errors.append(f"malformed {key} metadata")
+            continue
+        path = (out / metadata["path"]).resolve()
+        if (
+            not path.is_relative_to(out.resolve())
+            or not path.is_file()
+            or digest(path) != metadata["sha256"]
+        ):
+            errors.append(f"missing or changed {key} evidence")
+    return errors
+
+
 def evaluate_case(root, out, case, record):
     """Derive acceptance from actual status/log bytes and independent expectations."""
     LOGGER.debug("Entering evaluate_case: %s", case["id"])
@@ -424,6 +443,9 @@ def run_proof(request: ProofRequest):
     try:
         out.mkdir(parents=True, exist_ok=True)
         receipt["errors"] = collect(request, receipt)
+        for record in [*receipt["commands"], *receipt["cases"]]:
+            if not record.get("unavailable"):
+                receipt["errors"].extend(capture_errors(out, record))
         receipt["passed"] = not receipt["errors"]
         (out / "receipt.json").write_text(
             json.dumps(receipt, indent=2) + "\n", encoding="utf-8"
