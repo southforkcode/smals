@@ -8,13 +8,13 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 
 | State | Count |
 | --- | --- |
-| Completed with verified evidence | 24 |
-| In progress | 1 |
+| Completed with verified evidence | 25 |
+| In progress | 0 |
 | Blocked or split | 0 |
 | Pending | 1,921 |
 | Total indexed increments | 1,946 |
 
-**Next step: [22 — B014](#step-22).** Step 21 is complete with [integration and cleanup evidence](evidence/B013.md). This file records implementation progress, not the completion of writing the plan.
+**Next step: [23 — B015](#step-23).** Step 22 is complete with [integration and cleanup evidence](evidence/B014.md). This file records implementation progress, not the completion of writing the plan.
 
 ## Safety checkpoint cadence
 
@@ -35,7 +35,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 22 | B014 | 2 | 2026-10-26T13:12:19Z | | | 10 active minutes | unknown / unknown | In progress | [Evidence](evidence/B014.md) |
+| 22 | B014 | 2 | 2026-10-26T13:12:19Z | 2026-10-26T13:39:07Z | 1608 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B014.md) |
 | 22 | B014 | 1 | 2026-10-26T12:47:59Z | 2026-10-26T12:52:30Z | 271 | 10 active minutes | unknown / unknown | Stopped for user-requested process update; no implementation | [Evidence](evidence/B014.md) |
 | 21 | B013 | 2 | 2026-10-26T12:30:17Z | 2026-10-26T12:47:59Z | 1062 | 10 active minutes | unknown / unknown | Completed with elapsed overrun; retained under user-authorized efficiency policy | [Evidence](evidence/B013.md) |
 | 20 | B012 | 2 | 2026-10-26T12:26:48Z | 2026-10-26T12:30:17Z | 209 | 10 active minutes | unknown / unknown | Completed | [Evidence](evidence/B012.md) |
@@ -159,7 +159,7 @@ The sections below follow useful advancement: build and evidence, source verific
 - [x] <a id="step-20"></a>**Step 20 — [B012](01_foundation_and_contracts.md#b012)**: Add final acceptance policy that separates source, host model, artifact, native-family and exact-profile evidence. Evidence: [B012 completion](evidence/B012.md); merged, verified and local branch deleted.
 - [x] <a id="step-20.1"></a>**Step 20.1 — [B012.1](01_foundation_and_contracts.md#b012.1)**: Bounded receipt and integration closeout after the evidence-scope timebox overrun. Evidence: [B012.1 completion](evidence/B012.1.md); merged, verified and local branch deleted.
 - [x] <a id="step-21"></a>**Step 21 — [B013](01_foundation_and_contracts.md#b013)**: Expose CTest labels per increment and scripts/prove.py --case-set/--shard for bounded reruns Evidence: [B013 completion](evidence/B013.md); merged, verified and local branch deleted.
-- [ ] <a id="step-22"></a>**Step 22 — [B014](01_foundation_and_contracts.md#b014)**: Create one runnable placeholder-free example module and a command expectation file Evidence: pending.
+- [x] <a id="step-22"></a>**Step 22 — [B014](01_foundation_and_contracts.md#b014)**: Create one runnable placeholder-free example module and a command expectation file Evidence: [B014 completion](evidence/B014.md); merged, verified and local branch deleted.
 - [ ] <a id="step-23"></a>**Step 23 — [B015](01_foundation_and_contracts.md#b015)**: Add the shared structured entry/debug/error logging API and changed-unit branch-coverage reporting convention required by repository code standards. Evidence: pending.
 
 ## Steps 24–68: Complete source parsing and semantic verification
