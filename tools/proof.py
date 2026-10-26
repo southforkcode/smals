@@ -89,6 +89,7 @@ def case_errors(case):
         "stderr_contains",
         "artifacts",
         "backend",
+        "kind",
     }
     if (
         not isinstance(case, dict)
@@ -120,7 +121,9 @@ def case_errors(case):
 def expectation_errors(case):
     """Require independent output expectations and a declared backend."""
     LOGGER.debug("Entering expectation_errors")
-    if case.get("backend", "host") not in ("host", "unavailable"):
+    if case.get("backend", "host") not in ("host", "unavailable") or case.get(
+        "kind", "positive"
+    ) not in ("positive", "negative", "boundary"):
         return ["unavailable backend: no adapter is registered"]
     for key in ("stdout_contains", "stderr_contains"):
         if not isinstance(case.get(key, []), list) or not all(
@@ -314,11 +317,9 @@ def git_metadata(request, receipt):
     return []
 
 
-def tool_metadata(request, manifest, receipt):
-    """Record selected compiler/format/lint/interpreter tool identities."""
-    LOGGER.debug("Entering tool_metadata")
-    root, out, cmake = request.root, request.out, request.cmake
-    build = (root / manifest["build_dir"]).resolve()
+def selected_tools(build, cmake):
+    """Read actual configured tool paths for collection and independent audit."""
+    LOGGER.debug("Entering selected_tools")
     tools = {"cmake": cmake, "python": sys.executable}
     cache = build / "CMakeCache.txt"
     if cache.exists():
@@ -327,6 +328,15 @@ def tool_metadata(request, manifest, receipt):
                 r"(CMAKE_CXX_COMPILER|SMIL_CLANG_FORMAT|SMIL_CLANG_TIDY|SMIL_UV):", line
             ):
                 tools[line.split(":", 1)[0]] = line.split("=", 1)[1]
+    return tools
+
+
+def tool_metadata(request, manifest, receipt):
+    """Record selected compiler/format/lint/interpreter tool identities."""
+    LOGGER.debug("Entering tool_metadata")
+    root, out, cmake = request.root, request.out, request.cmake
+    build = (root / manifest["build_dir"]).resolve()
+    tools = selected_tools(build, cmake)
     receipt["tools"] = {}
     for name, executable in tools.items():
         path = Path(executable).resolve() if executable else Path("/unavailable")
