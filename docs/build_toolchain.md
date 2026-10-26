@@ -19,13 +19,33 @@ Use the Apple Command Line Tools executables below for subsequent local acceptan
 When the CMake build is implemented in B002, select these explicitly on a fresh build directory:
 
 ```sh
-cmake -S . -B build/smil \
+/opt/homebrew/Cellar/cmake/4.4.4/bin/cmake -S . -B build/smil \
   -DCMAKE_C_COMPILER=/Library/Developer/CommandLineTools/usr/bin/clang \
   -DCMAKE_CXX_COMPILER=/Library/Developer/CommandLineTools/usr/bin/clang++ \
   -DCMAKE_OSX_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
 ```
 
 This is a host-local selection, not a hard-coded shared CMake setting. Other hosts supply their own qualified clang 21 paths. A compiler, SDK or developer-directory change requires rerunning the small qualification before relying on the receipt. The smoke cases exercise C++23 language selection, compile/link/run, standard-library error values, and rejection of an invalid compile-time condition. Direct invocation initially failed to find `cstdio` without an SDK; the explicit SDK makes both cases discriminating. No compiler installation, shared build configuration or product design changes are needed for this existing tool.
+
+## macOS CMake pin
+
+[BT02](../plans/01_foundation_and_contracts.md#bt02) qualifies the existing Homebrew CMake installation. Use `/opt/homebrew/Cellar/cmake/4.4.4/bin/cmake`, version **4.4.4**, for subsequent local acceptance commands, including the future B002 command above. `/opt/homebrew/bin/cmake` and `/opt/homebrew/opt/cmake` currently resolve to that keg; use the versioned executable so a Homebrew relink does not silently select another version.
+
+The [BT02 receipt](../plans/evidence/BT02.md) records Homebrew package provenance, executable/receipt hashes, and known-good/known-bad script invocations. Requalify after replacing the executable or its installed CMake modules. This pin is host-local; no shared build configuration or compiler design changes are needed. B002 will supply and validate the actual project configuration and build.
+
+For later Windows qualification, select an approved CMake installation and run the receipt's two scripts with its full executable path:
+
+```powershell
+& $CMake --version
+& $CMake -P good.cmake
+if ($LASTEXITCODE -ne 0) { throw 'CMake smoke failed' }
+if ((Get-Content -Raw good-result.txt) -ne "42`n") { throw 'Incorrect result' }
+& $CMake -P bad.cmake
+if ($LASTEXITCODE -eq 0) { throw 'Unknown command was accepted' }
+if (Test-Path bad-result.txt) { throw 'Execution continued after invalid input' }
+```
+
+Use a fresh directory and retain the unknown-command diagnostic. This recipe is unexecuted; it provides no Windows evidence.
 
 ## Other build hosts
 

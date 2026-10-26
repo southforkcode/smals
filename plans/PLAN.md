@@ -9,9 +9,9 @@ Follow the repository [agent development process](../AGENTS.md) for each step, i
 | State | Count |
 | --- | --- |
 | Completed with verified evidence | 2 |
-| In progress | 0 |
+| In progress | 1 |
 | Blocked or split | 0 |
-| Pending | 1,941 |
+| Pending | 1,940 |
 | Total indexed increments | 1,943 |
 
 **Next step: [3 — BT02](#step-3).** Step 2 is complete with [verified clang 21 qualification, integration and cleanup evidence](evidence/BT01.md). This file records implementation progress, not the completion of writing the plan.
@@ -22,6 +22,7 @@ This records the agent's development work on a step, not software runtime. Add a
 
 | Step | Increment | Attempt | Started at UTC | Ended at UTC | Elapsed seconds | Original estimate | Active / waiting seconds | Outcome / source | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 3 | BT02 | 1 | 2026-10-26T09:51:17Z | | | 10 active minutes | unknown / unknown | In progress; observed UTC clock | [BT02 evidence](evidence/BT02.md#development-work-timing) |
 | 2 | BT01 | 1 | 2026-10-26T09:46:44Z | 2026-10-26T09:50:49Z | 245 | 10 active minutes | unknown / unknown | Completed; observed UTC clock bounds | [BT01 evidence](evidence/BT01.md#development-work-timing) |
 | 1 | B001 | 1 | 2026-10-26T09:25:04Z | 2026-10-26T09:40:12Z | 908 | 10 active minutes | unknown / unknown | Completed; retrospectively recorded observed window, not exact full effort | [Timing and limitations](evidence/B001.md#development-work-timing) |
 
@@ -95,7 +96,7 @@ The sections below follow useful advancement: build and evidence, source verific
 
 - [x] <a id="step-1"></a>**Step 1 — [B001](01_foundation_and_contracts.md#b001)**: Create/check out a dedicated implementation branch without discarding existing work. Evidence: [B001 completion](evidence/B001.md); merged into `main`, verified, and local branch deleted.
 - [x] <a id="step-2"></a>**Step 2 — [BT01](01_foundation_and_contracts.md#bt01)**: Validate or provision only clang21 through established approved sources. Evidence: [BT01 completion](evidence/BT01.md); merged into `main`, verified, and local branch deleted.
-- [ ] <a id="step-3"></a>**Step 3 — [BT02](01_foundation_and_contracts.md#bt02)**: Validate or provision only CMake through established approved sources Evidence: pending.
+- [ ] <a id="step-3"></a>**Step 3 — [BT02](01_foundation_and_contracts.md#bt02)**: Validate or provision only CMake through established approved sources. In progress: [BT02 evidence](evidence/BT02.md).
 - [ ] <a id="step-4"></a>**Step 4 — [BT03](01_foundation_and_contracts.md#bt03)**: Validate or provision only Python3.13 through established approved sources Evidence: pending.
 - [ ] <a id="step-5"></a>**Step 5 — [BT04](01_foundation_and_contracts.md#bt04)**: Validate or provision only clang-format through established approved sources Evidence: pending.
 - [ ] <a id="step-6"></a>**Step 6 — [BT05](01_foundation_and_contracts.md#bt05)**: Validate or provision only clang-tidy through established approved sources Evidence: pending.
