@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.28)
 project(smals VERSION 0.1.0 LANGUAGES CXX)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if(NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR
    NOT CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 21 OR
@@ -21,3 +22,23 @@ if(BUILD_TESTING)
   add_test(NAME controlled_failure COMMAND smil_tests --fail)
   set_tests_properties(controlled_failure PROPERTIES WILL_FAIL TRUE)
 endif()
+
+find_program(SMIL_CLANG_FORMAT NAMES clang-format-21 clang-format REQUIRED)
+find_program(SMIL_CLANG_TIDY NAMES clang-tidy-21 clang-tidy REQUIRED)
+file(GLOB_RECURSE format_files CONFIGURE_DEPENDS "src/*.cpp" "src/*.hpp" "test/*.cpp" "test/*.hpp")
+file(GLOB_RECURSE lint_files CONFIGURE_DEPENDS "src/*.cpp" "test/*.cpp")
+foreach(mode format-check format-fix lint)
+  if(mode STREQUAL "lint")
+    set(tool "${SMIL_CLANG_TIDY}")
+    set(inputs "${lint_files}")
+  else()
+    set(tool "${SMIL_CLANG_FORMAT}")
+    set(inputs "${format_files}")
+  endif()
+  add_custom_target(${mode}
+    COMMAND "${CMAKE_COMMAND}" "-DFILES=${inputs}" "-DTOOL=${tool}"
+      "-DMODE=${mode}" "-DBUILD_DIR=${CMAKE_BINARY_DIR}"
+      -P "${CMAKE_SOURCE_DIR}/tools/cmake/cpp_quality.cmake"
+    VERBATIM)
+endforeach()
+add_custom_target(quality ALL DEPENDS format-check lint)
