@@ -1,0 +1,7 @@
+# Bounded behavioral case runner
+
+Sources: [B006](../plans/01_foundation_and_contracts.md#b006), [delivery rules](../plans/00_delivery_and_evidence.md). The single zero-dependency native test executable owns a registry of domain case IDs, callbacks and independently declared accepted/rejected expectations. IDs describe tested behavior; plan mapping belongs outside test code.
+
+Select all cases by default or exactly one with --case ID. --seed parses an unsigned 64-bit decimal value exactly; deterministic fixture inputs include it. --limit bounds selection to 1..32 cases and rejects oversized/empty selections before running. --invert is a harness discrimination control: flip the expected acceptance of selected cases and require a mismatch to fail. Existing --fail remains a direct process-status witness. Every observation records case ID, seed, input and expected/actual acceptance; failures retain those values in output. No time-based process instrumentation or runtime performance assertion is added.
+
+The initial registry covers tool version, diagnostic fields, and invalid-command rejection. The rejection case generates `invalid.<seed>` and independently expects false from parse_command. Tests compare deterministic runs, deliberate expected-value inversion, empty selection, case-limit rejection, malformed options and seed boundaries. The runner never treats an unselected/empty set as green.
