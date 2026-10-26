@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "INT-007",
+  "spec_path": "specs/0004_integer_operations.md",
+  "spec_sha256": "9dc0600df10568223c669046bd8bf05101d8dc596859a646ee8bb3b1cd11303b",
+  "text": "All division/remainder operations shall cause terminal `integer_divide_by_zero` on zero divisor. `sdiv(MIN_N,-1)` shall cause terminal `integer_divide_overflow`; `srem(MIN_N,-1)` shall return zero without executing a quotient-overflow fault.",
+  "text_sha256": "c11f85b694f1e7877c8efc63dae14d77ed37fc03e36a3087d18ea5ffd5d31ab4",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "All division/remainder operations shall cause terminal `integer_divide_by_zero` on zero divisor.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`sdiv(MIN_N,-1)` shall cause terminal `integer_divide_overflow`",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "`srem(MIN_N,-1)` shall return zero without executing a quotient-overflow fault.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

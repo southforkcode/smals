@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PKT-004",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "After arguments, the caller shall reserve one region aligned for and sized to the greater of normal-result tuple and raised payload. Result tuple layout shall follow ordinary field layout without nominal identity. Both present outcomes shall use that region; absent carriers shall have offset zero. Only the selected carrier shall be read.",
+  "text_sha256": "df90e5f1c6e07a39aac711ca59f2a6f2085e29b97e9af0da959da7c1544d6bc2",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "After arguments, the caller shall reserve one region aligned for and sized to the greater of normal-result tuple and raised payload.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Result tuple layout shall follow ordinary field layout without nominal identity.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Both present outcomes shall use that region",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "absent carriers shall have offset zero.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "Only the selected carrier shall be read.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

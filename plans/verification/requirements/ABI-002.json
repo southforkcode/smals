@@ -1,0 +1,30 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ABI-002",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "The ABI shall define ordered parameter/result/aggregate classification, register/stack splitting, indirect copies/result areas, narrow carriers/extensions/unspecified bits, frame/stack organization and ownership, cleanup/returns, preserved/clobbered/reserved resources, and required processor/bank state.",
+  "text_sha256": "079733432daec9e82e92d76c64d3d16c558ff8fa9f76f093fc661575ac0de2f5",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The ABI shall define ordered parameter/result/aggregate classification, register/stack splitting, indirect copies/result areas, narrow carriers/extensions/unspecified bits, frame/stack organization and ownership, cleanup/returns, preserved/clobbered/reserved resources, and required processor/bank state.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RES-006",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Terminal reporting shall use pre-reserved emergency state independent of the exhausted capacity. A profile unable to guarantee this shall reject the use. Host process death, power loss, hardware corruption, or breach of environment reservations shall not be misreported as conforming resource exhaustion.",
+  "text_sha256": "1b40f46e66d1b2cc1dbe57bb832db6256dea39bb0d3290eb1db2eeaac9b85d4d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Terminal reporting shall use pre-reserved emergency state independent of the exhausted capacity.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A profile unable to guarantee this shall reject the use.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Host process death, power loss, hardware corruption, or breach of environment reservations shall not be misreported as conforming resource exhaustion.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-021",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "The callback stack shall drain LIFO across initializer completions and runtime registrations. Each entry shall be removed before invocation and execute at most once. Multiple entries for the same function shall remain distinct; callbacks shall execute on the lifecycle agent.",
+  "text_sha256": "0efc8f6f15784a3663f2f89b666e2d57a0b0e1067eb8193d71abfdd54f99f752",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The callback stack shall drain LIFO across initializer completions and runtime registrations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Each entry shall be removed before invocation and execute at most once.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Multiple entries for the same function shall remain distinct",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "callbacks shall execute on the lifecycle agent.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

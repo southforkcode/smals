@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "DEV-003",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "`mmio_load [iN] p` and `mmio_store p v` shall accept integer types matching the pointer pointee and explicitly supported contract widths. Non-byte widths shall have an explicit value/transaction-bit mapping, including ignored/required bits. Ordinary iN storage rules shall not imply that mapping.",
+  "text_sha256": "f1ca49973cedaa0ca7f080f296a01f02da327d667c6544e9dea4a6eb75eea90d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`mmio_load [iN] p` and `mmio_store p v` shall accept integer types matching the pointer pointee and explicitly supported contract widths.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Non-byte widths shall have an explicit value/transaction-bit mapping, including ignored/required bits.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Ordinary iN storage rules shall not imply that mapping.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

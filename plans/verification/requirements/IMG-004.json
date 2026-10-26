@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IMG-004",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Internal signatures shall have no stored value (representation/allocation zero, alignment one). Empty result tuples shall occupy zero bytes, unlike source empty records. Runtime-private descriptors shall carry exact runtime-contract identity.",
+  "text_sha256": "c0a6575011f79b22b6c1abac1babe81adcc1671ee092ddb08fc4e069aeac7071",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Internal signatures shall have no stored value (representation/allocation zero, alignment one).",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Empty result tuples shall occupy zero bytes, unlike source empty records.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Runtime-private descriptors shall carry exact runtime-contract identity.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

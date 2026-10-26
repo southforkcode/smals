@@ -1,0 +1,30 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-023",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "After callback drain, remaining global lifetimes shall end, state shall become terminated, and the environment shall report status/halt without restarting the instance or rerunning initialization.",
+  "text_sha256": "b53ad3d3c6219d84ab5dcd4e8f11c7d1011dbb93d7687e9a972c693d2c345be4",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "After callback drain, remaining global lifetimes shall end, state shall become terminated, and the environment shall report status/halt without restarting the instance or rerunning initialization.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

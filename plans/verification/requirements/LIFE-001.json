@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-001",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Each program instance shall have an environment-owned coordinator and designated lifecycle agent, with states bootstrap, initializing, running, shutting_down, and terminated. Normal initialization shall proceed in that order; failed initialization shall proceed to shutdown then termination. A terminal fault may terminate directly from any state without orderly cleanup.",
+  "text_sha256": "801870c1789c4c9bff8656af9927b78b78931c0db2b9bab6364ee8718f832b0f",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each program instance shall have an environment-owned coordinator and designated lifecycle agent, with states bootstrap, initializing, running, shutting_down, and terminated.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Normal initialization shall proceed in that order",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "failed initialization shall proceed to shutdown then termination.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "A terminal fault may terminate directly from any state without orderly cleanup.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

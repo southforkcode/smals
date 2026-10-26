@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "DEV-009",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "Invalid accesses shall fail the pre-transaction checks in [0009](0009_checked_execution.md). Bus/device faults after an authorized transaction begins shall follow the contract and may retain already committed external effects.",
+  "text_sha256": "bd82f95c389e29812977c3d949290bc54c55ad8b70d3fcbf5c7f43b99682a83a",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Invalid accesses shall fail the pre-transaction checks in [0009](0009_checked_execution.md).",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Bus/device faults after an authorized transaction begins shall follow the contract and may retain already committed external effects.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

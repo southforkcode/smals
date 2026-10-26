@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-010",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Integer types shall use canonical positive decimal widths, `i[1-9][0-9]*`. Widths shall be parsed mathematically without host-width truncation; `i0` and `i08` shall be rejected.",
+  "text_sha256": "9003a8bf77270bc9f50cb2f960630c7f2297087fe5a9519005917fe83d6682af",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Integer types shall use canonical positive decimal widths, `i[1-9][0-9]*`.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Widths shall be parsed mathematically without host-width truncation",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "`i0` and `i08` shall be rejected.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

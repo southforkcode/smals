@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-008",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Tokens shall use maximal munch. Bare `i[0-9]+` shall be an integer-type token or malformed-width diagnostic, never an ordinary-name fallback. Import aliases shall not be built-in integer-type tokens.",
+  "text_sha256": "1c62fd4f03a7346906b70a66881d94fff8fc0b07ba0a9ce46dabf377c7c804db",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Tokens shall use maximal munch.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Bare `i[0-9]+` shall be an integer-type token or malformed-width diagnostic, never an ordinary-name fallback.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Import aliases shall not be built-in integer-type tokens.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

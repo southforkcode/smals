@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-014",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "No implicit lock-free/wait-free guarantee shall be inferred. Unsupported atomic requirements shall be diagnosed rather than lowered to tearing access. Optimizations shall preserve observations, actual write footprints, synchronization, race checks, total order, and advertised progress.",
+  "text_sha256": "a01a4a8eb641a4abc9459ce0062722ca965e6d6d9ec7c486630ea1a107878666",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "No implicit lock-free/wait-free guarantee shall be inferred.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Unsupported atomic requirements shall be diagnosed rather than lowered to tearing access.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Optimizations shall preserve observations, actual write footprints, synchronization, race checks, total order, and advertised progress.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "FRM-003",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Native call/return mechanisms shall obey the family table below. Link-register saves shall be reserved before a nested call overwrites the incoming link. Dispatchers shall validate IDs and cover every retained function/continuation without writable trampolines or assumed computed-jump support.",
+  "text_sha256": "7555f2c9cc87b466e943fef21e3b31f1c1b40cae625f9b321777f7703c19f729",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Native call/return mechanisms shall obey the family table below.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Link-register saves shall be reserved before a nested call overwrites the incoming link.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Dispatchers shall validate IDs and cover every retained function/continuation without writable trampolines or assumed computed-jump support.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

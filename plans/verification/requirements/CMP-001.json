@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CMP-001",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Linked interfaces shall agree on nominal identities/signatures/effects, storage/pointer/function layouts, space/conversion/device/atomic domains, ABI/attributes, helper/preservation/runtime/execution contracts, lifecycle coordinator metadata, relocation/object/environment constraints, and required CPU features. CPU names or pointer widths alone shall not establish compatibility.",
+  "text_sha256": "7514623a236ac36d927c538ed42ebf8dc1fb200d74af128a7b1951bb4140ed98",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Linked interfaces shall agree on nominal identities/signatures/effects, storage/pointer/function layouts, space/conversion/device/atomic domains, ABI/attributes, helper/preservation/runtime/execution contracts, lifecycle coordinator metadata, relocation/object/environment constraints, and required CPU features.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "CPU names or pointer widths alone shall not establish compatibility.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LNK-001",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "`smil.library.v1` shall map unique exact module identities to relative object paths, canonical object digests, and bound interface digests. It shall package providers rather than create a new definition namespace. `smil.link.v1` shall pin exact target, roots, available libraries, explicitly included modules, canonical entry, and additional retained keys.",
+  "text_sha256": "549945f81c25da613700087db9e960904448e5b0bfd867c15aa8c855a803ed3e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`smil.library.v1` shall map unique exact module identities to relative object paths, canonical object digests, and bound interface digests.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall package providers rather than create a new definition namespace.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "`smil.link.v1` shall pin exact target, roots, available libraries, explicitly included modules, canonical entry, and additional retained keys.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

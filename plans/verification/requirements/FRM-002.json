@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "FRM-002",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Native return storage shall be separate from ordinary locals, preflight every implicit/explicit push or link-save frame, and reserve the manifest emergency portion exclusively for terminal reporting. Predecrement SP shall begin at aligned region end; postdecrement SP at last usable byte/index, respecting actual return writes.",
+  "text_sha256": "262a924ee9c2a8f2ea65e3121b9006661bf041bba388e6fabf33e8dde00d4c00",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Native return storage shall be separate from ordinary locals, preflight every implicit/explicit push or link-save frame, and reserve the manifest emergency portion exclusively for terminal reporting.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Predecrement SP shall begin at aligned region end",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "postdecrement SP at last usable byte/index, respecting actual return writes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

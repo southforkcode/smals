@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "FUN-003",
+  "spec_path": "specs/0005_functions_and_calls.md",
+  "spec_sha256": "cd2a1853be5b61df6b6906f48fdfddddc8999d79639bba6ebb2bed38ec88bc41",
+  "text": "Entry parameters shall match the fixed signature plus exactly one final `[varargs]` parameter for a variadic definition. ABI carriers/extension/result areas shall not add logical entry parameters. Signature entries shall contain types/attributes rather than SSA binders.",
+  "text_sha256": "21ca204ddbbdf11f13586382eed16a68f2e93e86ebf11883de332d8b39c457f4",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Entry parameters shall match the fixed signature plus exactly one final `[varargs]` parameter for a variadic definition.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "ABI carriers/extension/result areas shall not add logical entry parameters.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Signature entries shall contain types/attributes rather than SSA binders.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

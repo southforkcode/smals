@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CST-016",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "Verifiers shall reject invalid record operand kinds/counts/types, replacements, initializers, field paths, known immutable subobject stores, and unsupported constant operations. A statically invalid field path shall not be deferred as a runtime pointer fault.",
+  "text_sha256": "0eefb5acf6b31a464e7582741a06d3d0150b663e7672e734f74af45cce04b53d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Verifiers shall reject invalid record operand kinds/counts/types, replacements, initializers, field paths, known immutable subobject stores, and unsupported constant operations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A statically invalid field path shall not be deferred as a runtime pointer fault.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

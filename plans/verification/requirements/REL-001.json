@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REL-001",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Relocations shall record kind, destination section/offset, target namespace/key, signed addend, and applicable PC anchor, slice/full-address domain, bitfield, pointer-construction, or callable information. Inapplicable optional slots shall be null rather than ignored extensions.",
+  "text_sha256": "745f8e53d360eb2eca796f5afcea9856760b705117424385def44cc4baf5ffff",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Relocations shall record kind, destination section/offset, target namespace/key, signed addend, and applicable PC anchor, slice/full-address domain, bitfield, pointer-construction, or callable information.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Inapplicable optional slots shall be null rather than ignored extensions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

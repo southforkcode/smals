@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LNK-007",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Runtime aux `bootstrap_entry` shall be an untyped first-native-entry shim establishing reserved context/initial packet before entering typed bootstrap with image metadata. It shall not be source callable. Native foreign code shall require an explicit checked adapter published as a conforming `smil.object.v1`; native container readers shall require a separate transport contract.",
+  "text_sha256": "20f1f75b296349fe34c7f2f2666484ca0c23fc06ed2ed3c58cc98b905fb6eaa8",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Runtime aux `bootstrap_entry` shall be an untyped first-native-entry shim establishing reserved context/initial packet before entering typed bootstrap with image metadata.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall not be source callable.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Native foreign code shall require an explicit checked adapter published as a conforming `smil.object.v1`",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "native container readers shall require a separate transport contract.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-010",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "The closed terminator set shall be `br`, `br_if`, `switch`, `invoke`, `invoke_indirect`, `return`, `raise`, `trap`, and `exit`, with exactly their defined successors. No ordinary operation shall follow a terminator in its block.",
+  "text_sha256": "3851b5b6973cdb20ffded915346a28a3c0c309b9d31e9fa750b8fa319dc050bf",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The closed terminator set shall be `br`, `br_if`, `switch`, `invoke`, `invoke_indirect`, `return`, `raise`, `trap`, and `exit`, with exactly their defined successors.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "No ordinary operation shall follow a terminator in its block.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

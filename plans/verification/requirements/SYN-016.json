@@ -1,0 +1,48 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-016",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Significant newline shall end a simple statement. EOF shall supply a final boundary when delimiters are balanced. Blank/comment-only logical lines shall be allowed; semicolons and multiple independent statements on one logical line shall be rejected.",
+  "text_sha256": "fe787d02bcb9e15a7e3ca04eef21938b93f642869d4f05a3c346e7babf15265f",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Significant newline shall end a simple statement.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "EOF shall supply a final boundary when delimiters are balanced.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Blank/comment-only logical lines shall be allowed",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "semicolons and multiple independent statements on one logical line shall be rejected.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

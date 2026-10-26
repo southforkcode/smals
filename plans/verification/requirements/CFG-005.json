@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-005",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "The selected edge's source bindings shall be captured before transfer; all complete destination parameters shall bind simultaneously. A swap edge shall not overwrite a source value during sequential parameter assignment. Dominating values may be used directly without forwarding through every block.",
+  "text_sha256": "9a08088191d364e614f86d92d4f8a2eacf4a6dda51cdfc6f4c516103b4244a2c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The selected edge's source bindings shall be captured before transfer",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "all complete destination parameters shall bind simultaneously.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A swap edge shall not overwrite a source value during sequential parameter assignment.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Dominating values may be used directly without forwarding through every block.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

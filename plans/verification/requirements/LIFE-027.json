@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-027",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Native constructor/destructor registries and foreign exceptions shall require an explicit adapter and coordinator ordering contract. Dynamic loading/unloading and instance restart shall require extensions rather than hidden effects of ordinary calls.",
+  "text_sha256": "7e6e74c65e3065673eeeaf156286492bbb97c535b049fc007c8e731d2f17a7ab",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Native constructor/destructor registries and foreign exceptions shall require an explicit adapter and coordinator ordering contract.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Dynamic loading/unloading and instance restart shall require extensions rather than hidden effects of ordinary calls.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

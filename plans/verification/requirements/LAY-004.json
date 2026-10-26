@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LAY-004",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Ordinary i1 shall have one-byte representation/allocation/alignment. Stores shall write byte zero or one; loads shall read only the low bit. Consecutive i1 fields shall not be implicitly bit-packed. Foreign Boolean encodings shall require explicit adaptation.",
+  "text_sha256": "1a2c35c6cb69504e8a21937d491fcdea0fd65d1961e685c7c5dcf7c52985d695",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Ordinary i1 shall have one-byte representation/allocation/alignment.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Stores shall write byte zero or one",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "loads shall read only the low bit.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Consecutive i1 fields shall not be implicitly bit-packed.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "Foreign Boolean encodings shall require explicit adaptation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

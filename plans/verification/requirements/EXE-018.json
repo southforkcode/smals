@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-018",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Fixed validation/emergency scratch shall be pre-reserved to decide earlier stages from valid existing metadata. Helper allocation failure shall not preempt an earlier selected fault. New-history growth shall be stage 4; absent exact tracking shall never mean no race.",
+  "text_sha256": "4509340907d14edfd28753b853e17bddbe3692e067b5a9810cb1974eab9fb352",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Fixed validation/emergency scratch shall be pre-reserved to decide earlier stages from valid existing metadata.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Helper allocation failure shall not preempt an earlier selected fault.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "New-history growth shall be stage 4",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "absent exact tracking shall never mean no race.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-022",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "A dynamic global shall remain ready during its completion callback, then become finalized on normal callback return. Later content access shall cause `global_finalized`; allocation/address formation shall remain available until termination. Callback naming shall grant no mutation rights to immutable contents. Other globals shall remain available until their own finalization or termination.",
+  "text_sha256": "42c83a94a23b04a8da7432add74e747304f07832398d8f932a96c929c647566e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A dynamic global shall remain ready during its completion callback, then become finalized on normal callback return.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Later content access shall cause `global_finalized`",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "allocation/address formation shall remain available until termination.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Callback naming shall grant no mutation rights to immutable contents.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "Other globals shall remain available until their own finalization or termination.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

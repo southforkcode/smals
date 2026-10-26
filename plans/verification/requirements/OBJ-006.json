@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OBJ-006",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Functions shall locate their first instruction in code; globals shall identify distinct nonoverlapping allocations in data/rodata with exact bound type layout. Aux code/pool/metadata definitions may overlap an enclosing function extent. All section bounds/alignment shall be checked; relocated constant bytes shall encode their recorded logical initializer.",
+  "text_sha256": "fbbf4e8e11406015e2e672680ab32faf1733ba3dccb6c0df0dc5cbabb24e1241",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Functions shall locate their first instruction in code",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "globals shall identify distinct nonoverlapping allocations in data/rodata with exact bound type layout.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Aux code/pool/metadata definitions may overlap an enclosing function extent.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "All section bounds/alignment shall be checked",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "relocated constant bytes shall encode their recorded logical initializer.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

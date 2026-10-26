@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LAY-005",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Integer byte order shall be specified: little-endian places the least significant byte first; big-endian the most significant representation byte first. It shall not alter logical SSA bits/arithmetic or imply pointer/special-space encodings. Protocol order shall have its own definition.",
+  "text_sha256": "e5d99b48fb40d116aaedd48a2a81aeb81fedd6f078f23c5b27150cd057c5e3f9",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Integer byte order shall be specified: little-endian places the least significant byte first",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "big-endian the most significant representation byte first.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "It shall not alter logical SSA bits/arithmetic or imply pointer/special-space encodings.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Protocol order shall have its own definition.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

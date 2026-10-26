@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-003",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "An unbound interface shall record `target:null` and deferred ABI token `default`. A bound interface shall record exact profile ID/digest, shared-contract digest, and resolved component IDs, resolving defaults and layout constants. Machine linking shall not accept an unbound fingerprint in place of a bound one.",
+  "text_sha256": "7a685d41bc9518a716510e95b11d1a4e96e5337ab75bcb55bf066773c743a9c3",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "An unbound interface shall record `target:null` and deferred ABI token `default`.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A bound interface shall record exact profile ID/digest, shared-contract digest, and resolved component IDs, resolving defaults and layout constants.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Machine linking shall not accept an unbound fingerprint in place of a bound one.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RFN-002",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Function-address constants/storage shall use FNREF relocation. Indirect entry shall validate both IDs against catalogs and apply native translation/dispatch. Native C pointers, C calling conventions, and dynamic loading shall not be implicit interfaces.",
+  "text_sha256": "37c183255970c989b463870b6e49278a8ec2b6e411372d557c5767774e8aae76",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Function-address constants/storage shall use FNREF relocation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Indirect entry shall validate both IDs against catalogs and apply native translation/dispatch.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Native C pointers, C calling conventions, and dynamic loading shall not be implicit interfaces.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

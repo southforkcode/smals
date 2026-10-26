@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-010",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "A memory footprint shall be the union of accessed leaf representation-byte ranges, excluding padding. A failed compare/exchange shall have a read-only footprint. Correct atomic accesses to one supported location shall not constitute a race with each other.",
+  "text_sha256": "6501077d503f2c8d23b913f018ee2cf283eafa665de4eb9d1522312fd78df00c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A memory footprint shall be the union of accessed leaf representation-byte ranges, excluding padding.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A failed compare/exchange shall have a read-only footprint.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Correct atomic accesses to one supported location shall not constitute a race with each other.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

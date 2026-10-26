@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-003",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "A profile shall specify supported widths, atomic alignment, regions, participating agents, progress, and interrupt/reentrancy guarantees. Extra alignment shall be proven/checked or handled by a conforming helper; existing declarations shall not imply extra alignment.",
+  "text_sha256": "bdc968e4c603397a8f4404825df0782be5cf0eb620d25c23a6c9ecb277551a99",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A profile shall specify supported widths, atomic alignment, regions, participating agents, progress, and interrupt/reentrancy guarantees.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Extra alignment shall be proven/checked or handled by a conforming helper",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "existing declarations shall not imply extra alignment.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-012",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Minimum pointer-inspection integer width M shall be 16 for the catalog's 8-bit families and 32 for the others; supported conversion widths shall be M through 65535 without truncation. Numeric values outside each domain shall cause `invalid_pointer_operation`.",
+  "text_sha256": "49a28994c10a0b36af1a927677efe496fa8661b7e33eea0f1739cf00e48bb8bd",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Minimum pointer-inspection integer width M shall be 16 for the catalog's 8-bit families and 32 for the others",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "supported conversion widths shall be M through 65535 without truncation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Numeric values outside each domain shall cause `invalid_pointer_operation`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

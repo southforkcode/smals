@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-002",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Version 1 shall have one independently generated object per module identity. Multiple implementation fragments shall be combined and checked before object publication. Two selected implementations with the same identity shall be an error even with matching exports. Distinct library versions shall require distinct module identities.",
+  "text_sha256": "14f3b0931306ae34c4f2cafed036b8340a298c0a7d42477b205de4bff5c24155",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Version 1 shall have one independently generated object per module identity.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Multiple implementation fragments shall be combined and checked before object publication.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Two selected implementations with the same identity shall be an error even with matching exports.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Distinct library versions shall require distinct module identities.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

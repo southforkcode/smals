@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-002",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Every indexed profile shall be fully resolved without binding-time inheritance/host defaults. Binding shall validate the exact index entry, manifest/shared-contract digests and closed schema, reject unknown IDs/fields/contracts, and record exact resolved identities. Linking shall require equality of all resolved components, including CPU/environment, until an explicit compatibility revision exists.",
+  "text_sha256": "07ddc4f42686fbd545aed2dc86645d4c45a2f45704af49720e013e409eb6841f",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every indexed profile shall be fully resolved without binding-time inheritance/host defaults.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Binding shall validate the exact index entry, manifest/shared-contract digests and closed schema, reject unknown IDs/fields/contracts, and record exact resolved identities.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Linking shall require equality of all resolved components, including CPU/environment, until an explicit compatibility revision exists.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

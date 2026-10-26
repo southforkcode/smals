@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-001",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "Every block shall have a unique function-local label, ordered typed parameters (including an explicit empty list), and ordered operations ending in exactly one final terminator. Labels shall not be ordinary values/data pointers.",
+  "text_sha256": "5dcf76f14336de1dd9da111e6c10836d4fd112625a3f47f84ccc9bfffa4bb513",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every block shall have a unique function-local label, ordered typed parameters (including an explicit empty list), and ordered operations ending in exactly one final terminator.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Labels shall not be ordinary values/data pointers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

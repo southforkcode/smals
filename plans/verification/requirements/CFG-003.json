@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-003",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "Operations shall execute in textual block order subject to semantics-preserving transformation. There shall be no implicit fallthrough, implicit return/trap, hidden unwinding destination, or saved-stack successor. Arbitrary valid edges between non-entry blocks shall be permitted.",
+  "text_sha256": "3faabf0a5c505e78b9d336a034415351f8ff68c8344f3e3f0a03567da48ed3a0",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Operations shall execute in textual block order subject to semantics-preserving transformation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "There shall be no implicit fallthrough, implicit return/trap, hidden unwinding destination, or saved-stack successor.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Arbitrary valid edges between non-entry blocks shall be permitted.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

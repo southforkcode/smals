@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-007",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Each SSA definition shall introduce a fresh immutable typed binding. Loop execution may produce new dynamic bindings from one static definition; it shall not permit identifier reassignment. SSA values shall have no SMIL-visible addresses or prescribed physical register.",
+  "text_sha256": "c3e5688b3db4346bc46dae9bd6cf33b4c35e2d94b5932d1c353506dad6376dc6",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each SSA definition shall introduce a fresh immutable typed binding.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Loop execution may produce new dynamic bindings from one static definition",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "it shall not permit identifier reassignment.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "SSA values shall have no SMIL-visible addresses or prescribed physical register.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

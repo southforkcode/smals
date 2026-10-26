@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IDN-001",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Module record identity shall be `[\"record\", module_identity, \"module\", declaration_name]`; function-local identity shall be `[\"record\", module_identity, \"function\", owning_function_name, declaration_name]`. Imported records shall retain their owner's identity; local records shall not escape module contracts.",
+  "text_sha256": "52de6c1d54669ab375c504624b697edff70cdfd3c1289df1223a14d2e6669e6f",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Module record identity shall be `[\"record\", module_identity, \"module\", declaration_name]`",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "function-local identity shall be `[\"record\", module_identity, \"function\", owning_function_name, declaration_name]`.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Imported records shall retain their owner's identity",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "local records shall not escape module contracts.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

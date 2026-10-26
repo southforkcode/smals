@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LAY-007",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "A record's field layout shall not vary with the space holding the record. Pointer-field spaces may affect field type layout. A special space unable to support the ordinary layout shall reject the aggregate rather than alter offsets. Bytewise padding comparison shall not imply logical record equality.",
+  "text_sha256": "56174a2e2fd16a3074f09bd7b3a80c49291abd4e95308e47961599efddaa018d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A record's field layout shall not vary with the space holding the record.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Pointer-field spaces may affect field type layout.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A special space unable to support the ordinary layout shall reject the aggregate rather than alter offsets.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Bytewise padding comparison shall not imply logical record equality.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

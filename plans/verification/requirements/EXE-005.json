@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-005",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "An integer read shall require only its N logical bits in addressed byte order; pointer/callable reads shall require their complete typed representation; record reads shall require every leaf recursively. Missing required bits shall cause `uninitialized_read` before any value escapes. Ignored high bits/padding shall not add read requirements.",
+  "text_sha256": "b064fbd5d0672a36c3f754b84530695fe204e0f1058eb9f62a67be2c5e562ed8",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "An integer read shall require only its N logical bits in addressed byte order",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "pointer/callable reads shall require their complete typed representation",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "record reads shall require every leaf recursively.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Missing required bits shall cause `uninitialized_read` before any value escapes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "Ignored high bits/padding shall not add read requirements.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

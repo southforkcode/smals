@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-015",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Each global definition shall establish one distinct addressable object shared by referencing invocations until program termination. Invocation shall not recreate/reinitialize it. Its symbol shall have type `ptr S [T]`, with `data` selected when `space(...)` is omitted.",
+  "text_sha256": "37ac6b28058df27b1835fd0986e36ca7fbcf5e0464eff725682465cf7b335a56",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each global definition shall establish one distinct addressable object shared by referencing invocations until program termination.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Invocation shall not recreate/reinitialize it.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Its symbol shall have type `ptr S [T]`, with `data` selected when `space(...)` is omitted.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

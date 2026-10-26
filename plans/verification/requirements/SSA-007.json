@@ -1,0 +1,107 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SSA-007",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "Verification shall enforce entry declaration ordering; callable effects/ABIs/attributes; record paths and initializer dependencies; pointer/device/atomic form restrictions; switch/trap validity; borrowed-pack ownership; and lifecycle signatures. Profile-dependent checks shall finish at binding and whole-program graph checks at linking.",
+  "text_sha256": "3ac2a381307dac1b96e567cfbdda5f611df4aae96a855522311e7fa3afd68fec",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Verification shall enforce entry declaration ordering",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "callable effects/ABIs/attributes",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "record paths and initializer dependencies",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "pointer/device/atomic form restrictions",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "switch/trap validity",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.6",
+      "text": "borrowed-pack ownership",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.7",
+      "text": "and lifecycle signatures.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.8",
+      "text": "Profile-dependent checks shall finish at binding and whole-program graph checks at linking.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

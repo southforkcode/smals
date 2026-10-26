@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-004",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Import aliases shall be unique ordinary-name qualifiers; self-import and repeated aliases shall be rejected. Multiple different aliases of one provider shall denote the same entities. Qualifiers shall form a separate namespace and shall not be shadowed within `alias::member` by local type names.",
+  "text_sha256": "103662c40b7cf4579addf01750a41e1d66c8b35febdb7f891696f88810a47cf3",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Import aliases shall be unique ordinary-name qualifiers",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "self-import and repeated aliases shall be rejected.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Multiple different aliases of one provider shall denote the same entities.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Qualifiers shall form a separate namespace and shall not be shadowed within `alias::member` by local type names.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

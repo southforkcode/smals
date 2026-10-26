@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-025",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Recursive type references shall be permitted only when every storage-containment cycle is broken by a data pointer or function reference. Direct/indirect by-value cycles shall be rejected. Callable signature references shall not count as inline storage fields.",
+  "text_sha256": "8685a461c5b8553cedead644ca5710cc743692b75870da0a68e4721d9c703561",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Recursive type references shall be permitted only when every storage-containment cycle is broken by a data pointer or function reference.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Direct/indirect by-value cycles shall be rejected.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Callable signature references shall not count as inline storage fields.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

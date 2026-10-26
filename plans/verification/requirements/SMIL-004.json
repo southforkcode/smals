@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SMIL-004",
+  "spec_path": "specs/0000_smil.md",
+  "spec_sha256": "3a23f85c2c5659b7edbae538509c1a36889cff667cd9b83a79a236e5bdf98a01",
+  "text": "A conforming tool shall distinguish source parsing, semantic verification, target binding, machine linking/loading, and runtime execution. Success at one boundary shall not imply success at the next.",
+  "text_sha256": "c85ff4c461e59a17cac784ce678d743aa8b2856253cbbe0d27bbc97bd73464de",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A conforming tool shall distinguish source parsing, semantic verification, target binding, machine linking/loading, and runtime execution.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Success at one boundary shall not imply success at the next.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-008",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Source symbol keys shall be canonical JSON triples `[module_identity, namespace, local_name]`, with namespaces `type`, `constant`, or `value` and function/global kind separately recorded. Aliases/sigils shall not become part of canonical names. Private machine labels shall use `aux` and have no source export/address.",
+  "text_sha256": "8c5fb1e79f0da8fdaf749f8aa68dc2122a3aebcf4cafabbea7b8ff4f8d2d0c9c",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Source symbol keys shall be canonical JSON triples `[module_identity, namespace, local_name]`, with namespaces `type`, `constant`, or `value` and function/global kind separately recorded.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Aliases/sigils shall not become part of canonical names.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Private machine labels shall use `aux` and have no source export/address.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

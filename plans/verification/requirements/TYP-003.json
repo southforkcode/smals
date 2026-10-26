@@ -1,0 +1,35 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-003",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Module types/constants/functions/globals and block labels shall permit forward references subject to resolution, dependency, and dominance rules. Repeated compatible function declarations shall be the only permitted repeated declarations of the same entity.",
+  "text_sha256": "08aa955ce2ba3a5152d90c8ddec0052762add4b6d8ecd6435e3ebade9c16dd00",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Module types/constants/functions/globals and block labels shall permit forward references subject to resolution, dependency, and dominance rules.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Repeated compatible function declarations shall be the only permitted repeated declarations of the same entity.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

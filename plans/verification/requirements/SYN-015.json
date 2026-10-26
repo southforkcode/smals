@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-015",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Adjacent strings shall not concatenate. Raw/triple-quoted strings, character literals, `\\\\xNN`, brace Unicode escapes, string splicing, and string-valued computation operands shall be rejected. Strings shall not allocate storage.",
+  "text_sha256": "e7f4b19f7183771507cc04f5e35cac827292cea32049f8c0585ac85c3e8badfe",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Adjacent strings shall not concatenate.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Raw/triple-quoted strings, character literals, `\\\\xNN`, brace Unicode escapes, string splicing, and string-valued computation operands shall be rejected.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Strings shall not allocate storage.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

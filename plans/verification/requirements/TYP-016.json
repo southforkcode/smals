@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-016",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Every mutable or immutable global shall have an explicit exact-type constant initializer or the dynamic-factory form in [0014](0014_program_lifecycle.md). Dynamic storage shall not receive an implicit zero value. Placement shall permit its required construction and access.",
+  "text_sha256": "63716f37456347503c34a09aff619e0a703ef54000a34bf587c714f6b807e62d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every mutable or immutable global shall have an explicit exact-type constant initializer or the dynamic-factory form in [0014](0014_program_lifecycle.md).",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Dynamic storage shall not receive an implicit zero value.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Placement shall permit its required construction and access.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

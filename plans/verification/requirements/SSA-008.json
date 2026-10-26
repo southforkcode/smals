@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SSA-008",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "A value defined on only one incoming path shall not be used after a merge unless it dominates the use. A block parameter receiving an appropriate value from every incoming edge shall be the supported merge mechanism.",
+  "text_sha256": "2156fa20dfdd3bc985d11976c8b1507fed6eeae997928526acc94568f2db1347",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A value defined on only one incoming path shall not be used after a merge unless it dominates the use.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A block parameter receiving an appropriate value from every incoming edge shall be the supported merge mechanism.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

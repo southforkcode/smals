@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-008",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Dynamic globals and startup hooks shall form one graph with unique nonempty exact decoded UTF-8 IDs and explicit `after` edges. Duplicate/missing/self/cyclic dependencies shall be diagnosed before action execution. Constant globals shall have no nodes. Imports, source order, and address references shall not infer edges.",
+  "text_sha256": "509d3363259e5bfdb4c274103051f891ed973fcf56a320057c4655132c2f7e57",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Dynamic globals and startup hooks shall form one graph with unique nonempty exact decoded UTF-8 IDs and explicit `after` edges.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Duplicate/missing/self/cyclic dependencies shall be diagnosed before action execution.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Constant globals shall have no nodes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Imports, source order, and address references shall not infer edges.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

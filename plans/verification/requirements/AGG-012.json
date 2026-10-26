@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-012",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "`sizeof [iM] [T]` shall return allocation size, `alignof [iM] [T]` required alignment, and `offsetof [iM] [R] field(path)` cumulative inline offset, all in bytes. They shall require supported layouts, use the same layout as storage access, and perform no runtime memory access.",
+  "text_sha256": "bacca8dc246ef2f3e13dcde5a218b6d41c6e8b57785b4ece19672a11c0a92f04",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`sizeof [iM] [T]` shall return allocation size, `alignof [iM] [T]` required alignment, and `offsetof [iM] [R] field(path)` cumulative inline offset, all in bytes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "They shall require supported layouts, use the same layout as storage access, and perform no runtime memory access.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

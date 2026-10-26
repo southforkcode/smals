@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-014",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Decoded identifier strings shall be nonempty and contain no NUL. Equality, duplicate detection, hashing, and lifecycle ordering shall use decoded scalar sequences without normalization or case folding, rather than escape spelling. A trap identifier shall additionally begin with `user.` and have a nonempty suffix.",
+  "text_sha256": "43a179c125e23b1a82dfd7118f2e6a7e623187927a5b84807a2b4717d6a52c22",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Decoded identifier strings shall be nonempty and contain no NUL.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Equality, duplicate detection, hashing, and lifecycle ordering shall use decoded scalar sequences without normalization or case folding, rather than escape spelling.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A trap identifier shall additionally begin with `user.` and have a nonempty suffix.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

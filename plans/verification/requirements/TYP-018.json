@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-018",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Global allocation, content readiness, and finalization shall be distinct states. Content access shall follow lifecycle readiness rules; storage visibility/lifetime shall imply neither atomicity nor synchronization nor device semantics.",
+  "text_sha256": "548f5ee62da8f4ec0e931f79b73ff6cc890632051d45abcf2547f393d2115a31",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Global allocation, content readiness, and finalization shall be distinct states.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Content access shall follow lifecycle readiness rules",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "storage visibility/lifetime shall imply neither atomicity nor synchronization nor device semantics.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

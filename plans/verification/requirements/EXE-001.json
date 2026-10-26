@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-001",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "`smil.execution.checked.v1` shall govern ordinary/unaligned/atomic access, local construction, calls, helpers, and lifecycle operations where applicable. Reached violations shall terminate without results, catchable payloads, cleanup, rollback of earlier effects, or later normal commits.",
+  "text_sha256": "3684f178173889a60f3f1878d1be0b8f45d619d0fb3ac0fa5a98c1c7e72bfe3c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`smil.execution.checked.v1` shall govern ordinary/unaligned/atomic access, local construction, calls, helpers, and lifecycle operations where applicable.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Reached violations shall terminate without results, catchable payloads, cleanup, rollback of earlier effects, or later normal commits.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

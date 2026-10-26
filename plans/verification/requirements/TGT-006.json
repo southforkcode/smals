@@ -1,0 +1,30 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TGT-006",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Target validation shall check all supported type layouts/placements/relocations, constant/layout evaluation, spaces/conversions, access/device/atomic/unaligned implementations, callable/variadic/exceptional ABIs, lifecycle graphs/interfaces, execution digests/plans/tracking/emergency budgets, linked compatibility, and legal instruction/helper availability before object publication.",
+  "text_sha256": "3d3420c71a2656202bc12de9580eb50c20d3aee5b743e501cd64d059d51cda83",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Target validation shall check all supported type layouts/placements/relocations, constant/layout evaluation, spaces/conversions, access/device/atomic/unaligned implementations, callable/variadic/exceptional ABIs, lifecycle graphs/interfaces, execution digests/plans/tracking/emergency budgets, linked compatibility, and legal instruction/helper availability before object publication.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

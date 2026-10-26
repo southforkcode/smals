@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OBJ-007",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Every emitted semantic dependency shall have an explicit edge, including calls, fnaddr, global access, address constants, helpers, types, and machine labels. Relocations shall imply their targets; other dependencies shall be separate edges from the containing definition. Disassembly shall not substitute for missing producer metadata.",
+  "text_sha256": "fb28df6bee4a6e60cf4f3d60c6622bb7c9a7528f351b684d7d554cc75aa449e5",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every emitted semantic dependency shall have an explicit edge, including calls, fnaddr, global access, address constants, helpers, types, and machine labels.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Relocations shall imply their targets",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "other dependencies shall be separate edges from the containing definition.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Disassembly shall not substitute for missing producer metadata.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

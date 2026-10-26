@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-027",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Function symbols shall not be data pointers or ordinary function values. `fnaddr` shall construct callable references under [0005](0005_functions_and_calls.md); globals shall not be callable.",
+  "text_sha256": "88458afc8eb3372fd43965d227f4899b3731b35ddbb670945db56b0a66427c77",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Function symbols shall not be data pointers or ordinary function values.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`fnaddr` shall construct callable references under [0005](0005_functions_and_calls.md)",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "globals shall not be callable.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

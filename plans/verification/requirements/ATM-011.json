@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-011",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "Conflicting accesses shall overlap storage footprints with at least one actual write. Across agents, unordered conflicting accesses with at least one non-atomic access shall constitute a data race, including mixed atomic/ordinary use. Ordinary writes between atomic phases shall remain ordered relative to conflicts.",
+  "text_sha256": "e654a365025bb591e8953f0e14d47e81f40f8f19d5d63ab64a0beccf4965a34b",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Conflicting accesses shall overlap storage footprints with at least one actual write.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Across agents, unordered conflicting accesses with at least one non-atomic access shall constitute a data race, including mixed atomic/ordinary use.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Ordinary writes between atomic phases shall remain ordered relative to conflicts.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

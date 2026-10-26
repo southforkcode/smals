@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CST-007",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "Integer/record constant evaluation shall use runtime typing and mathematical semantics, including modular overflow. Layout-independent expressions may evaluate unbound; layout/encoding-dependent expressions shall remain symbolic until binding.",
+  "text_sha256": "8a37c681569c3912a17509caa52870022beedc37aab2b6c5d011eb2e104aa134",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Integer/record constant evaluation shall use runtime typing and mathematical semantics, including modular overflow.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Layout-independent expressions may evaluate unbound",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "layout/encoding-dependent expressions shall remain symbolic until binding.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

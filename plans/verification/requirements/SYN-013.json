@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-013",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Strings shall be double-quoted and admit JSON escapes for quote, backslash, slash, backspace, form feed, newline, carriage return, tab, and four-hex-digit Unicode escapes. Raw controls/newlines, invalid escapes, and isolated surrogate escapes shall be rejected; adjacent escaped surrogate pairs shall decode to one scalar.",
+  "text_sha256": "31e9cdb74a0109f7891d264843f6920a1e26999d06478cae9da0fa9c9cb451de",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Strings shall be double-quoted and admit JSON escapes for quote, backslash, slash, backspace, form feed, newline, carriage return, tab, and four-hex-digit Unicode escapes.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Raw controls/newlines, invalid escapes, and isolated surrogate escapes shall be rejected",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "adjacent escaped surrogate pairs shall decode to one scalar.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

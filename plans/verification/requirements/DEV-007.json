@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "DEV-007",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "A device fence shall not itself wait for independent DMA/device completion or create CPU-thread synchronization. Completion shall use the device protocol; atomic fences shall not substitute for device fences. External ordinary-memory mutation shall require explicit coherence and ownership rules.",
+  "text_sha256": "105fcf763f77fe7216c5f523ce4ad02dad29b2d74ec36120b8c0cbe7f996c27f",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A device fence shall not itself wait for independent DMA/device completion or create CPU-thread synchronization.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Completion shall use the device protocol",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "atomic fences shall not substitute for device fences.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "External ordinary-memory mutation shall require explicit coherence and ownership rules.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

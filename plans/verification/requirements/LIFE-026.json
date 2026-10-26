@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-026",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Linking shall retain lifecycle functions/nodes, verify contracts/placements/agents/runtime support, and resolve the graph before execution. Readiness/finalized checks shall follow association through aliases and supported integer reconstruction.",
+  "text_sha256": "2f9a2b929d3f86e818c3e5df41d542e771dc715b984a28d0dde0341fa9a59a10",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Linking shall retain lifecycle functions/nodes, verify contracts/placements/agents/runtime support, and resolve the graph before execution.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Readiness/finalized checks shall follow association through aliases and supported integer reconstruction.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

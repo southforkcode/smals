@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "FUN-001",
+  "spec_path": "specs/0005_functions_and_calls.md",
+  "spec_sha256": "cd2a1853be5b61df6b6906f48fdfddddc8999d79639bba6ebb2bed38ec88bc41",
+  "text": "A function shall be module-level and have an ordered fixed parameter list, optional final variadic marker, ordered normal results, optional ABI clause, and optional single raised-payload type. Definitions shall contain one or more basic blocks; functions shall not nest.",
+  "text_sha256": "677060877d4baf6c1baf7a494ec383d268a877056ff2412712a6826ece49b5fa",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A function shall be module-level and have an ordered fixed parameter list, optional final variadic marker, ordered normal results, optional ABI clause, and optional single raised-payload type.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Definitions shall contain one or more basic blocks",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "functions shall not nest.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

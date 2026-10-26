@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ENV-001",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Before entry, the environment shall establish processor/runtime/stacks, final global locations/relocations, constant values, serial dynamic initialization, and gated application entry. Entry shall be designated, fixed-arity, non-raising, and supported by its ABI; normal results shall have a defined logical i32 status mapping.",
+  "text_sha256": "0b398dee43e9175df4cbf69df6ec46c4731bde3d89afaa15bab1e969ec14d209",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Before entry, the environment shall establish processor/runtime/stacks, final global locations/relocations, constant values, serial dynamic initialization, and gated application entry.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Entry shall be designated, fixed-arity, non-raising, and supported by its ABI",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "normal results shall have a defined logical i32 status mapping.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

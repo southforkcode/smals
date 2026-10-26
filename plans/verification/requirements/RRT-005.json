@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RRT-005",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Only `main` shall register callbacks or execute `exit`. Callbacks shall be valid non-null default-ABI zero-parameter/zero-result fixed non-raising references. Capacity shall be reserved before completion-registered actions and committed only on success.",
+  "text_sha256": "be600ea93a229d601be0fa1b33bb6ee6cccd87e66f163a207bc382b7d34ed014",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Only `main` shall register callbacks or execute `exit`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Callbacks shall be valid non-null default-ABI zero-parameter/zero-result fixed non-raising references.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Capacity shall be reserved before completion-registered actions and committed only on success.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

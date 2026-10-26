@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-014",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "A factory/hook raised outcome shall fail its node without installing its object/registering its callback, retrying, continuing dependents, or entering the application. Its explicit exceptional CFG shall clean up its own partial resources; earlier committed callbacks shall drain in reverse registration order, then terminal `initialization_failed` shall be reported.",
+  "text_sha256": "ca9e93764b527d6e380fe9b5f6b643c5266c2ae6e9e476791225fc5aa4227729",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A factory/hook raised outcome shall fail its node without installing its object/registering its callback, retrying, continuing dependents, or entering the application.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Its explicit exceptional CFG shall clean up its own partial resources",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "earlier committed callbacks shall drain in reverse registration order, then terminal `initialization_failed` shall be reported.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OBJ-001",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "`smil.object.v1` shall consist of a JSON descriptor and raw section blobs containing one owner module ID, bound target, embedded interface, all direct import locks/types/definitions/sections/references/relocations/continuations/runtime requirements/lifecycle nodes/user faults, and the checked execution metadata required by MET-001.",
+  "text_sha256": "e9cd53ee15e7bf1a39f9ed3f379f0a2e317bed8dcddf7450ac2fa9e1a64e309d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`smil.object.v1` shall consist of a JSON descriptor and raw section blobs containing one owner module ID, bound target, embedded interface, all direct import locks/types/definitions/sections/references/relocations/continuations/runtime requirements/lifecycle nodes/user faults, and the checked execution metadata required by MET-001.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

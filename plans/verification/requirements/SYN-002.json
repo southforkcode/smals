@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-002",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Source shall be valid UTF-8 containing Unicode scalar values. A BOM shall be accepted and ignored only at the start. Malformed encoding, surrogate scalars, and out-of-range code points shall be rejected without replacement.",
+  "text_sha256": "162089363bbc97de51f863af28d07e573e82866a95f01fb5f1a419f2f399874a",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Source shall be valid UTF-8 containing Unicode scalar values.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A BOM shall be accepted and ignored only at the start.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Malformed encoding, surrogate scalars, and out-of-range code points shall be rejected without replacement.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

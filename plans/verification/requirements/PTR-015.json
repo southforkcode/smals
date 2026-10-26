@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PTR-015",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "`addrspacecast` shall require different spaces, equal resolved pointees, and an explicitly supported ordered profile mapping. Null shall map to typed destination null. A non-null source shall require a live associated location covered by that mapping.",
+  "text_sha256": "6bb247148227ccc749c41eb9eb2f36ff62cdeb76cb941d157d80bba468faab31",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`addrspacecast` shall require different spaces, equal resolved pointees, and an explicitly supported ordered profile mapping.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Null shall map to typed destination null.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A non-null source shall require a live associated location covered by that mapping.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

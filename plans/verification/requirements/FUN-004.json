@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "FUN-004",
+  "spec_path": "specs/0005_functions_and_calls.md",
+  "spec_sha256": "cd2a1853be5b61df6b6906f48fdfddddc8999d79639bba6ebb2bed38ec88bc41",
+  "text": "Direct `call` shall accept only a function symbol with a non-raising callable contract. Fixed arguments and result bindings shall match exact ordered types/counts; produced results shall all bind fresh SSA identifiers.",
+  "text_sha256": "c4c834d4fdc6d08e261f7925899b9169c4ece1776502b82a25576629f494dc59",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Direct `call` shall accept only a function symbol with a non-raising callable contract.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Fixed arguments and result bindings shall match exact ordered types/counts",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "produced results shall all bind fresh SSA identifiers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

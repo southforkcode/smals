@@ -1,0 +1,38 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-010",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Imported globals shall expose actual type, space, mutability, and initialization mode. Clients shall not strengthen rights, redeclare mutability, or treat a not-ready immutable dynamic object as a compile-time value.",
+  "text_sha256": "badac8c8887a76089c36e59d99212180dfc4d45a755c8538e1a5a7f38eee411b",
+  "required_scopes": [
+    "source",
+    "artifact",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Imported globals shall expose actual type, space, mutability, and initialization mode.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Clients shall not strengthen rights, redeclare mutability, or treat a not-ready immutable dynamic object as a compile-time value.",
+      "scopes": [
+        "source",
+        "artifact",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-005",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "`record_set value field(path) replacement` shall require an exact selected-field type and return a new value with the source's nominal type, the selected field replaced, and every other field unchanged. It shall not mutate the source or storage.",
+  "text_sha256": "d008ec8e25024d6595682af119d7914c234f30e8bea35599624059bea91b8324",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`record_set value field(path) replacement` shall require an exact selected-field type and return a new value with the source's nominal type, the selected field replaced, and every other field unchanged.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall not mutate the source or storage.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

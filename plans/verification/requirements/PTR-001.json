@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PTR-001",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "A data pointer shall have a declared space and pointee type. A non-null associated pointer shall identify an allocation/external region, byte position, and applicable restrictions. Association may be implemented by proof or metadata but shall not be fabricated from arbitrary bits.",
+  "text_sha256": "f08a202c5e5298a57427f1b4ea8192e35495e1b0030c41c0c5f6f8de9444bb5a",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A data pointer shall have a declared space and pointee type.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A non-null associated pointer shall identify an allocation/external region, byte position, and applicable restrictions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Association may be implemented by proof or metadata but shall not be fabricated from arbitrary bits.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

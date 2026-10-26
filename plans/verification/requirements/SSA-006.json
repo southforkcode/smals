@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SSA-006",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "A verifier shall resolve every referenced symbol, type, constant, block, and SSA name to the appropriate kind; enforce definition uniqueness; and enforce every operation's result count, exact types, static attributes, and availability.",
+  "text_sha256": "9afe833329b0e356efbd97326399c867b842a85c04ce89b1f501acef43fda904",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A verifier shall resolve every referenced symbol, type, constant, block, and SSA name to the appropriate kind",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "enforce definition uniqueness",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "and enforce every operation's result count, exact types, static attributes, and availability.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

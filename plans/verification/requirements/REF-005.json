@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-005",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Reference integers shall support every width 1 through 65535. For representation bytes B=`ceil(N/8)` and catalog cap C, alignment shall be the largest power of two at most `min(B,C)` and allocation `round_up(B,alignment)`. Wider bound types shall be unsupported, not truncated.",
+  "text_sha256": "2656d5e97bf30dee6ed753b4198d7792782ea1c919ef74994f9c88be392a7ba1",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Reference integers shall support every width 1 through 65535.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "For representation bytes B=`ceil(N/8)` and catalog cap C, alignment shall be the largest power of two at most `min(B,C)` and allocation `round_up(B,alignment)`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Wider bound types shall be unsupported, not truncated.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CST-011",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "Symbolic `ptr_offset` shall remain within the identified allocation's bound extent and supported relocation model. Symbolic `ptr_diff` shall use the same allocation and a representable signed difference; no final link address shall be required to compute that difference.",
+  "text_sha256": "95c69bd299769bc3e53284f84ef2f66c9fffe723129e26cff4a3b419c28cd310",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Symbolic `ptr_offset` shall remain within the identified allocation's bound extent and supported relocation model.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Symbolic `ptr_diff` shall use the same allocation and a representable signed difference",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "no final link address shall be required to compute that difference.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

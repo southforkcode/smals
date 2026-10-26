@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-003",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Successful integer initialization/store shall define every bit of its representation bytes, including cleared unused high bits, but not allocation padding. An interior integer view shall initialize only its own representation bytes in the selected byte order.",
+  "text_sha256": "a8b46ee2b60fabe2404168f0fb2cecc3f0d17b6b4bd7e28da84350a8f002be7d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Successful integer initialization/store shall define every bit of its representation bytes, including cleared unused high bits, but not allocation padding.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "An interior integer view shall initialize only its own representation bytes in the selected byte order.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

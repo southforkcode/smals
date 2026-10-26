@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXC-005",
+  "spec_path": "specs/0005_functions_and_calls.md",
+  "spec_sha256": "cd2a1853be5b61df6b6906f48fdfddddc8999d79639bba6ebb2bed38ec88bc41",
+  "text": "Invoke outcome values shall have no source SSA binding and shall become available only as destination parameters on their selected edge. Explicit edge operands shall be available at the source terminator. Both edges shall participate in reachability/dominance, including shared destinations.",
+  "text_sha256": "402a6f260e0cc6918a3632bafe6404323ebebff4014612fceee6afe13e9904f1",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Invoke outcome values shall have no source SSA binding and shall become available only as destination parameters on their selected edge.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Explicit edge operands shall be available at the source terminator.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Both edges shall participate in reachability/dominance, including shared destinations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

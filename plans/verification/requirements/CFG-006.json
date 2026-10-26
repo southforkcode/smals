@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-006",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "`br` shall take its one explicit edge. `br_if` shall require `i1`, select its first edge for one and second for zero, and bind only the selected argument list. Edges to the same block shall remain separately checked.",
+  "text_sha256": "c9cb45c638fbf856201238deaa7909b29da8f7df4803d05795e75e7ffe3a63e5",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`br` shall take its one explicit edge.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`br_if` shall require `i1`, select its first edge for one and second for zero, and bind only the selected argument list.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Edges to the same block shall remain separately checked.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

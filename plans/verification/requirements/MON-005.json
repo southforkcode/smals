@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MON-005",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Monitor `mmio_fence` shall complete prior synchronous monitor transactions and establish the compiler boundary. It shall imply no DMA access to RAM. Real devices/shared-memory protocols shall require different explicit contracts.",
+  "text_sha256": "64c1b39fc78e193e6bdfd31035c3d06820bf045b3caa1a9d956296c75bbe5006",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Monitor `mmio_fence` shall complete prior synchronous monitor transactions and establish the compiler boundary.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall imply no DMA access to RAM.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Real devices/shared-memory protocols shall require different explicit contracts.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

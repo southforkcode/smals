@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REL-003",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Every relocation shall follow the normative encoding table below, validate the full mathematical expression before extraction/encoding, and fit its destination bytes/field. Overflow, invalid target kinds, missing records, illegal masks, and unsupported relocations shall be diagnostics rather than dropped/truncated entries.",
+  "text_sha256": "0bb64892bf496a8a603c512a08614a3020f3d84ab2889b655b1c9d0802b06ae9",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every relocation shall follow the normative encoding table below, validate the full mathematical expression before extraction/encoding, and fit its destination bytes/field.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Overflow, invalid target kinds, missing records, illegal masks, and unsupported relocations shall be diagnostics rather than dropped/truncated entries.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

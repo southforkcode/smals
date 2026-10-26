@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ABI-005",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Hidden indirect argument passing shall preserve immutable by-value SSA semantics. Results shall survive callee/packet expiry in caller-owned backing; callee local storage shall not back an ordinary returned value. Returned local pointers shall still expire.",
+  "text_sha256": "ab88b3d2fc75d5ed652f3f9d387a14b0f484e78b73b3b793e0eb1a4601e71974",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Hidden indirect argument passing shall preserve immutable by-value SSA semantics.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Results shall survive callee/packet expiry in caller-owned backing",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "callee local storage shall not back an ordinary returned value.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Returned local pointers shall still expire.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

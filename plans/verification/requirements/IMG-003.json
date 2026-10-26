@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IMG-003",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Catalog type references shall be ordered field IDs for records/tuples, one pointee ID for pointers, one signature ID for function refs, and empty for integer/runtime carriers. Signatures shall separately carry parameter/result/raised references. Inapplicable nullable fields shall be null, arrays empty, and variadic false.",
+  "text_sha256": "6f2421e8fe439cf61dcd5f5e6d666b5fda612c1d5a6831164f6047860ef93cab",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Catalog type references shall be ordered field IDs for records/tuples, one pointee ID for pointers, one signature ID for function refs, and empty for integer/runtime carriers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Signatures shall separately carry parameter/result/raised references.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Inapplicable nullable fields shall be null, arrays empty, and variadic false.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

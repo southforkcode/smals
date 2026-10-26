@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LNK-006",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "The mandatory runtime shall bind each required private entry to its same-spelled aux definition with token `<contracts-id>#<entry-name>` and exact raw carriers/default packet ABI. `bootstrap`, `initialize`, `dispatch`, `request_exit`, `drain_callbacks`, and `fault` shall always exist; operation-dependent entries/helper specializations shall close. Contract `never` shall imply no result entries and nonreturning behavior.",
+  "text_sha256": "53f2e5d74434518399d4ae77971d8c26915681f00555fbdd686d0c26af3916c4",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The mandatory runtime shall bind each required private entry to its same-spelled aux definition with token `<contracts-id>#<entry-name>` and exact raw carriers/default packet ABI.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`bootstrap`, `initialize`, `dispatch`, `request_exit`, `drain_callbacks`, and `fault` shall always exist",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "operation-dependent entries/helper specializations shall close.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Contract `never` shall imply no result entries and nonreturning behavior.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

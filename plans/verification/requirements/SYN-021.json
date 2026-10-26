@@ -1,0 +1,32 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-021",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "The complete grammar below shall define the accepted module, fragment, declaration, operation, and terminator forms. Unknown operations/clauses and unlisted operand annotations shall be rejected.",
+  "text_sha256": "51049e961ce383372666d9b43b0a4f31faf1134506bcd8b96cf0d64aa63149d1",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The complete grammar below shall define the accepted module, fragment, declaration, operation, and terminator forms.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Unknown operations/clauses and unlisted operand annotations shall be rejected.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

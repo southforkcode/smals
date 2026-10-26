@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-005",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "`atomic_load` shall return the current iN; `atomic_store` shall replace it. `atomic_rmw` shall return the old value and install `xchg`, modular `add/sub`, or bitwise `and/or/xor` with its operand in one indivisible action. Other RMW kinds shall be rejected.",
+  "text_sha256": "afc2eb04e5306d613fa0291c5ffc5dbbf7efe5413251b7a4826184e6c53e5631",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`atomic_load` shall return the current iN",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "`atomic_store` shall replace it.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "`atomic_rmw` shall return the old value and install `xchg`, modular `add/sub`, or bitwise `and/or/xor` with its operand in one indivisible action.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Other RMW kinds shall be rejected.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

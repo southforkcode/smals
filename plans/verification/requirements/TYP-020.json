@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-020",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Module-local types shall be visible throughout their module; function-local types shall be confined to the declaring function and shall not escape through any module declaration or function contract, directly or indirectly. Local types shall be static declarations, not new identities per invocation.",
+  "text_sha256": "78229e67bf1b97f9ca5e30f290b4dc4e557b59ba05cd1f07562a3730e13bc8b3",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Module-local types shall be visible throughout their module",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "function-local types shall be confined to the declaring function and shall not escape through any module declaration or function contract, directly or indirectly.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Local types shall be static declarations, not new identities per invocation.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

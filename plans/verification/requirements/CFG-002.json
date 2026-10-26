@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-002",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "The first block shall be entry, match the function signature, and have no incoming CFG edges. Other blocks may be reordered without changing explicit edge semantics; branches shall remain within the owning function and shall never target entry.",
+  "text_sha256": "420a0d1b637dace5166c810b2b5962e735888bcf39d9f63737ecb55331a1bcf3",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The first block shall be entry, match the function signature, and have no incoming CFG edges.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Other blocks may be reordered without changing explicit edge semantics",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "branches shall remain within the owning function and shall never target entry.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-006",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "All local definitions shall be private unless explicitly exported by `export type Name`, `export $name`, or `export @name`. Each export shall name a current-module definition; unresolved function declarations, duplicate exports, wrong-kind selections, and imported entity re-exports shall be rejected. An exported alias may refer to an imported type while retaining its identity.",
+  "text_sha256": "af2c5cde03e3ce2b89ac142f30fd6b49957d29102e9b9936da1642f34920219c",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "All local definitions shall be private unless explicitly exported by `export type Name`, `export $name`, or `export @name`.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Each export shall name a current-module definition",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "unresolved function declarations, duplicate exports, wrong-kind selections, and imported entity re-exports shall be rejected.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "An exported alias may refer to an imported type while retaining its identity.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

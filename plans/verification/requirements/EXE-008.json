@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-008",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Initialization proof/tracking shall match every permitted alias and integer view, reset per allocation lifetime, and remain private/bounded. At merges a definite-initialization proof shall use the intersection of incoming initialized sets; loops shall use a sound fixed point. May-alias stores shall establish only bytes proven written.",
+  "text_sha256": "16f5ddc8d61ef5668739b3d9efc6494bf70be46fb1c79ce04d3d9a87cb428ba7",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Initialization proof/tracking shall match every permitted alias and integer view, reset per allocation lifetime, and remain private/bounded.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "At merges a definite-initialization proof shall use the intersection of incoming initialized sets",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "loops shall use a sound fixed point.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "May-alias stores shall establish only bytes proven written.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

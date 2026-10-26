@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "INT-014",
+  "spec_path": "specs/0004_integer_operations.md",
+  "spec_sha256": "9dc0600df10568223c669046bd8bf05101d8dc596859a646ee8bb3b1cd11303b",
+  "text": "`umul_overflow` shall return `bits_N(U(a)*U(b))` then `i1(U(a)*U(b) >= B)`. Unsigned addition/subtraction overflow shall be available using carry/borrow with zero input.",
+  "text_sha256": "153fe6f1193f4b595cdbad142f5a980a452e8b118078cd405304e5913d1b3f8f",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`umul_overflow` shall return `bits_N(U(a)*U(b))` then `i1(U(a)*U(b) >= B)`.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Unsigned addition/subtraction overflow shall be available using carry/borrow with zero input.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

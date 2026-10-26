@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RES-007",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Profile-mandated identity increments, live-object slot charges, and callback registrations shall be preserved even when their physical representation is optimized away. Backend-dependent frame/spill/work/tracking charges shall describe the actual published lowering.",
+  "text_sha256": "8563485031c650ee898bfd9f55d4e84a85a98c94aed54c2ab3560dbc22871774",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Profile-mandated identity increments, live-object slot charges, and callback registrations shall be preserved even when their physical representation is optimized away.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Backend-dependent frame/spill/work/tracking charges shall describe the actual published lowering.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

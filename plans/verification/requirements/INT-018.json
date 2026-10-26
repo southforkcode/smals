@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "INT-018",
+  "spec_path": "specs/0004_integer_operations.md",
+  "spec_sha256": "9dc0600df10568223c669046bd8bf05101d8dc596859a646ee8bb3b1cd11303b",
+  "text": "These definitions shall apply to `i1`, sub-byte, non-power-of-two, and non-native widths. Backends/helpers shall normalize hardware shifts, division, remainder, and flags when hardware semantics differ.",
+  "text_sha256": "0ce33157bf5c5658f345c5af0325528b4376def32440833f1d4305795595c441",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "These definitions shall apply to `i1`, sub-byte, non-power-of-two, and non-native widths.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Backends/helpers shall normalize hardware shifts, division, remainder, and flags when hardware semantics differ.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

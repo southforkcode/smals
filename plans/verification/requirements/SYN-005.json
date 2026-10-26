@@ -1,0 +1,32 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-005",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Ordinary names shall match ASCII `[A-Za-z_][A-Za-z0-9_]*` and be case-sensitive. Sigils shall immediately precede their names: `@`, `$`, `%`, and `^` for value/type binders, constants, SSA values, and blocks respectively.",
+  "text_sha256": "82f643f54b54d7135397d2bdf8cc4a42b05938c78850ba9a8bf20c9c2e89c4ca",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Ordinary names shall match ASCII `[A-Za-z_][A-Za-z0-9_]*` and be case-sensitive.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Sigils shall immediately precede their names: `@`, `$`, `%`, and `^` for value/type binders, constants, SSA values, and blocks respectively.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

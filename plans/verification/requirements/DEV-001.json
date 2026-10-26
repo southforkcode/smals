@@ -1,0 +1,96 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "DEV-001",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "Every device access contract shall be versioned and specify region identity/extent/lifetime/mappings/agents; legal directions, widths, alignment and byte order; exact transaction sequence/byte enables/splitting; side effects/reserved bits; ordering/completion/posting/barriers; shared memory/coherence/DMA rules; and bus/device failure behavior including partial completion.",
+  "text_sha256": "dd368ab72f58f35c173f3b49e1aeee4fc4ab503774bec50ec2163148f7720ca3",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Every device access contract shall be versioned and specify region identity/extent/lifetime/mappings/agents",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "legal directions, widths, alignment and byte order",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "exact transaction sequence/byte enables/splitting",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "side effects/reserved bits",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "ordering/completion/posting/barriers",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.6",
+      "text": "shared memory/coherence/DMA rules",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.7",
+      "text": "and bus/device failure behavior including partial completion.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

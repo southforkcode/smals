@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PKT-003",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Argument entries shall be 16 bytes each, containing type ID, payload offset, allocation size, reserved zero, in source order. Zero count shall use table offset zero. Payloads shall follow the table with per-type alignment, ordinary encoding, zero ABI padding, and by-value copies inaccessible as source packet storage. Offset arithmetic shall not wrap.",
+  "text_sha256": "a1458cb5bcbd834cc13c647541429770e2aad05a28bfefa8b7304701ba256e62",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Argument entries shall be 16 bytes each, containing type ID, payload offset, allocation size, reserved zero, in source order.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Zero count shall use table offset zero.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Payloads shall follow the table with per-type alignment, ordinary encoding, zero ABI padding, and by-value copies inaccessible as source packet storage.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Offset arithmetic shall not wrap.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

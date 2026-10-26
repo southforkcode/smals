@@ -1,0 +1,40 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-024",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Parenthesized constant expressions shall exclude SSA operands syntactically. Local aggregate initializers shall permit SSA operands only through the local-initializer production. Parsing shall not weaken this distinction based on optimization proofs.",
+  "text_sha256": "5274c6cbad66c171d9683e5b8008ca40aa201f3329bc1ef11134dadd08c4b10c",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Parenthesized constant expressions shall exclude SSA operands syntactically.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Local aggregate initializers shall permit SSA operands only through the local-initializer production.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Parsing shall not weaken this distinction based on optimization proofs.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

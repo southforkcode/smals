@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-004",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "Dynamic-global allocation/subobjects shall exist before initialization, but contents shall remain unavailable until normal factory return and complete coordinator installation. No implicit zero or second preceding initializer shall exist. Installation shall publish complete value/readiness together and initialize immutable storage without authorizing ordinary writes.",
+  "text_sha256": "70f984e8868c8f31b1366107501ac272f7eac81615315ed3c4aaafcf3e85139a",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Dynamic-global allocation/subobjects shall exist before initialization, but contents shall remain unavailable until normal factory return and complete coordinator installation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "No implicit zero or second preceding initializer shall exist.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Installation shall publish complete value/readiness together and initialize immutable storage without authorizing ordinary writes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-013",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Multi-agent validation shall coordinate observation, read/write histories, lifetime, and commitment, keyed by allocation identity and footprint. Prospective acquire edges shall derive from the actual observed write and become effective only on commit. History may be summarized/discarded only with proof preserving all future conflicts.",
+  "text_sha256": "fa4c885510c99f135b6eb1a87f0c8ae3406d3d05aa2b234f329ec624ca1fda49",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Multi-agent validation shall coordinate observation, read/write histories, lifetime, and commitment, keyed by allocation identity and footprint.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Prospective acquire edges shall derive from the actual observed write and become effective only on commit.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "History may be summarized/discarded only with proof preserving all future conflicts.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

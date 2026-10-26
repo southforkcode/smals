@@ -1,0 +1,35 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-001",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "`%name`, `$name`, `@name` in a value position, bare type names, profile-defined space names, and `^name` shall resolve respectively to function-local SSA, module constants, module functions/globals, types, spaces, and function-local blocks. Qualified imports shall follow [0012](0012_modules_and_interfaces.md).",
+  "text_sha256": "85153f9ebcc3d97a953267f093f34c14064632e2f6d41636aa4e5edf2b1a4024",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`%name`, `$name`, `@name` in a value position, bare type names, profile-defined space names, and `^name` shall resolve respectively to function-local SSA, module constants, module functions/globals, types, spaces, and function-local blocks.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Qualified imports shall follow [0012](0012_modules_and_interfaces.md).",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

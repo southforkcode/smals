@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-011",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Registry/catalog/packet/native-return/runtime-private storage shall not be ordinary registered objects. Numeric guessing shall not make it accessible. Proofs may remove physical checks/fields privately but shall preserve semantic charges and observable stored/public representations. Alternate thin encodings shall require a different layout/runtime contract.",
+  "text_sha256": "c3ec283ff41c77e894e954bdef42c125c41ef85c08b153f0f15fadf9f4fb04b9",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Registry/catalog/packet/native-return/runtime-private storage shall not be ordinary registered objects.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Numeric guessing shall not make it accessible.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Proofs may remove physical checks/fields privately but shall preserve semantic charges and observable stored/public representations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Alternate thin encodings shall require a different layout/runtime contract.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

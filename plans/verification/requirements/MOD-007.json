@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MOD-007",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "A local function declaration shall describe a function owned by this module and shall not search other modules by spelling. Imported symbols shall use their pinned qualified declarations and shall not be redeclared locally as the same entity. Ambient native/global name lookup shall not apply.",
+  "text_sha256": "2905c1f54522ff7aacbe7cdaf066d3ba2cf24d733d1aae831381c47d133ee3b4",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A local function declaration shall describe a function owned by this module and shall not search other modules by spelling.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Imported symbols shall use their pinned qualified declarations and shall not be redeclared locally as the same entity.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Ambient native/global name lookup shall not apply.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

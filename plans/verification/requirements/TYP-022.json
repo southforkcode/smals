@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-022",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "`@A = type [T]` shall be a transparent alias interchangeable with T after resolution, retaining T's layout and identity. Cycles consisting solely of transparent aliases shall be rejected. Aliasing `varargs` shall not make it storable or escapable.",
+  "text_sha256": "170255db5f1227a7db7c0e05b49626312e650fc05e08a5695a90a6a3cd70730b",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`@A = type [T]` shall be a transparent alias interchangeable with T after resolution, retaining T's layout and identity.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Cycles consisting solely of transparent aliases shall be rejected.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Aliasing `varargs` shall not make it storable or escapable.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

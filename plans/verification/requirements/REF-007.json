@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-007",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "Data/ROM/I/O pointers shall be 16 bytes aligned to `min(C,4)`; function references eight bytes with that alignment. Pointer fields shall be target-endian u32 allocation identity, allocation-relative byte offset, cached normalized coordinate, and effective read/write rights at offsets 0,4,8,12. Rights shall use bits 0/1 with other bits zero.",
+  "text_sha256": "42359d4b7b380c89258d5d840de8ae305ebe174b1bce305a505ff4899bf04a80",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Data/ROM/I/O pointers shall be 16 bytes aligned to `min(C,4)`",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "function references eight bytes with that alignment.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Pointer fields shall be target-endian u32 allocation identity, allocation-relative byte offset, cached normalized coordinate, and effective read/write rights at offsets 0,4,8,12.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Rights shall use bits 0/1 with other bits zero.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

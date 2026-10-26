@@ -1,0 +1,9 @@
+# Requirement obligation inventory
+
+Sources: [B010](../plans/01_foundation_and_contracts.md#b010), [effective specifications](../specs/README.md), and [minimum scopes](../plans/11_requirement_matrix.md). Read numbered effective specifications only, preserving each exact Markdown table-cell requirement text, UTF-8 digest, source path and file digest. Duplicate keys, missing/extra manifests and authority drift are errors.
+
+Each initially open manifest has reviewed=false, minimum scopes from the existing matrix, conservative sentence/semicolon obligation groups covering the complete text, and empty evidence links. These are initial obligation seeds, not a claim that automatic sentence splitting establishes atomic semantic clause boundaries. A requirement's later closure increment must review/refine every actual clause before reviewed can become true; the auditor rejects unreviewed seeds, missing clause text/scopes/positive-negative evidence or unsupported native claims. All 435 requirements remain open after seeding.
+
+scripts/seed_requirements.py creates absent manifests and preserves byte-for-byte existing evidence. It refuses changed authority rather than overwriting prior reviewed work. scripts/audit_evidence.py --inventory checks exact coverage/text/digests/minimum scopes and rejects orphan case mappings. Existing partial case links may lack receipts while state is open, but must refer to registered increment/case IDs; closure separately requires audited proof. No source/test file stores plan mappings.
+
+Tests independently construct a two-requirement/two-spec fixture and scope matrix. They verify counts, exact Unicode text/hash, idempotence, preserved evidence, duplicate authorities, missing/extra keys, orphan tests and changed normative text. The real repository check must report 435 open and zero verified, never infer verification from inventory presence.

@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RFN-001",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "A function reference shall contain target-endian u32 function ID followed by exact callable signature ID; null shall be the zero pair. Function catalog records shall contain function ID, signature ID, normalized entry, and reserved zero. IDs shall resolve to fixed targets for the instance lifetime.",
+  "text_sha256": "18f4e9d3afe9f5cfd38067d703908c2394dfe194cf7dfced30cc15ced848c883",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A function reference shall contain target-endian u32 function ID followed by exact callable signature ID",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "null shall be the zero pair.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Function catalog records shall contain function ID, signature ID, normalized entry, and reserved zero.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "IDs shall resolve to fixed targets for the instance lifetime.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-011",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "An action may access constant globals and dynamic globals already completed. Required construction order shall be expressed by explicit/transitive dependencies; accessing incomplete contents shall fault rather than recursively initialize them. Source-language total constructor order shall require graph edges; lazy once/reentry semantics shall require explicit lowering/contracts.",
+  "text_sha256": "46bcb18b5c9baf3805f63a362a1996d5d0139bb4ea8601a074deaf3970c521f9",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "An action may access constant globals and dynamic globals already completed.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Required construction order shall be expressed by explicit/transitive dependencies",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "accessing incomplete contents shall fault rather than recursively initialize them.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Source-language total constructor order shall require graph edges",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "lazy once/reentry semantics shall require explicit lowering/contracts.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

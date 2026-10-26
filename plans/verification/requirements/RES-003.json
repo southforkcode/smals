@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RES-003",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Each operation shall preflight and reserve all required resources before its logical commit, including native pushes, helper entry, storage-requiring locks, software extensions, local identity/tracking, and dynamic packet sizes. Call target validation shall precede its reservations.",
+  "text_sha256": "5492b81889a6191c79bf939d2e6f5f694e14a62b8fc75ab60106d7e9394faae9",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each operation shall preflight and reserve all required resources before its logical commit, including native pushes, helper entry, storage-requiring locks, software extensions, local identity/tracking, and dynamic packet sizes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Call target validation shall precede its reservations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

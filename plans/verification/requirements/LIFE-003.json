@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-003",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "`global ... [T] dynamic @factory init(\"id\")` shall require one nonempty program-wide ID and a direct non-variadic zero-parameter factory returning exactly one T. The factory may declare one raised type. Optional `after` shall list prerequisites; optional shutdown shall be a supported-ABI fixed non-raising zero-parameter/zero-result function.",
+  "text_sha256": "a5fa5e49d2c1f1157ba20a32e076db2373566e20aa2a2ca1b56cf2c6ce1e775b",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`global ... [T] dynamic @factory init(\"id\")` shall require one nonempty program-wide ID and a direct non-variadic zero-parameter factory returning exactly one T.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "The factory may declare one raised type.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Optional `after` shall list prerequisites",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "optional shutdown shall be a supported-ABI fixed non-raising zero-parameter/zero-result function.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

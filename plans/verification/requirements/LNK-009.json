@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LNK-009",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Sections/catalogs/globals/native/software/runtime/callback/tracking storage shall fit aligned permitted regions and exact declared capacities/ID ranges. A capacity shall not silently expand into another region. Static failure shall be a diagnostic before a final executable image is published.",
+  "text_sha256": "0dd3bb96be7c13fa0ee37515a269bdfcb5670cf43944d6b89af15a5ed9ef639f",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Sections/catalogs/globals/native/software/runtime/callback/tracking storage shall fit aligned permitted regions and exact declared capacities/ID ranges.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A capacity shall not silently expand into another region.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Static failure shall be a diagnostic before a final executable image is published.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

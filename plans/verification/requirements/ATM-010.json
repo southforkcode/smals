@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-010",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "`atomic_fence seq_cst` shall participate in the total order and order preceding/following ordinary accesses in its agent. It shall not read a value or independently create cross-agent synchronization; publication shall require atomic communication or an environment event.",
+  "text_sha256": "cbd0883e6fe99f33d17295da6dc1e2a5a28d30dd5b2659ef2affb7693889d6e9",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`atomic_fence seq_cst` shall participate in the total order and order preceding/following ordinary accesses in its agent.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall not read a value or independently create cross-agent synchronization",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "publication shall require atomic communication or an environment event.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-002",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Type and value namespaces shall be separate. Functions and globals shall share one module value namespace and shall not have the same name. SSA and block names shall each be unique in their separate function namespaces; constants shall be unique per module; type binders shall be unique per type scope.",
+  "text_sha256": "e0ed2fe48caac9f33964ead61a38f524837219648c5b11b20ef31cf8a084a787",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Type and value namespaces shall be separate.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Functions and globals shall share one module value namespace and shall not have the same name.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "SSA and block names shall each be unique in their separate function namespaces",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "constants shall be unique per module",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.5",
+      "text": "type binders shall be unique per type scope.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

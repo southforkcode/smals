@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "EXE-006",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "A successful load shall not initialize storage. Masking, discarding, extracting a sibling field, comparison, or a later overwrite shall not repair an invalid earlier read. A typed copy shall validate its source before exposing any copied value/destination effect.",
+  "text_sha256": "8e428d42254e0857eeee9bc503333f84ff0242d57039614b30e5d1ec256e0ae6",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A successful load shall not initialize storage.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Masking, discarding, extracting a sibling field, comparison, or a later overwrite shall not repair an invalid earlier read.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A typed copy shall validate its source before exposing any copied value/destination effect.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

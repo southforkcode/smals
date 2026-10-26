@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ATM-007",
+  "spec_path": "specs/0008_devices_and_atomics.md",
+  "spec_sha256": "41f682e067c1197b2c36c9d92b89264e8f5d89a145341789204df11b6a0371ff",
+  "text": "All participating `seq_cst` accesses/fences shall have one total order consistent with agent sequencing and happens-before. Extending it with initialization and ordinary writes consistently with happens-before, each read shall observe the latest preceding location write. RMW read/update shall occupy one position.",
+  "text_sha256": "9c1ffc3b906f82d44212a7d4484fd6589c6ccad479272df8bc5d9feab26f40bb",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "All participating `seq_cst` accesses/fences shall have one total order consistent with agent sequencing and happens-before.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Extending it with initialization and ordinary writes consistently with happens-before, each read shall observe the latest preceding location write.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "RMW read/update shall occupy one position.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

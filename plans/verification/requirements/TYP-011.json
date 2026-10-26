@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-011",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Each processed local declaration shall create a distinct allocation for its invocation, including recursive invocations. Its lifetime shall begin at declaration and end on return, raise, or abandonment. A retained pointer shall not extend that lifetime.",
+  "text_sha256": "f0f3520a191f27806c3a28b2c2b2d91f26b1d94bd8b9143c5d412ad0ee6320d7",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each processed local declaration shall create a distinct allocation for its invocation, including recursive invocations.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Its lifetime shall begin at declaration and end on return, raise, or abandonment.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "A retained pointer shall not extend that lifetime.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LNK-004",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "The designated canonical entry shall exist and satisfy the selected environment contract, for reference profiles local name `smil_main`, default-ABI fixed `() -> ([i32])`, non-raising. It may be private; retained-key designation shall neither export it nor conflict with equal private names in other modules. Every additionally retained key shall exist.",
+  "text_sha256": "afdf344104891010831e0783da9f366fa646d4025255dc8452752806664376c1",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The designated canonical entry shall exist and satisfy the selected environment contract, for reference profiles local name `smil_main`, default-ABI fixed `() -> ([i32])`, non-raising.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It may be private",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "retained-key designation shall neither export it nor conflict with equal private names in other modules.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Every additionally retained key shall exist.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

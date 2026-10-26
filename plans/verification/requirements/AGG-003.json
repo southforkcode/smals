@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-003",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "`record_make [R] (values)` shall require a record type and exactly one exact-type operand per field in declaration order. It shall produce one R value without addressable allocation. An empty record shall require an empty operand list.",
+  "text_sha256": "1bd0da7ca97c2c83411e59a1bfc41e493585731e7f61003508d5867edd754ab5",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`record_make [R] (values)` shall require a record type and exactly one exact-type operand per field in declaration order.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "It shall produce one R value without addressable allocation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "An empty record shall require an empty operand list.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

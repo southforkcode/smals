@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "ABI-006",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "A function ABI clause shall select only an ABI supported by the bound profile; omission shall use the default. Declarations/definition and callable references shall agree on effective ABI/attributes. Direct/indirect calls shall inherit that contract without conflicting call-site overrides.",
+  "text_sha256": "6101bd0cffa6c18a3bf5c0b127701d879f8bc5fee858f9aed223e8a8337e23fb",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A function ABI clause shall select only an ABI supported by the bound profile",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "omission shall use the default.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Declarations/definition and callable references shall agree on effective ABI/attributes.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Direct/indirect calls shall inherit that contract without conflicting call-site overrides.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

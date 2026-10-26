@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LAY-003",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "Integer iN shall have representation size `ceil(N/8)`, with profile-defined alignment/allocation. Loads shall decode low N bits and stores shall encode them while clearing unused high representation bits, without promises for allocation padding or writes to neighbors.",
+  "text_sha256": "d34211a23fb56eea029eb60e36528065b0684962f17577a3a3485490662a30ef",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Integer iN shall have representation size `ceil(N/8)`, with profile-defined alignment/allocation.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Loads shall decode low N bits and stores shall encode them while clearing unused high representation bits, without promises for allocation padding or writes to neighbors.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

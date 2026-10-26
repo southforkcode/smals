@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REF-004",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "A tool shall advertise a profile as implemented only when its encoder, complete lowering/runtime closure, linker/loader contract, and relevant conformance vectors pass. An unavailable backend shall produce a diagnostic rather than emit code for a nearby CPU. Proposed profile status shall not satisfy this gate.",
+  "text_sha256": "212bbe077e525501d90e9d42db083ecb7b9e94ed0dcd239d9b67f294bf5c496d",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A tool shall advertise a profile as implemented only when its encoder, complete lowering/runtime closure, linker/loader contract, and relevant conformance vectors pass.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "An unavailable backend shall produce a diagnostic rather than emit code for a nearby CPU.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Proposed profile status shall not satisfy this gate.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

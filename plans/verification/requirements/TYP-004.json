@@ -1,0 +1,44 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-004",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "`[T]` shall denote a type; a typed literal shall denote a value of its resolved type without creating addressable storage. Operation-specific typing shall determine operand/result types, with no implicit integer, record, pointer, or truncating conversion.",
+  "text_sha256": "1d1f9aadbbeac61719b0d06547404de9f3ed5e46d8cc986313649a8349a0f089",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`[T]` shall denote a type",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "a typed literal shall denote a value of its resolved type without creating addressable storage.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Operation-specific typing shall determine operand/result types, with no implicit integer, record, pointer, or truncating conversion.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

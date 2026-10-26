@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "AGG-009",
+  "spec_path": "specs/0003_constants_and_aggregates.md",
+  "spec_sha256": "9633ace45b7e98544ae562ddc1bfabd70c7a67bdb9cc20caed61bb937e5006ff",
+  "text": "A complete record store shall establish all field values recursively. A field store shall initialize only that field, including its complete inline descendants. Sibling fields and padding shall not acquire initialization through that store.",
+  "text_sha256": "32a0e21b698b6a3d834ab698abddc51fb4f845dc604ec432ac085b9fd7156528",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A complete record store shall establish all field values recursively.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A field store shall initialize only that field, including its complete inline descendants.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Sibling fields and padding shall not acquire initialization through that store.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

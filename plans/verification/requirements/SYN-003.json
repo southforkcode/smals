@@ -1,0 +1,48 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SYN-003",
+  "spec_path": "specs/0001_source_syntax.md",
+  "spec_sha256": "e90afa6b16753b32ace0d443694e0b0ed5bbba39fcc45e5dae1d7205843bd7ca",
+  "text": "Physical newlines shall be LF or CRLF, with CRLF counted once. A standalone CR shall be rejected. Outside strings/comments, horizontal whitespace shall consist only of ASCII space and tab. Indentation shall have no syntactic effect.",
+  "text_sha256": "6b93fb843560d9e140e4834f41c837acdb41c263525783421f7b17cb8dd3e35b",
+  "required_scopes": [
+    "source"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Physical newlines shall be LF or CRLF, with CRLF counted once.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A standalone CR shall be rejected.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Outside strings/comments, horizontal whitespace shall consist only of ASCII space and tab.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Indentation shall have no syntactic effect.",
+      "scopes": [
+        "source"
+      ],
+      "evidence": []
+    }
+  ]
+}

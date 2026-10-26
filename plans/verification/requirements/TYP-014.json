@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-014",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "Local sizes/alignment shall follow the resolved layout and frame contract. Logical storage shall belong to the invocation frame; core declaration order alone shall not require physical order unless a selected ABI imposes it.",
+  "text_sha256": "3d2385811b7f27dd4f40a52cdf198f6974be31b8225ccdf37efa464a6c7b4c65",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Local sizes/alignment shall follow the resolved layout and frame contract.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Logical storage shall belong to the invocation frame",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "core declaration order alone shall not require physical order unless a selected ABI imposes it.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

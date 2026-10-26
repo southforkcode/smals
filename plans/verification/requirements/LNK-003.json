@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LNK-003",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "Executable reference links shall explicitly select/pin runtime module `smil.rt.checked.packet.v2` like other inputs. A data-only fixture may omit it but shall not become executable without runtime and entry. No hidden host runtime shall be substituted.",
+  "text_sha256": "35d3c6f00b9b9f3579b30e40e274671cf63f3d73f6b10bf3e3a718da1c2e66fd",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Executable reference links shall explicitly select/pin runtime module `smil.rt.checked.packet.v2` like other inputs.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "A data-only fixture may omit it but shall not become executable without runtime and entry.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "No hidden host runtime shall be substituted.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

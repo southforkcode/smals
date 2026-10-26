@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "RRT-004",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "The source entry shall be designated `smil_main`, fixed `() -> ([i32])`, default packet ABI, non-raising/non-variadic. Lifecycle shall install constants, execute the resolved dependency order, publish readiness, enter it, drain callbacks, and report i32 bits. Other language entry forms shall use wrappers.",
+  "text_sha256": "da87ade838389d734c67bea53015e12d488efae66c2f181dbbefadd5b3d8d080",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The source entry shall be designated `smil_main`, fixed `() -> ([i32])`, default packet ABI, non-raising/non-variadic.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Lifecycle shall install constants, execute the resolved dependency order, publish readiness, enter it, drain callbacks, and report i32 bits.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Other language entry forms shall use wrappers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-007",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Public type labels shall be `t` plus a zero-padded decimal ordinal of at least six digits beginning at one. Private types shall continue in sorted private-key order. Equal keys shall have one descriptor; conflicting definitions for one nominal key shall be rejected.",
+  "text_sha256": "cc559f57b8b328f2a92d122c30815fb57cebde852a0b82608cc53eae263dae23",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Public type labels shall be `t` plus a zero-padded decimal ordinal of at least six digits beginning at one.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Private types shall continue in sorted private-key order.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Equal keys shall have one descriptor",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "conflicting definitions for one nominal key shall be rejected.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

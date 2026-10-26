@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PKT-006",
+  "spec_path": "specs/0011_checked_reference_profiles.md",
+  "spec_sha256": "f1793252d628919f393bcfe12cf52a8160b580a6bc802cf3b2df1c6c1f1a2d0a",
+  "text": "The caller shall copy selected results into surviving backing before packet release/restoring saved software top. Hardware flags/native return registers shall not carry logical results. Extension attributes shall retain effective identity but cause no physical widening without a wider carrier; unused bits shall remain canonical zero.",
+  "text_sha256": "3f07f00d09df6d0eddeec3845d59129128f99e53cbaae51d29fb019680a4e8ce",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The caller shall copy selected results into surviving backing before packet release/restoring saved software top.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Hardware flags/native return registers shall not carry logical results.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Extension attributes shall retain effective identity but cause no physical widening without a wider carrier",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "unused bits shall remain canonical zero.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

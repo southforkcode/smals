@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-023",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "`ptr [T]` shall equal `ptr data [T]`. Address space and resolved pointee shall participate in pointer type identity; different spaces shall remain distinct even with equal encodings. Pointer width shall not be inferred from pointee width.",
+  "text_sha256": "e57d166a63984c1c2cfa2ae7d635ef444da1136dfc9777d7cca30c49c7bc7f8d",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`ptr [T]` shall equal `ptr data [T]`.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Address space and resolved pointee shall participate in pointer type identity",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "different spaces shall remain distinct even with equal encodings.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Pointer width shall not be inferred from pointee width.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

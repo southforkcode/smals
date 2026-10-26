@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TGT-002",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "A module shall contain at most one target directive, following its header when present and preceding imports/other items. Build selection may supply an omitted target; simultaneous source/build selections shall agree on the resolved contract or be rejected. Host layout/ABI shall not be silently selected.",
+  "text_sha256": "2e2e0ad40d2337fb601584643c5cf7b027d6d57225559b44e28cc2e501fd2042",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A module shall contain at most one target directive, following its header when present and preceding imports/other items.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Build selection may supply an omitted target",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "simultaneous source/build selections shall agree on the resolved contract or be rejected.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "Host layout/ABI shall not be silently selected.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

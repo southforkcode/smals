@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MET-005",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Published checked v1 identities/digests shall not be silently amended. Checked v2 shall select the stronger execution digest/runtime, preserve built-in fault IDs 1–13, add ID 14 for `uninitialized_read` and 15 for `data_race`, and retain user-ID base 65536. Exact-component linking shall reject old v1-bound objects in a v2 program.",
+  "text_sha256": "7e017288e75a1cdbff9477d257f7a278f0d1a79e6ecb6ab68dc8caa153c7ba5b",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Published checked v1 identities/digests shall not be silently amended.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Checked v2 shall select the stronger execution digest/runtime, preserve built-in fault IDs 1–13, add ID 14 for `uninitialized_read` and 15 for `data_race`, and retain user-ID base 65536.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Exact-component linking shall reject old v1-bound objects in a v2 program.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

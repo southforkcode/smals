@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "FUN-006",
+  "spec_path": "specs/0005_functions_and_calls.md",
+  "spec_sha256": "cd2a1853be5b61df6b6906f48fdfddddc8999d79639bba6ebb2bed38ec88bc41",
+  "text": "All argument/result passing shall preserve logical by-value values and result lifetimes, including aggregates and hidden physical carriers. Block argument transfer shall not count as a call.",
+  "text_sha256": "477257ea4b5e78aab567c0c371b2fb5eed5d7ca9ef81090969a1357afd76f95e",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "All argument/result passing shall preserve logical by-value values and result lifetimes, including aggregates and hidden physical carriers.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Block argument transfer shall not count as a call.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

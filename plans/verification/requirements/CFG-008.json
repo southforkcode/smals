@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-008",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "Encoded switch cases shall be unique, including different signed/unsigned spellings of the same bits. Invalid/faulting cases shall be diagnosed. Zero cases shall transfer to default; all listed edges shall remain structural CFG edges even for constant selectors.",
+  "text_sha256": "58b89203fb9c519897183fb0a4b35e2197253bb9e9eb924a682db09000fbf94a",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Encoded switch cases shall be unique, including different signed/unsigned spellings of the same bits.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Invalid/faulting cases shall be diagnosed.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Zero cases shall transfer to default",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "all listed edges shall remain structural CFG edges even for constant selectors.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

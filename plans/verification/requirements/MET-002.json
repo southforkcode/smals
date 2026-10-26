@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "MET-002",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "The plan shall identify module, execution-contract digest, profile, and every defined function's complete frame size, callee-owned native reservation excluding nested callees, local shadow extent, and checked sites. Locals shall record declaration ordinal, canonical type key, offset/size, initial state, tracking choice, and bitmap offset/size. Sites shall record opcode, fixed costs, and runtime-dependent resource domains.",
+  "text_sha256": "3531a541add4289208805027edd159ad6d38bf33ef78c22f814a34f6f4dca11c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The plan shall identify module, execution-contract digest, profile, and every defined function's complete frame size, callee-owned native reservation excluding nested callees, local shadow extent, and checked sites.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Locals shall record declaration ordinal, canonical type key, offset/size, initial state, tracking choice, and bitmap offset/size.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Sites shall record opcode, fixed costs, and runtime-dependent resource domains.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

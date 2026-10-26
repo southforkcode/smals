@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LAY-008",
+  "spec_path": "specs/0010_targets_layout_and_abi.md",
+  "spec_sha256": "d6cd3f2515cb710c6b180964916db69cb652bc37cc4e26120afc33455f4414e0",
+  "text": "A profile shall explicitly define or reject empty-record layout. Packed records, alignment overrides, and alternate addressable units shall require extensions. Queries, field accesses, initializer relocations, and every participating compiler/link stage shall use the same resolved layout.",
+  "text_sha256": "ba11a073f63ce926d3b10858cdacb68740c6205f4bb387cb1bbd5a2b0a28fab7",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A profile shall explicitly define or reject empty-record layout.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Packed records, alignment overrides, and alternate addressable units shall require extensions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Queries, field accesses, initializer relocations, and every participating compiler/link stage shall use the same resolved layout.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

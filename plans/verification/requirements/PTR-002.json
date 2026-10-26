@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "PTR-002",
+  "spec_path": "specs/0007_pointers_and_memory.md",
+  "spec_sha256": "70b03cc07c8654ddb763e263d2ca1bae13091fdbb20d2d9d60c7863fc87a3c1e",
+  "text": "Each live local allocation and each distinct global shall have distinct allocation identity. Inline fields shall share their root allocation identity/extent. Physical address reuse shall not revive an expired association.",
+  "text_sha256": "cad981a436c7a80adecfd047f41aecadddf31ab71e1c18374e3044e9cdcc96c5",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Each live local allocation and each distinct global shall have distinct allocation identity.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Inline fields shall share their root allocation identity/extent.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Physical address reuse shall not revive an expired association.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

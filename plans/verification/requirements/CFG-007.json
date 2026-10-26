@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "CFG-007",
+  "spec_path": "specs/0006_control_flow_and_ssa.md",
+  "spec_sha256": "ff5d9ac2baa8d27412b4499cd59a9cb5c5852f318a2a621d4a8588db1d3cd818",
+  "text": "`switch [iN] selector default edge { cases }` shall require a matching iN selector, one default, and zero or more same-type constant cases evaluable by binding. Selection shall compare bit patterns, with no range/fallthrough semantics.",
+  "text_sha256": "7eb79427ab386bf0cdb455e1db7f5a2b0efdef58700d7c694ffc17cdf8faecb1",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "`switch [iN] selector default edge { cases }` shall require a matching iN selector, one default, and zero or more same-type constant cases evaluable by binding.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Selection shall compare bit patterns, with no range/fallthrough semantics.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

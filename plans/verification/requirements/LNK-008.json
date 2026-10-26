@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LNK-008",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "The selected lifecycle graph shall resolve/validate before execution, retaining every selected node regardless of call reachability. Dependency on an unselected module's node shall be an error, not implicit archive discovery.",
+  "text_sha256": "23a70b6103114f20854b31839695aa337a291669b5e0e9b5fe52647b3ce36467",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The selected lifecycle graph shall resolve/validate before execution, retaining every selected node regardless of call reachability.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Dependency on an unselected module's node shall be an error, not implicit archive discovery.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

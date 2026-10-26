@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IFC-012",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "Public symbolic pointer/function constants shall reference explicitly exported target symbols of their owner. Exporting a constant shall not export a private target automatically. Private object initializers may reference owned private symbols; runtime-returned values may still identify private entities.",
+  "text_sha256": "7469270a8a6437a97456783501c2a9a022b2897c63525cdf478f42fce27edaeb",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Public symbolic pointer/function constants shall reference explicitly exported target symbols of their owner.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Exporting a constant shall not export a private target automatically.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Private object initializers may reference owned private symbols",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "runtime-returned values may still identify private entities.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

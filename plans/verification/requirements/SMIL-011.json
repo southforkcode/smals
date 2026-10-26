@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SMIL-011",
+  "spec_path": "specs/0000_smil.md",
+  "spec_sha256": "3a23f85c2c5659b7edbae538509c1a36889cff667cd9b83a79a236e5bdf98a01",
+  "text": "The core shall accept only the operations and forms defined by these specifications. Arrays, unions, packed/vector/floating-point types, generic volatile RAM, weak atomics, raw continuations, dynamic allocation, dynamic module loading, and uncontracted foreign transfers require separately specified extensions.",
+  "text_sha256": "0d36c670dda9af62d68b0edc63b1a484675bd776c615b20acded9ef3b2c136ba",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "The core shall accept only the operations and forms defined by these specifications.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Arrays, unions, packed/vector/floating-point types, generic volatile RAM, weak atomics, raw continuations, dynamic allocation, dynamic module loading, and uncontracted foreign transfers require separately specified extensions.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "REL-006",
+  "spec_path": "specs/0013_objects_and_static_linking.md",
+  "spec_sha256": "61815ed05fd9b86f52b2f1a3601cc7d46fc2c364a652d7414fab72f7b8ae4d15",
+  "text": "CHECKED_PTR shall retain root global/region, pointer type, field path, requested rights, and signed byte delta; validate real subobjects/full allocation extent including allowed one-past; and encode actual root ID, offset, coordinate, and intersected rights without wrapping. It shall not allocate another object.",
+  "text_sha256": "0cd701bceb7785ddd9f5f3d95ce96fb951140fa358012b469f0f3cbc7f40c01c",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "CHECKED_PTR shall retain root global/region, pointer type, field path, requested rights, and signed byte delta",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "validate real subobjects/full allocation extent including allowed one-past",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "and encode actual root ID, offset, coordinate, and intersected rights without wrapping.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "It shall not allocate another object.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

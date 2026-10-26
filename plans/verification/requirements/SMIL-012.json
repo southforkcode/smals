@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "SMIL-012",
+  "spec_path": "specs/0000_smil.md",
+  "spec_sha256": "3a23f85c2c5659b7edbae538509c1a36889cff667cd9b83a79a236e5bdf98a01",
+  "text": "A guide example containing placeholders or omitting enclosing declarations shall not be treated as an independently publishable source module. Intentionally invalid examples shall retain their specified rejection or fault behavior.",
+  "text_sha256": "5890dd78b4922b991e4126bc1f54d711d17c1c2d8a91d46aac7f7408e7d8d7f7",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A guide example containing placeholders or omitting enclosing declarations shall not be treated as an independently publishable source module.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Intentionally invalid examples shall retain their specified rejection or fault behavior.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

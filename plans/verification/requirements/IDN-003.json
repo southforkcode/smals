@@ -1,0 +1,35 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "IDN-003",
+  "spec_path": "specs/0012_modules_and_interfaces.md",
+  "spec_sha256": "bc35fcf1393ec682a1616256a51bfbdd3969cb0dbbe1ad3ad386ebf2761a2155",
+  "text": "A published interface shall include the complete finite type graph reachable through its exports, including pointer fields, private module-level records in the public closure, callable/raised types, and constant values. Version 1 shall have no implicit opaque-record boundary.",
+  "text_sha256": "2bf23bfd5ffd407fb04d42cdb11714a68d6cccae06a77e082aa447a613f3a8b4",
+  "required_scopes": [
+    "source",
+    "artifact"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A published interface shall include the complete finite type graph reachable through its exports, including pointer fields, private module-level records in the public closure, callable/raised types, and constant values.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Version 1 shall have no implicit opaque-record boundary.",
+      "scopes": [
+        "source",
+        "artifact"
+      ],
+      "evidence": []
+    }
+  ]
+}

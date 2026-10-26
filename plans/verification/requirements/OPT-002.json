@@ -1,0 +1,41 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "OPT-002",
+  "spec_path": "specs/0009_checked_execution.md",
+  "spec_sha256": "4652e60fe6c4f1ddfbdd33354284f00707f53aa8127d4c74420ed67b54ef6baa",
+  "text": "Removing/forwarding/merging/hoisting loads, divisions, pointer operations, or guards shall preserve or prove absent all applicable domain, readiness, initialization, race, synchronization, resource, and terminal-prefix effects. Proven reached failures may become their selected terminal event, never an impossible-path assumption.",
+  "text_sha256": "f482295862b0ef14dfd3d4e805fbaf11e247f11811a03130708ca117544636f5",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "Removing/forwarding/merging/hoisting loads, divisions, pointer operations, or guards shall preserve or prove absent all applicable domain, readiness, initialization, race, synchronization, resource, and terminal-prefix effects.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Proven reached failures may become their selected terminal event, never an impossible-path assumption.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}

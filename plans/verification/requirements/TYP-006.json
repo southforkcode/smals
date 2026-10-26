@@ -1,0 +1,53 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "TYP-006",
+  "spec_path": "specs/0002_types_and_storage.md",
+  "spec_sha256": "10b1fc7c609295596f141626cfde11861abd724ca34ca3514b18f8fc1fbdfdab",
+  "text": "A nonnegative `iN` literal shall be less than `2^N`; a negative literal shall be at least `-2^(N-1)` and encoded in N-bit two's complement. Out-of-range literals shall be rejected without truncation; `[i8 255]` and `[i8 -1]` shall have equal bits.",
+  "text_sha256": "e34604627740bd6d61f987482feeccd04e72161d3662ee6352d17026f4ff868d",
+  "required_scopes": [
+    "source",
+    "host"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A nonnegative `iN` literal shall be less than `2^N`",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "a negative literal shall be at least `-2^(N-1)` and encoded in N-bit two's complement.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "Out-of-range literals shall be rejected without truncation",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.4",
+      "text": "`[i8 255]` and `[i8 -1]` shall have equal bits.",
+      "scopes": [
+        "source",
+        "host"
+      ],
+      "evidence": []
+    }
+  ]
+}

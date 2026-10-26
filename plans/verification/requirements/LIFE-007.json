@@ -1,0 +1,52 @@
+{
+  "schema": "smals.requirement.v1",
+  "key": "LIFE-007",
+  "spec_path": "specs/0014_program_lifecycle.md",
+  "spec_sha256": "95ed1fe9f86ecdbda606d755a908ee8554e536c3fecbb3ba6fa2035ecb5c0518",
+  "text": "A `startup \"id\" @action` shall identify a non-variadic zero-parameter/zero-result action, optionally raising, with an optional callback obeying LIFE-003. Coordinator-supported action/callback ABIs may differ; reference callbacks shall use default ABI.",
+  "text_sha256": "9abb1040947ef842a7c1ae0985eea04008456633d988537ce71b38da0f6246e2",
+  "required_scopes": [
+    "source",
+    "host",
+    "artifact",
+    "exact-profile"
+  ],
+  "state": "open",
+  "reviewed": false,
+  "clause_basis": "Conservative sentence/semicolon seed groups; semantic clause review required before closure.",
+  "obligations": [
+    {
+      "id": "clause.1",
+      "text": "A `startup \"id\" @action` shall identify a non-variadic zero-parameter/zero-result action, optionally raising, with an optional callback obeying LIFE-003.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.2",
+      "text": "Coordinator-supported action/callback ABIs may differ",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "clause.3",
+      "text": "reference callbacks shall use default ABI.",
+      "scopes": [
+        "source",
+        "host",
+        "artifact",
+        "exact-profile"
+      ],
+      "evidence": []
+    }
+  ]
+}
